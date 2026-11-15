@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Keyline One — Classic keypad. Touchscreen smartphone.",
-    "description": "Keyline One is a compact hybrid phone: a real physical keypad combined with a colour touchscreen. Explore it in 3D and try the interactive demo."
+    "title": "Keyline One — The phone for what matters. Not for endless scrolling.",
+    "description": "Keyline One is a compact phone with a real keypad and a small touchscreen, made for calls, messages, maps and work — not for endless feeds. Spend less time on your screen."
   },
   "common": {
     "skip": "Skip to content",
@@ -14,24 +14,52 @@
   },
   "nav": {
     "product": "Product",
-    "features": "Features",
     "demo": "Interactive Demo",
     "faq": "FAQ",
     "bag": "Bag",
     "bagItems": "{count} item(s) in bag",
     "language": "Language",
     "menu": "Menu",
-    "order": "Order"
+    "order": "Order",
+    "why": "Why Keyline"
   },
   "hero": {
-    "eyebrow": "Introducing Keyline One",
-    "title1": "Real keys.",
-    "title2": "Real touchscreen.",
-    "subtitle": "A compact phone that pairs a tactile numeric keypad with a colour touchscreen — the simplicity you remember, the apps you rely on.",
-    "ctaDiscover": "Discover the device",
+    "eyebrow": "Keyline One",
+    "title1": "Do what matters.",
+    "title2": "Skip the endless feed.",
+    "subtitle": "A compact phone with real keys and a small touchscreen — for calls, messages, maps and work. Everything you need, without the habit of scrolling for hours.",
     "ctaDemo": "Try interactive demo",
     "priceLabel": "Indicative price",
-    "renderNote": "Render of provisional 3D model"
+    "renderNote": "Render of provisional 3D model",
+    "ctaOrder": "Order now · {price}"
+  },
+  "why": {
+    "eyebrow": "Why Keyline",
+    "title": "Your smartphone is built to keep you scrolling. Keyline One is built to let you go.",
+    "intro": "Feeds, notifications and autoplay are designed to hold your attention for as long as possible. Keyline One keeps what you actually need and makes the rest far less tempting — so the minutes you used to lose come back to you.",
+    "points": [
+      {
+        "title": "Only the essentials",
+        "text": "Calls, messages, navigation and the tools you need for work. Stay reachable — without a device designed to keep you hooked."
+      },
+      {
+        "title": "Made for tasks, not for scrolling",
+        "text": "A compact screen and a real keypad make it quick to do what you picked up the phone for — and easy to put it back in your pocket."
+      },
+      {
+        "title": "Time back for real life",
+        "text": "Spend the hours you win back on people, sleep, sport and your own projects — not on a feed that never ends."
+      }
+    ],
+    "calc": {
+      "title": "How much of your life does your screen take?",
+      "label": "Your daily screen time",
+      "hours": "{h} h a day",
+      "days": "{days} full days a year",
+      "daysSub": "spent looking at a screen",
+      "half": "Cut it in half and you win back {days} days every year.",
+      "note": "Use your own number — you'll find it under Screen Time (iPhone) or Digital Wellbeing (Android)."
+    }
   },
   "viewer": {
     "eyebrow": "360° viewer",
@@ -55,9 +83,6 @@
     "hint": "Drag to rotate"
   },
   "presentation": {
-    "eyebrow": "The concept",
-    "title": "Classic control. A different smartphone experience.",
-    "intro": "Most phones force a choice: a touchscreen smartphone or a simple button phone. Keyline One combines both in one compact body. Type, dial and navigate with real keys — and tap the screen whenever touch is faster.",
     "front": {
       "title": "Two ways to control. One device.",
       "text": "A colour touchscreen in the upper half, a full physical keypad in the lower half. Use whichever feels natural at the moment."
@@ -69,16 +94,6 @@
     "keypad": {
       "title": "Keys you can feel.",
       "text": "Individual tactile buttons for numbers, calls and navigation, plus a central circular control. Dial without looking."
-    },
-    "back": {
-      "title": "Clean back. Rear camera.",
-      "text": "A minimal graphite back with a rear camera module in the corner."
-    },
-    "scale": {
-      "title": "Made to disappear into a pocket.",
-      "text": "Narrow and compact — shown here next to a standard bank card (85.6 × 54 mm) for scale.",
-      "card": "Bank card",
-      "note": "Approximate scale based on reference photos. Exact dimensions will be published once verified."
     }
   },
   "specs": {
@@ -124,24 +139,96 @@
       "online": "online",
       "lastSeen": "last seen recently",
       "chats": [
-        { "name": "Anna", "preview": "See you at 7?", "time": "12:41", "messages": [["in", "Hi! Are we still on for tonight?"], ["out", "Yes! Same place as last time?"], ["in", "See you at 7?"]] },
-        { "name": "Family", "preview": "Mum: Photos from Sunday 📷", "time": "11:02", "messages": [["in", "Photos from Sunday 📷"], ["out", "Lovely, thank you!"]] },
-        { "name": "Tomas", "preview": "The keypad is so handy", "time": "Yesterday", "messages": [["in", "Got the new phone?"], ["out", "Yes — typing with real keys again"], ["in", "The keypad is so handy"]] },
-        { "name": "Work", "preview": "Meeting moved to 10:30", "time": "Mon", "messages": [["in", "Meeting moved to 10:30"]] }
+        {
+          "name": "Anna",
+          "preview": "See you at 7?",
+          "time": "12:41",
+          "messages": [
+            [
+              "in",
+              "Hi! Are we still on for tonight?"
+            ],
+            [
+              "out",
+              "Yes! Same place as last time?"
+            ],
+            [
+              "in",
+              "See you at 7?"
+            ]
+          ]
+        },
+        {
+          "name": "Family",
+          "preview": "Mum: Photos from Sunday 📷",
+          "time": "11:02",
+          "messages": [
+            [
+              "in",
+              "Photos from Sunday 📷"
+            ],
+            [
+              "out",
+              "Lovely, thank you!"
+            ]
+          ]
+        },
+        {
+          "name": "Tomas",
+          "preview": "The keypad is so handy",
+          "time": "Yesterday",
+          "messages": [
+            [
+              "in",
+              "Got the new phone?"
+            ],
+            [
+              "out",
+              "Yes — typing with real keys again"
+            ],
+            [
+              "in",
+              "The keypad is so handy"
+            ]
+          ]
+        },
+        {
+          "name": "Work",
+          "preview": "Meeting moved to 10:30",
+          "time": "Mon",
+          "messages": [
+            [
+              "in",
+              "Meeting moved to 10:30"
+            ]
+          ]
+        }
       ],
       "autoReply": "👍"
     },
     "maps": {
       "search": "Search places",
       "you": "You are here",
-      "places": ["Café", "Park", "Station"],
+      "places": [
+        "Café",
+        "Park",
+        "Station"
+      ],
       "route": "Route",
       "walk": "12 min walk"
     },
-    "gallery": { "title": "Gallery", "count": "{count} photos" },
+    "gallery": {
+      "title": "Gallery",
+      "count": "{count} photos"
+    },
     "video": {
       "title": "Videos",
-      "items": ["Morning in the mountains", "How to make fresh pasta", "City lights timelapse", "Ocean waves — 10 minutes"],
+      "items": [
+        "Morning in the mountains",
+        "How to make fresh pasta",
+        "City lights timelapse",
+        "Ocean waves — 10 minutes"
+      ],
       "views": "{count} views",
       "playing": "Demo playback",
       "channel": "Demo channel"
@@ -149,9 +236,18 @@
     "music": {
       "title": "Now playing",
       "tracks": [
-        { "title": "Quiet Morning", "artist": "Demo Ensemble" },
-        { "title": "Graphite", "artist": "Keyline Sounds" },
-        { "title": "Night Train", "artist": "Demo Ensemble" }
+        {
+          "title": "Quiet Morning",
+          "artist": "Demo Ensemble"
+        },
+        {
+          "title": "Graphite",
+          "artist": "Keyline Sounds"
+        },
+        {
+          "title": "Night Train",
+          "artist": "Demo Ensemble"
+        }
       ],
       "note": "Generated demo tones — no copyrighted music"
     },
@@ -179,36 +275,35 @@
       "search": "Search contacts",
       "mobile": "Mobile"
     },
-    "home": { "date": "{weekday}, {day} {month}" }
-  },
-  "features": {
-    "eyebrow": "Features",
-    "title": "Simple on the outside. Smart on the inside.",
-    "pending": "Pending verification",
-    "items": {
-      "compact": { "title": "Compact design", "text": "A narrow body that fits comfortably in one hand and any pocket." },
-      "keypad": { "title": "Physical keypad", "text": "Tactile number keys, call keys and a circular navigation control." },
-      "touch": { "title": "Touchscreen", "text": "A colour display you can tap, scroll and swipe." },
-      "hybrid": { "title": "Hybrid experience", "text": "Switch between keys and touch at any moment, in any app." },
-      "apps": { "title": "App compatibility", "text": "Designed to run popular messaging and media apps. Exact compatibility is being verified." },
-      "dualSim": { "title": "Dual SIM", "text": "Two SIM cards in one device. Being confirmed with the manufacturer." },
-      "lte": { "title": "4G connectivity", "text": "Mobile data over 4G networks. Band support is being confirmed." }
+    "home": {
+      "date": "{weekday}, {day} {month}"
     }
   },
   "purchase": {
     "eyebrow": "Order",
     "title": "Keyline One",
-    "description": "Compact hybrid phone with a physical numeric keypad and a colour touchscreen.",
+    "description": "A compact phone with a physical keypad and a colour touchscreen — made for the essentials, not for endless scrolling.",
     "colour": "Colour",
-    "colours": { "graphite": "Graphite" },
+    "colours": {
+      "graphite": "Graphite"
+    },
     "quantity": "Quantity",
     "decrease": "Decrease quantity",
     "increase": "Increase quantity",
     "order": "Order now",
     "testNotice": "We are currently testing interest in this product. Placing an order sends us a request — no payment is taken.",
-    "delivery": { "title": "Delivery", "text": "Delivery times and costs will be confirmed before sales open." },
-    "returns": { "title": "Returns", "text": "Return policy details will be published before sales open." },
-    "warranty": { "title": "Warranty", "text": "Warranty terms will be published before sales open." }
+    "delivery": {
+      "title": "Delivery",
+      "text": "Delivery times and costs will be confirmed before sales open."
+    },
+    "returns": {
+      "title": "Returns",
+      "text": "Return policy details will be published before sales open."
+    },
+    "warranty": {
+      "title": "Warranty",
+      "text": "Warranty terms will be published before sales open."
+    }
   },
   "checkout": {
     "title": "Test order",
@@ -253,18 +348,46 @@
     "eyebrow": "FAQ",
     "title": "Questions & answers",
     "items": [
-      { "q": "Is this a smartphone or a traditional button phone?", "a": "Both. Keyline One has a colour touchscreen in the upper half and a full physical keypad in the lower half. You can navigate with touch, with the keys, or with both." },
-      { "q": "Can I install applications?", "a": "The device is designed for app use, and the reference units run apps. Which app store and operating system version ship with the final product is still being confirmed with the manufacturer. We will publish it here before sales open." },
-      { "q": "Does it support WhatsApp?", "a": "This is being verified on production units. We will only confirm WhatsApp support once we have tested it ourselves." },
-      { "q": "Does it support Telegram?", "a": "This is being verified on production units. We will only confirm Telegram support once we have tested it ourselves." },
-      { "q": "Does it have 4G?", "a": "4G support and the exact network bands are being confirmed with the manufacturer. Please check back before ordering." },
-      { "q": "What is included in the package?", "a": "The package contents will be confirmed before sales open." },
-      { "q": "How long does delivery take?", "a": "Delivery times will be confirmed before sales open. During the current test phase no orders are shipped." },
-      { "q": "What is the return policy?", "a": "For orders within the EU you will have at least the statutory 14-day right of withdrawal. Full return terms will be published before sales open." }
+      {
+        "q": "How does Keyline One help me spend less time on my phone?",
+        "a": "It is designed for purposeful use. The compact screen and physical keypad make calls, messages and quick tasks easy, while long scrolling sessions become much less comfortable. You can use it as your everyday phone and keep a larger device at home for the occasional task that really needs it. How much time you save depends on your habits."
+      },
+      {
+        "q": "Is this a smartphone or a traditional button phone?",
+        "a": "Both. Keyline One has a colour touchscreen in the upper half and a full physical keypad in the lower half. You can navigate with touch, with the keys, or with both."
+      },
+      {
+        "q": "Can I install applications?",
+        "a": "The device is designed for app use, and the reference units run apps. Which app store and operating system version ship with the final product is still being confirmed with the manufacturer. We will publish it here before sales open."
+      },
+      {
+        "q": "Does it support WhatsApp?",
+        "a": "This is being verified on production units. We will only confirm WhatsApp support once we have tested it ourselves."
+      },
+      {
+        "q": "Does it support Telegram?",
+        "a": "This is being verified on production units. We will only confirm Telegram support once we have tested it ourselves."
+      },
+      {
+        "q": "Does it have 4G?",
+        "a": "4G support and the exact network bands are being confirmed with the manufacturer. Please check back before ordering."
+      },
+      {
+        "q": "What is included in the package?",
+        "a": "The package contents will be confirmed before sales open."
+      },
+      {
+        "q": "How long does delivery take?",
+        "a": "Delivery times will be confirmed before sales open. During the current test phase no orders are shipped."
+      },
+      {
+        "q": "What is the return policy?",
+        "a": "For orders within the EU you will have at least the statutory 14-day right of withdrawal. Full return terms will be published before sales open."
+      }
     ]
   },
   "footer": {
-    "tagline": "Real keys. Real touchscreen.",
+    "tagline": "The phone for what matters.",
     "product": "Product",
     "contact": "Contact",
     "faq": "FAQ",
@@ -286,31 +409,76 @@
     "privacy": {
       "title": "Privacy Policy",
       "sections": [
-        { "h": "Who we are", "p": "The controller of your personal data is {entity}, {address}. Contact: {email}." },
-        { "h": "What data we collect", "p": "When you submit a test order we collect your name, email address, country, optional phone number, selected quantity, selected language and the time of submission. We also process your IP address briefly to protect the form against abuse (rate limiting) and to choose a suitable website language." },
-        { "h": "Why we process it", "p": "To respond to your request and to inform you about the product's availability (Art. 6(1)(b) GDPR — steps prior to a contract) and to protect our website (Art. 6(1)(f) GDPR — legitimate interest)." },
-        { "h": "How long we keep it", "p": "Test order requests are stored for {days} days and then deleted, unless you ask us to delete them earlier." },
-        { "h": "Who receives it", "p": "Your request is delivered by email through our email service provider, acting as a processor. [List processors, e.g. hosting and email providers, and any transfers outside the EU.]" },
-        { "h": "Cookies and storage", "p": "We use only strictly necessary storage: a cookie and local storage entry that remember your language. We do not use analytics or advertising cookies." },
-        { "h": "Your rights", "p": "You have the right to access, rectify, erase, restrict and port your data, and to object to processing. You may also lodge a complaint with your supervisory authority (in Lithuania: State Data Protection Inspectorate; in Germany: the data protection authority of your federal state)." }
+        {
+          "h": "Who we are",
+          "p": "The controller of your personal data is {entity}, {address}. Contact: {email}."
+        },
+        {
+          "h": "What data we collect",
+          "p": "When you submit a test order we collect your name, email address, country, optional phone number, selected quantity, selected language and the time of submission. We also process your IP address briefly to protect the form against abuse (rate limiting) and to choose a suitable website language."
+        },
+        {
+          "h": "Why we process it",
+          "p": "To respond to your request and to inform you about the product's availability (Art. 6(1)(b) GDPR — steps prior to a contract) and to protect our website (Art. 6(1)(f) GDPR — legitimate interest)."
+        },
+        {
+          "h": "How long we keep it",
+          "p": "Test order requests are stored for {days} days and then deleted, unless you ask us to delete them earlier."
+        },
+        {
+          "h": "Who receives it",
+          "p": "Your request is delivered by email through our email service provider, acting as a processor. [List processors, e.g. hosting and email providers, and any transfers outside the EU.]"
+        },
+        {
+          "h": "Cookies and storage",
+          "p": "We use only strictly necessary storage: a cookie and local storage entry that remember your language. We do not use analytics or advertising cookies."
+        },
+        {
+          "h": "Your rights",
+          "p": "You have the right to access, rectify, erase, restrict and port your data, and to object to processing. You may also lodge a complaint with your supervisory authority (in Lithuania: State Data Protection Inspectorate; in Germany: the data protection authority of your federal state)."
+        }
       ]
     },
     "terms": {
       "title": "Terms and Conditions",
       "sections": [
-        { "h": "Test phase", "p": "This website is currently used to test interest in the product. Submitting a test order does not create a purchase contract, no payment is taken and no product is shipped." },
-        { "h": "Seller", "p": "{entity}, {address}, registration no. {reg}, VAT no. {vat}." },
-        { "h": "Prices", "p": "Prices shown are indicative and include VAT where applicable. Final prices will be confirmed before sales open." },
-        { "h": "Product information", "p": "Product images include renders of a provisional 3D model. Specifications marked “To be confirmed” are not yet verified." },
-        { "h": "Governing law", "p": "[To be completed.]" }
+        {
+          "h": "Test phase",
+          "p": "This website is currently used to test interest in the product. Submitting a test order does not create a purchase contract, no payment is taken and no product is shipped."
+        },
+        {
+          "h": "Seller",
+          "p": "{entity}, {address}, registration no. {reg}, VAT no. {vat}."
+        },
+        {
+          "h": "Prices",
+          "p": "Prices shown are indicative and include VAT where applicable. Final prices will be confirmed before sales open."
+        },
+        {
+          "h": "Product information",
+          "p": "Product images include renders of a provisional 3D model. Specifications marked “To be confirmed” are not yet verified."
+        },
+        {
+          "h": "Governing law",
+          "p": "[To be completed.]"
+        }
       ]
     },
     "shipping": {
       "title": "Shipping and Returns",
       "sections": [
-        { "h": "Shipping", "p": "No orders are shipped during the test phase. Shipping destinations, carriers, times and costs will be published before sales open." },
-        { "h": "Right of withdrawal", "p": "Consumers in the EU have the right to withdraw from a distance contract within 14 days without giving a reason. Full withdrawal instructions and a model withdrawal form will be added here." },
-        { "h": "Warranty", "p": "The statutory legal guarantee applies. Any additional manufacturer warranty will be described here." }
+        {
+          "h": "Shipping",
+          "p": "No orders are shipped during the test phase. Shipping destinations, carriers, times and costs will be published before sales open."
+        },
+        {
+          "h": "Right of withdrawal",
+          "p": "Consumers in the EU have the right to withdraw from a distance contract within 14 days without giving a reason. Full withdrawal instructions and a model withdrawal form will be added here."
+        },
+        {
+          "h": "Warranty",
+          "p": "The statutory legal guarantee applies. Any additional manufacturer warranty will be described here."
+        }
       ]
     },
     "contact": {
@@ -324,5 +492,8 @@
     "customerGreeting": "Hello {name},",
     "customerBody": "Thank you for your interest in Keyline One. We have received your test order request (reference {ref}). This is currently a product testing phase: no payment has been processed and nothing will be shipped. We will contact you when the product becomes available."
   },
-  "notFound": { "title": "Page not found", "back": "Back to home" }
+  "notFound": {
+    "title": "Page not found",
+    "back": "Back to home"
+  }
 }

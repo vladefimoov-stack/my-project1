@@ -12,10 +12,10 @@ A premium single-product e-commerce website for a compact **hybrid phone**: a re
 |---|---|
 | Hero | Staggered entrance, scroll parallax, price from config, CTAs to the 3D viewer and demo |
 | 360° viewer | Real WebGL 3D model: drag/touch rotate (horizontal + vertical), wheel/pinch zoom, idle auto-rotate that pauses on interaction, preset views (display, keypad, back & camera, side, top & bottom), reset, fullscreen (with iOS fallback). Lazy-loaded when near the viewport, render loop paused off-screen, static renders if WebGL is unavailable |
-| Presentation | Editorial blocks with scroll reveals: front, display close-up, keypad close-up, back (parallax), scale vs. a bank card |
+| Presentation | Editorial blocks with scroll reveals: front, display close-up, keypad close-up |
 | Specifications | Driven by `config/product.ts`; unverified values show "To be confirmed" |
 | Interactive demo | A website **simulation** of the phone (not an emulator). Launcher identical in layout to the reference photo; 9 working apps (Telegram-style & WhatsApp-style chat with multi-tap keypad typing, Maps, Gallery, Video, Music with generated tones, Settings, Phone dialer, Contacts). Works with touch, the on-device keypad (D-pad, OK, back, call/end, digits) and the computer keyboard |
-| Features | Confirmed vs "pending verification" per feature, from config |
+| Why Keyline | Main message — less time on the screen — with an interactive calculator where visitors enter their own daily screen time |
 | Purchase | Colour, quantity, "Order now" → test checkout; delivery/returns/warranty placeholders |
 | Test checkout | Name, email, country, optional phone, quantity, consent → `POST /api/order` → owner email. Success shown **only after** the email provider accepts the message |
 | FAQ | Accessible accordion + FAQPage JSON-LD |
@@ -71,14 +71,13 @@ See [`.env.example`](.env.example). Server-only secrets are **never** exposed to
 
 Everything lives in two places:
 
-- **`config/product.ts`** — price, currency, max quantity, colours, specifications, feature verification flags, 3D model URL.
+- **`config/product.ts`** — price, currency, max quantity, colours, specifications, 3D model URL.
   ```ts
-  price: 149,                 // ← change the price here
+  price: 119,                 // ← change the price here
   specs: {
     display: { value: '3.5" IPS touchscreen', verified: true },   // shown
     battery: { value: null, verified: false },                     // "To be confirmed"
   }
-  features: [{ key: "lte", confirmed: true }, …]                   // removes the "pending" tag
   ```
 - **`locales/en.json`, `locales/lt.json`, `locales/de.json`** — all text: headlines, descriptions, FAQ answers, demo content, legal templates, email copy. Keep the same keys in all three files.
 - **`config/site.ts`** — public contact email, company details for the legal pages, data-retention period.

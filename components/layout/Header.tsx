@@ -8,6 +8,7 @@ import { fmt } from "@/i18n/dictionaries";
 import { Logo } from "./Logo";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useCart } from "./CartProvider";
+import { formatPrice, product } from "@/config/product";
 
 export function Header({ home = true }: { home?: boolean }) {
   const { dict, locale } = useI18n();
@@ -31,8 +32,8 @@ export function Header({ home = true }: { home?: boolean }) {
 
   const base = home ? "" : `/${locale}`;
   const links = [
+    { href: `${base}#why`, label: dict.nav.why },
     { href: `${base}#product`, label: dict.nav.product },
-    { href: `${base}#features`, label: dict.nav.features },
     { href: `${base}#demo`, label: dict.nav.demo },
     { href: `${base}#faq`, label: dict.nav.faq },
   ];
@@ -64,6 +65,9 @@ export function Header({ home = true }: { home?: boolean }) {
         </nav>
 
         <div className="flex items-center gap-1">
+          <button type="button" onClick={() => openCheckout()} className="btn-primary mr-1 hidden h-9 px-4 text-[13px] md:inline-flex">
+            {dict.nav.order} · {formatPrice(product.price, locale)}
+          </button>
           <LanguageSwitcher />
           <button
             type="button"

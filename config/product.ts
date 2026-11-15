@@ -27,15 +27,6 @@ export type SpecKey =
 
 export type Spec = { value: string | null; verified: boolean };
 
-export type FeatureKey =
-  | "compact"
-  | "keypad"
-  | "touch"
-  | "hybrid"
-  | "apps"
-  | "dualSim"
-  | "lte";
-
 export const product = {
   /** Internal SKU used in order notifications */
   sku: "KL-ONE-GRAPHITE",
@@ -44,7 +35,7 @@ export const product = {
   brand: "Keyline",
 
   /** ── PRICE ─────────────────────────────────────────────────────── */
-  price: 149, // indicative price shown on the site (test phase, no payment)
+  price: 119, // indicative price shown on the site (test phase, no payment)
   currency: "EUR" as const,
   /** Maximum units per test order */
   maxQuantity: 5,
@@ -81,21 +72,6 @@ export const product = {
     weight: { value: null, verified: false },
     colours: { value: null, verified: false },
   } satisfies Record<SpecKey, Spec>,
-
-  /**
-   * ── FEATURES ───────────────────────────────────────────────────────
-   * `confirmed: false` → shown with a "pending verification" label.
-   * Physical traits visible in the reference photos are marked confirmed.
-   */
-  features: [
-    { key: "compact", confirmed: true },
-    { key: "keypad", confirmed: true },
-    { key: "touch", confirmed: true },
-    { key: "hybrid", confirmed: true },
-    { key: "apps", confirmed: false },
-    { key: "dualSim", confirmed: false },
-    { key: "lte", confirmed: false },
-  ] satisfies { key: FeatureKey; confirmed: boolean }[],
 
   /** ── 3D MODEL ──────────────────────────────────────────────────────
    * Leave `glbUrl` null to use the built-in provisional procedural model.

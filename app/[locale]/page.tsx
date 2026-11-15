@@ -8,7 +8,7 @@ import { ViewerSection } from "@/components/product-viewer/ViewerSection";
 import { Presentation } from "@/components/sections/Presentation";
 import { Specs } from "@/components/sections/Specs";
 import { DemoSection } from "@/components/virtual-phone/DemoSection";
-import { Features } from "@/components/sections/Features";
+import { Why } from "@/components/sections/Why";
 import { Purchase } from "@/components/sections/Purchase";
 import { FAQ } from "@/components/sections/FAQ";
 
@@ -27,12 +27,12 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <Header />
       <main id="main">
         <Hero />
+        <Why />
         <ViewerSection />
         <Presentation />
-        <Specs />
         <DemoSection />
-        <Features />
         <Purchase />
+        <Specs />
         <FAQ />
       </main>
       <Footer />

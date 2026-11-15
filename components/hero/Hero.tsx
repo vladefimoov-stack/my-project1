@@ -5,6 +5,8 @@ import { useRef } from "react";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useI18n } from "@/i18n/I18nProvider";
 import { formatPrice, product } from "@/config/product";
+import { fmt } from "@/i18n/dictionaries";
+import { useCart } from "@/components/layout/CartProvider";
 import renders from "@/lib/render-manifest.json";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -12,6 +14,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 export function Hero() {
   const { dict, locale } = useI18n();
   const reduce = useReducedMotion();
+  const { openCheckout } = useCart();
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const phoneY = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : 90]);
@@ -46,17 +49,13 @@ export function Hero() {
             {dict.hero.subtitle}
           </motion.p>
           <motion.div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start" {...item(4)}>
-            <a href="#viewer" className="btn-primary w-full sm:w-auto">
-              {dict.hero.ctaDiscover}
-            </a>
+            <button type="button" onClick={() => openCheckout(1)} className="btn-primary w-full sm:w-auto sm:px-8">
+              {fmt(dict.hero.ctaOrder, { price: formatPrice(product.price, locale) })}
+            </button>
             <a href="#demo" className="btn-secondary w-full sm:w-auto">
               {dict.hero.ctaDemo}
               <span aria-hidden="true">→</span>
             </a>
-          </motion.div>
-          <motion.div className="mt-8 flex items-baseline justify-center gap-3 lg:justify-start" {...item(5)}>
-            <span className="text-[13px] text-stone">{dict.hero.priceLabel}</span>
-            <span className="text-[28px] font-semibold tracking-tight">{formatPrice(product.price, locale)}</span>
           </motion.div>
         </div>
 
