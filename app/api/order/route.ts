@@ -3,7 +3,6 @@ import { randomBytes } from "node:crypto";
 import { orderSchema, type Order, type OrderResponse } from "@/lib/order-schema";
 import { rateLimit, recall, remember } from "@/lib/rate-limit";
 import { emailConfigured, sendEmail } from "@/lib/email";
-import { saveOrderToSheet, sheetsConfigured } from "@/lib/sheets";
 import { buildCustomerEmail, buildOwnerEmail } from "@/lib/order-email";
 import { log, maskEmail } from "@/lib/logger";
 import { site } from "@/config/site";
@@ -124,25 +123,15 @@ async function deliver(order: Order, dupKeys: string[]): Promise<Delivery> {
   const now = new Date();
   const reference = makeReference(now);
 
-  // 1) Google Sheets — the order log; 2) email — notification.
-  // The order counts as received when at least one channel accepted it.
-  const useSheets = sheetsConfigured();
-  const useEmail = emailConfigured();
-  if (!useSheets && !useEmail) {
-    log("error", "order.config", { reason: "no channel configured (GOOGLE_SHEETS_* or RESEND_API_KEY/EMAIL_FROM)" });
+  if (!emailConfigured()) {
+    log("error", "order.config", { reason: "email not configured (GMAIL_USER + GMAIL_APP_PASSWORD, or RESEND_API_KEY + EMAIL_FROM)" });
     return { ok: false, status: 503 };
   }
-  const [saved, mailed] = await Promise.all([
-    useSheets ? saveOrderToSheet(order, reference, now) : Promise.resolve(false),
-    useEmail ? sendEmail(buildOwnerEmail(order, reference, now, to), "owner-notification") : Promise.resolve({ ok: false as const, reason: "off" }),
-  ]);
-
-  if (!saved && !mailed.ok) {
-    log("error", "order.failed", { reference, sheets: useSheets ? "failed" : "off", email: mailed.ok ? "ok" : mailed.reason, customer: maskEmail(order.email) });
+  const result = await sendEmail(buildOwnerEmail(order, reference, now, to), "owner-notification");
+  if (!result.ok) {
+    log("error", "order.failed", { reference, reason: result.reason, customer: maskEmail(order.email) });
     return { ok: false, status: 502 };
   }
-  const result = { id: mailed.ok ? mailed.id : "-" };
-  const channels = { sheets: saved, email: mailed.ok };
 
   remember(dupKeys[0], reference); // same form submission retried → same reference (24 h)
   remember(dupKeys[1], reference, CONTENT_DEDUPE_MS); // same person submitting twice from two tabs
@@ -150,14 +139,13 @@ async function deliver(order: Order, dupKeys: string[]): Promise<Delivery> {
   log("info", "order.accepted", {
     reference,
     emailId: result.id,
-    channels,
     customer: maskEmail(order.email),
     country: order.country,
     quantity: order.quantity,
     locale: order.locale,
   });
 
-  if (useEmail && process.env.SEND_CUSTOMER_CONFIRMATION === "true") {
+  if (process.env.SEND_CUSTOMER_CONFIRMATION === "true") {
     // best effort — the request is already confirmed by the owner notification
     void sendEmail(buildCustomerEmail(order, reference), "customer-confirmation");
   }

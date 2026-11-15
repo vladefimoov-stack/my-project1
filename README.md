@@ -49,7 +49,8 @@ See [`.env.example`](.env.example). Server-only secrets are **never** exposed to
 | Variable | Required | Purpose |
 |---|---|---|
 | `NEXT_PUBLIC_SITE_URL` | yes (prod) | Canonical URL for SEO, hreflang, sitemap |
-| `EMAIL_PROVIDER` | – | `resend` (default) or `log` (dev only) |
+| `GMAIL_USER`, `GMAIL_APP_PASSWORD` | yes (or Resend) | Gmail account + app password used to send order emails |
+| `EMAIL_PROVIDER` | – | `gmail`, `resend` or `log` (dev only); auto-detected when empty |
 | `RESEND_API_KEY` | yes (prod) | Resend API key |
 | `EMAIL_FROM` | yes (prod) | Verified sender, e.g. `Kalm <orders@yourdomain.com>` |
 | `ORDER_NOTIFICATION_EMAIL` | yes | Recipient of test-order notifications |
@@ -58,13 +59,13 @@ See [`.env.example`](.env.example). Server-only secrets are **never** exposed to
 | `GEOIP_API_URL` | – | Optional geolocation fallback when the host gives no country header |
 | `ENABLE_RENDER_ROUTE` | – | Enables `/render` in production (used to regenerate images) |
 
-### Saving orders to Google Sheets (recommended)
+### Sending order emails via Gmail (recommended)
 
-1. Create a Google Sheet → **Extensions → Apps Script**, paste `integrations/google-sheets/Code.gs`, set `SECRET`.
-2. **Deploy → New deployment → Web app**, *Execute as: Me*, *Who has access: Anyone* → copy the URL.
-3. In Vercel set `GOOGLE_SHEETS_WEBHOOK_URL` (that URL) and `GOOGLE_SHEETS_SECRET` (same secret) → Redeploy.
+1. Google account → **Security** → turn on **2-Step Verification**.
+2. Open **myaccount.google.com/apppasswords**, create an app password named "Kalm".
+3. In Vercel set `GMAIL_USER` (the Gmail address) and `GMAIL_APP_PASSWORD` (the 16-character password) → Redeploy.
 
-Each order becomes a row (date, order number, name, email, phone, country, quantity, total, language, status, notes). An order is accepted when it is saved to the sheet **or** emailed; if both channels are configured, both are used.
+Orders are sent from that Gmail account to `ORDER_NOTIFICATION_EMAIL` (default in `config/site.ts`), with the customer as reply-to.
 
 ### Setting up Resend
 

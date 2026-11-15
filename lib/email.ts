@@ -1,4 +1,5 @@
 import "server-only";
+import nodemailer, { type Transporter } from "nodemailer";
 import { log, maskEmail } from "./logger";
 
 export type EmailMessage = {
@@ -11,11 +12,61 @@ export type EmailMessage = {
 
 export type SendResult = { ok: true; id: string } | { ok: false; reason: string };
 
+/** gmail (app password) if configured, otherwise resend — unless EMAIL_PROVIDER says otherwise */
+export function emailProvider() {
+  const explicit = process.env.EMAIL_PROVIDER?.toLowerCase();
+  if (explicit) return explicit;
+  return process.env.GMAIL_APP_PASSWORD ? "gmail" : "resend";
+}
+
 /** true when an email provider is set up (or the dev "log" provider is used) */
 export function emailConfigured() {
-  const provider = (process.env.EMAIL_PROVIDER || "resend").toLowerCase();
+  const provider = emailProvider();
   if (provider === "log") return process.env.NODE_ENV !== "production";
+  if (provider === "gmail") return Boolean(process.env.GMAIL_USER && process.env.GMAIL_APP_PASSWORD);
   return Boolean(process.env.RESEND_API_KEY && process.env.EMAIL_FROM);
+}
+
+let gmailTransport: Transporter | null = null;
+
+async function sendViaGmail(msg: EmailMessage, tag: string, toMasked: string[]): Promise<SendResult> {
+  const user = process.env.GMAIL_USER;
+  const pass = process.env.GMAIL_APP_PASSWORD?.replace(/\s+/g, ""); // Google shows it in groups of 4
+  if (!user || !pass) {
+    log("error", "email.config", { tag, reason: "GMAIL_USER or GMAIL_APP_PASSWORD missing" });
+    return { ok: false, reason: "not_configured" };
+  }
+  gmailTransport ??= nodemailer.createTransport({
+    host: process.env.SMTP_HOST || "smtp.gmail.com",
+    port: Number(process.env.SMTP_PORT) || 465,
+    secure: (Number(process.env.SMTP_PORT) || 465) === 465,
+    auth: { user, pass },
+    connectionTimeout: 10_000,
+    greetingTimeout: 10_000,
+    socketTimeout: 15_000,
+  });
+  try {
+    const info = await gmailTransport.sendMail({
+      from: { name: process.env.EMAIL_FROM_NAME || "Kalm", address: user },
+      to: msg.to,
+      subject: msg.subject,
+      text: msg.text,
+      html: msg.html,
+      replyTo: msg.replyTo,
+    });
+    if (info.rejected?.length) {
+      log("error", "email.failed", { tag, provider: "gmail", error: "rejected", to: toMasked });
+      return { ok: false, reason: "rejected" };
+    }
+    log("info", "email.sent", { tag, provider: "gmail", id: info.messageId, to: toMasked });
+    return { ok: true, id: info.messageId };
+  } catch (e) {
+    const err = e as { code?: string; responseCode?: number; message?: string };
+    // EAUTH / 535 = wrong address or app password (or 2-Step Verification is off)
+    log("error", "email.failed", { tag, provider: "gmail", code: err.code, responseCode: err.responseCode, error: err.message?.slice(0, 200), to: toMasked });
+    gmailTransport = null;
+    return { ok: false, reason: err.code === "EAUTH" ? "auth" : "smtp" };
+  }
 }
 
 export const escapeHtml = (s: string) =>
@@ -26,8 +77,10 @@ export const escapeHtml = (s: string) =>
  * Returns ok only when the provider ACCEPTED the message.
  */
 export async function sendEmail(msg: EmailMessage, tag: string): Promise<SendResult> {
-  const provider = (process.env.EMAIL_PROVIDER || "resend").toLowerCase();
+  const provider = emailProvider();
   const toMasked = msg.to.map(maskEmail);
+
+  if (provider === "gmail") return sendViaGmail(msg, tag, toMasked);
 
   if (provider === "log") {
     if (process.env.NODE_ENV === "production") {
