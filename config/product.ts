@@ -45,9 +45,9 @@ export const product = {
     {
       id: "graphite",
       // swatch + material colours used by the 3D model
-      swatch: "#2A2B2E",
-      body: "#2B2C30",
-      keys: "#3A3B40",
+      swatch: "#16171A",
+      body: "#18191C",
+      keys: "#1F2024",
       available: true,
     },
   ],

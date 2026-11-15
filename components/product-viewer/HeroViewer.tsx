@@ -9,6 +9,7 @@ import renders from "@/lib/render-manifest.json";
 import type { ViewId } from "@/lib/views";
 import type { ViewRequest, ZoomRequest } from "./ViewerCanvas";
 import type { AppId } from "@/lib/apps";
+import { launcherDate } from "@/lib/launcher";
 
 const ViewerCanvas = dynamic(() => import("./ViewerCanvas"), { ssr: false });
 
@@ -38,7 +39,7 @@ const iconBtn =
  * the live WebGL model as soon as it is ready. Static render if no WebGL.
  */
 export function HeroViewer() {
-  const { dict } = useI18n();
+  const { dict, locale } = useI18n();
   const wrap = useRef<HTMLDivElement>(null);
   const [mount, setMount] = useState(false);
   const [visible, setVisible] = useState(true);
@@ -50,6 +51,8 @@ export function HeroViewer() {
   const [autoRotate, setAutoRotate] = useState(true);
   const [fs, setFs] = useState(false);
   const labels = dict.demo.apps as Record<AppId, string>;
+  const [date, setDate] = useState<string>();
+  useEffect(() => setDate(launcherDate(locale)), [locale]);
 
   useEffect(() => {
     const ok = hasWebGL();
@@ -146,6 +149,7 @@ export function HeroViewer() {
               autoRotate={autoRotate}
               active={visible}
               labels={labels}
+              date={date}
               onInteract={onInteract}
               onReady={() => setTimeout(() => setReady(true), 150)}
               freeZoom={fs}

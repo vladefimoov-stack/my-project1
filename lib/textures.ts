@@ -2,6 +2,7 @@
 
 import * as THREE from "three";
 import { APPS, APP_LABELS_EN, type AppId } from "./apps";
+import { AZ, LAUNCHER_ORDER } from "./launcher";
 import { KEY_GLYPHS, type KeyDef } from "./device";
 
 const FONT = `"Inter", "Helvetica Neue", Arial, sans-serif`;
@@ -39,62 +40,82 @@ export function drawAppIcon(ctx: CanvasRenderingContext2D, id: AppId, x: number,
   ctx.restore();
 }
 
-/** Home screen (launcher) texture — 3:4 portrait, mirrors the reference photo. */
-export function makeScreenCanvas(labels: Record<AppId, string> = APP_LABELS_EN, time = "12:48") {
-  const W = 768, H = 1024;
+
+/** Blue "wave" wallpaper similar to the real device. */
+export function drawWallpaper(ctx: CanvasRenderingContext2D, W: number, H: number) {
+  const bg = ctx.createLinearGradient(0, 0, W, H);
+  bg.addColorStop(0, "#0A1A5C");
+  bg.addColorStop(1, "#122B8F");
+  ctx.fillStyle = bg;
+  ctx.fillRect(0, 0, W, H);
+  const wave = ctx.createLinearGradient(W * 0.3, 0, W, H);
+  wave.addColorStop(0, "#3D63F0");
+  wave.addColorStop(1, "#1C3CC4");
+  ctx.fillStyle = wave;
+  ctx.beginPath();
+  ctx.moveTo(W * 0.42, 0);
+  ctx.bezierCurveTo(W * 0.2, H * 0.25, W * 0.75, H * 0.4, W * 0.48, H * 0.62);
+  ctx.bezierCurveTo(W * 0.25, H * 0.8, W * 0.55, H * 0.95, W * 0.5, H);
+  ctx.lineTo(W, H);
+  ctx.lineTo(W, 0);
+  ctx.closePath();
+  ctx.fill();
+  const glow = ctx.createRadialGradient(W * 0.85, H * 0.15, 10, W * 0.85, H * 0.15, W * 0.7);
+  glow.addColorStop(0, "rgba(140,170,255,0.45)");
+  glow.addColorStop(1, "rgba(140,170,255,0)");
+  ctx.fillStyle = glow;
+  ctx.fillRect(0, 0, W, H);
+}
+
+/** Home screen texture — list launcher, matching the real device's UI layout. */
+export function makeScreenCanvas(labels: Record<AppId, string> = APP_LABELS_EN, time = "12:48", date = "Mon, Nov 9") {
+  date = date || "Mon, Nov 9";
+  const W = 768, H = 952;
   const c = document.createElement("canvas");
   c.width = W; c.height = H;
   const ctx = c.getContext("2d")!;
-
-  // wallpaper
-  const bg = ctx.createLinearGradient(0, 0, W, H);
-  bg.addColorStop(0, "#0E1118");
-  bg.addColorStop(1, "#1B2130");
-  ctx.fillStyle = bg;
-  ctx.fillRect(0, 0, W, H);
-  const glow = ctx.createRadialGradient(W * 0.15, H * 0.8, 10, W * 0.15, H * 0.8, W * 0.9);
-  glow.addColorStop(0, "rgba(64,140,255,0.35)");
-  glow.addColorStop(1, "rgba(64,140,255,0)");
-  ctx.fillStyle = glow;
-  ctx.fillRect(0, 0, W, H);
+  drawWallpaper(ctx, W, H);
 
   // status bar
   ctx.fillStyle = "#FFFFFF";
-  ctx.font = `600 34px ${FONT}`;
+  ctx.font = `600 32px ${FONT}`;
   ctx.textBaseline = "middle";
-  ctx.fillText(time, 34, 42);
-  // battery
-  roundRect(ctx, W - 76, 28, 42, 26, 6); ctx.fill();
-  ctx.fillRect(W - 33, 36, 4, 10);
-  // wifi
-  ctx.save(); ctx.translate(W - 116, 56);
+  ctx.fillText(time, 30, 38);
+  roundRect(ctx, W - 74, 26, 40, 24, 6); ctx.fill();
+  ctx.fillRect(W - 33, 33, 4, 10);
+  ctx.save(); ctx.translate(W - 112, 50);
   ctx.strokeStyle = "#FFFFFF"; ctx.lineWidth = 5; ctx.lineCap = "round";
-  for (const r of [8, 17, 26]) { ctx.beginPath(); ctx.arc(0, 0, r, -Math.PI * 0.78, -Math.PI * 0.22); ctx.stroke(); }
+  for (const r of [8, 16, 24]) { ctx.beginPath(); ctx.arc(0, 0, r, -Math.PI * 0.78, -Math.PI * 0.22); ctx.stroke(); }
   ctx.beginPath(); ctx.arc(0, 0, 3, 0, Math.PI * 2); ctx.fill();
   ctx.restore();
-  // signal
-  for (let i = 0; i < 4; i++) ctx.fillRect(W - 210 + i * 11, 54 - (i + 1) * 6, 7, (i + 1) * 6);
+  for (let i = 0; i < 4; i++) ctx.fillRect(W - 196 + i * 11, 50 - (i + 1) * 6, 7, (i + 1) * 6);
 
-  // icon grid
-  const size = 156;
-  const cols = [W / 6, W / 2, (W * 5) / 6];
-  const rowsY = [128, 418, 708];
-  APPS.forEach((app, i) => {
-    const cx = cols[i % 3];
-    const y = rowsY[Math.floor(i / 3)];
-    drawAppIcon(ctx, app.id, cx - size / 2, y, size);
-    ctx.fillStyle = "rgba(255,255,255,0.92)";
-    ctx.font = `500 30px ${FONT}`;
-    ctx.textAlign = "center";
-    ctx.textBaseline = "top";
-    ctx.fillText(labels[app.id], cx, y + size + 16);
-    ctx.textAlign = "left";
+  // date header
+  ctx.font = `600 34px ${FONT}`;
+  ctx.fillText(date, 120, 150);
+
+  // app list
+  const rowH = 84, top = 200, icon = 58;
+  LAUNCHER_ORDER.slice(0, 8).forEach((id, i) => {
+    const y = top + i * rowH;
+    if (i === 2) {
+      ctx.fillStyle = "rgba(255,255,255,0.28)";
+      roundRect(ctx, 96, y - 8, W - 250, rowH - 6, 22); ctx.fill();
+    }
+    drawAppIcon(ctx, id, 120, y + 4, icon);
+    ctx.fillStyle = "#FFFFFF";
+    ctx.font = `500 32px ${FONT}`;
+    ctx.textBaseline = "middle";
+    ctx.fillText(labels[id], 205, y + 4 + icon / 2);
   });
-  // page dots
+
+  // A–Z index
   ctx.fillStyle = "rgba(255,255,255,0.9)";
-  ctx.beginPath(); ctx.arc(W / 2 - 14, H - 34, 6, 0, Math.PI * 2); ctx.fill();
-  ctx.fillStyle = "rgba(255,255,255,0.35)";
-  ctx.beginPath(); ctx.arc(W / 2 + 14, H - 34, 6, 0, Math.PI * 2); ctx.fill();
+  ctx.font = `600 22px ${FONT}`;
+  ctx.textAlign = "center";
+  const step = (H - 520) / AZ.length;
+  [...AZ].forEach((ch, i) => ctx.fillText(ch, W - 52, 230 + i * step));
+  ctx.textAlign = "left";
   return c;
 }
 
@@ -111,9 +132,9 @@ export function makeKeyLabelCanvas(key: KeyDef, aspect: number) {
   const c = document.createElement("canvas");
   c.width = W; c.height = H;
   const ctx = c.getContext("2d")!;
-  ctx.fillStyle = "#D9DADE";
+  ctx.fillStyle = "#F2F2F4";
   if (key.icon) {
-    const s = H * 0.62;
+    const s = H * (key.icon === "menu" ? 0.7 : 0.6);
     ctx.save();
     ctx.translate(W / 2 - s / 2, H / 2 - s / 2);
     ctx.scale(s / 24, s / 24);

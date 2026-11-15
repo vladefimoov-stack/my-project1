@@ -56,34 +56,35 @@ function extrudeCentered(shape: THREE.Shape, depth: number, bevel: number, segme
 
 export type PhoneModelProps = {
   screenLabels?: Record<AppId, string>;
+  screenDate?: string;
   bodyColor?: string;
   keyColor?: string;
 };
 
 export const PhoneModel = forwardRef<THREE.Group, PhoneModelProps>(function PhoneModel(
-  { screenLabels, bodyColor = product.colours[0].body, keyColor = product.colours[0].keys },
+  { screenLabels, screenDate, bodyColor = product.colours[0].body, keyColor = product.colours[0].keys },
   ref
 ) {
   const layout = useMemo(() => keypadLayout(), []);
 
   const geo = useMemo(() => {
-    const body = extrudeCentered(roundedRectShape(W - 4.4, H - 4.4, DEVICE.cornerRadius - 2.2), D, 2.2, 6);
-    const glass = extrudeCentered(roundedRectShape(DEVICE.glass.width, DEVICE.glass.height, DEVICE.cornerRadius - 2.4, 1.6), 0.8, 0.25, 3);
+    const body = extrudeCentered(roundedRectShape(W - 2.8, H - 2.8, DEVICE.cornerRadius - 1.4), D, 1.4, 6);
+    const glass = extrudeCentered(roundedRectShape(DEVICE.glass.width, DEVICE.glass.height, DEVICE.cornerRadius - 1, 0.8), 0.6, 0.15, 3);
     const plateH = layout.top - layout.bottom + 1.6;
-    const plate = extrudeCentered(roundedRectShape(W - DEVICE.keypad.side * 2 + 1.4, plateH, 2, 4.6), 0.5, 0.1, 2);
+    const plate = extrudeCentered(roundedRectShape(W - DEVICE.keypad.side * 2 + 0.8, plateH, 0.8, DEVICE.cornerRadius - 1.3), 0.4, 0.08, 2);
     const camModule = extrudeCentered(roundedRectShape(DEVICE.camera.w, DEVICE.camera.h, DEVICE.camera.w / 2), 1.1, 0.35, 4);
-    const earpiece = extrudeCentered(roundedRectShape(9, 1, 0.5), 0.2, 0.05, 2);
+    const earpiece = extrudeCentered(roundedRectShape(10, 0.9, 0.45), 0.15, 0.04, 2);
     const usb = extrudeCentered(roundedRectShape(8.6, 2.8, 1.4), 1, 0.1, 2);
     const rocker = extrudeCentered(roundedRectShape(1.6, 18, 0.8), 1.4, 0.3, 3);
     // D-pad: lathe profiles (outer ring + centre button) for a machined look
     const ringPts = [
-      [DEVICE.dpad.inner + 0.7, 0], [DEVICE.dpad.inner + 0.7, 0.75], [DEVICE.dpad.inner + 1.0, 1.0],
-      [DEVICE.dpad.outer - 0.4, 1.0], [DEVICE.dpad.outer, 0.7], [DEVICE.dpad.outer, 0],
+      [DEVICE.dpad.inner + 0.6, 0], [DEVICE.dpad.inner + 0.6, 0.4], [DEVICE.dpad.inner + 0.8, 0.55],
+      [DEVICE.dpad.outer - 0.3, 0.55], [DEVICE.dpad.outer, 0.4], [DEVICE.dpad.outer, 0],
     ].reverse().map(([r, y]) => new THREE.Vector2(r, y));
     const dpadRing = new THREE.LatheGeometry(ringPts, 64);
     dpadRing.rotateX(Math.PI / 2);
     const btnPts = [
-      [0, 1.05], [DEVICE.dpad.inner - 0.6, 1.0], [DEVICE.dpad.inner - 0.1, 0.85], [DEVICE.dpad.inner, 0.5], [DEVICE.dpad.inner, 0],
+      [0, 0.62], [DEVICE.dpad.inner - 0.5, 0.6], [DEVICE.dpad.inner - 0.1, 0.5], [DEVICE.dpad.inner, 0.3], [DEVICE.dpad.inner, 0],
     ].reverse().map(([r, y]) => new THREE.Vector2(r, y));
     const dpadBtn = new THREE.LatheGeometry(btnPts, 64);
     dpadBtn.rotateX(Math.PI / 2);
@@ -92,19 +93,19 @@ export const PhoneModel = forwardRef<THREE.Group, PhoneModelProps>(function Phon
 
   const tex = useMemo(() => {
     if (typeof document === "undefined") return null;
-    const screen = canvasTexture(makeScreenCanvas(screenLabels));
+    const screen = canvasTexture(makeScreenCanvas(screenLabels, "12:48", screenDate));
     const logo = canvasTexture(makeBackLogoCanvas(product.brand));
     const keyLabels = new Map<string, THREE.CanvasTexture>();
     for (const k of layout.keys) keyLabels.set(k.def.id, canvasTexture(makeKeyLabelCanvas(k.def, k.w / k.h)));
     return { screen, logo, keyLabels };
-  }, [layout, screenLabels]);
+  }, [layout, screenLabels, screenDate]);
 
   const mat = useMemo(
     () => ({
-      body: new THREE.MeshPhysicalMaterial({ color: bodyColor, roughness: 0.42, metalness: 0.18, clearcoat: 0.3, clearcoatRoughness: 0.45 }),
-      keys: new THREE.MeshPhysicalMaterial({ color: keyColor, roughness: 0.5, metalness: 0.06, clearcoat: 0.2, clearcoatRoughness: 0.5 }),
-      plate: new THREE.MeshStandardMaterial({ color: "#0E0E10", roughness: 0.85 }),
-      glass: new THREE.MeshPhysicalMaterial({ color: "#040405", roughness: 0.06, metalness: 0.1, clearcoat: 1, clearcoatRoughness: 0.03 }),
+      body: new THREE.MeshPhysicalMaterial({ color: bodyColor, roughness: 0.62, metalness: 0.08, clearcoat: 0.12, clearcoatRoughness: 0.6 }),
+      keys: new THREE.MeshPhysicalMaterial({ color: keyColor, roughness: 0.5, metalness: 0.05, clearcoat: 0.3, clearcoatRoughness: 0.45 }),
+      plate: new THREE.MeshStandardMaterial({ color: "#040405", roughness: 0.9 }),
+      glass: new THREE.MeshPhysicalMaterial({ color: "#020203", roughness: 0.08, metalness: 0, clearcoat: 1, clearcoatRoughness: 0.04, envMapIntensity: 0.35 }),
       dark: new THREE.MeshStandardMaterial({ color: "#060607", roughness: 0.6 }),
       lens: new THREE.MeshPhysicalMaterial({ color: "#07080B", roughness: 0.02, metalness: 0.3, clearcoat: 1, clearcoatRoughness: 0 }),
       lensRing: new THREE.MeshStandardMaterial({ color: "#9A9CA3", roughness: 0.28, metalness: 1 }),
@@ -129,7 +130,7 @@ export const PhoneModel = forwardRef<THREE.Group, PhoneModelProps>(function Phon
 
   const glassY = H / 2 - DEVICE.glass.top - DEVICE.glass.height / 2;
   const screenY = H / 2 - DEVICE.screen.top - DEVICE.screen.height / 2;
-  const keyDepth = 1.0;
+  const keyDepth = 0.45;
   const cam = { x: W / 2 - DEVICE.camera.x, y: H / 2 - DEVICE.camera.y };
 
   return (
@@ -138,39 +139,43 @@ export const PhoneModel = forwardRef<THREE.Group, PhoneModelProps>(function Phon
       <mesh name="Body" geometry={geo.body} material={mat.body} castShadow receiveShadow />
 
       {/* ── Front: glass + display ───────────── */}
-      <mesh name="FrontGlass" geometry={geo.glass} material={mat.glass} position={[0, glassY, FRONT + 0.2]} />
+      <mesh name="FrontGlass" geometry={geo.glass} material={mat.glass} position={[0, glassY, FRONT + 0.15]} />
       {tex && (
-        <mesh name="Display" position={[0, screenY, FRONT + 0.61]}>
+        <mesh name="Display" position={[0, screenY, FRONT + 0.46]}>
           <planeGeometry args={[DEVICE.screen.width, DEVICE.screen.height]} />
           <meshBasicMaterial map={tex.screen} toneMapped={false} />
         </mesh>
       )}
-      <mesh name="Earpiece" geometry={geo.earpiece} material={mat.dark} position={[0, H / 2 - DEVICE.glass.top - 3.4, FRONT + 0.62]} />
+      <mesh name="Earpiece" geometry={geo.earpiece} material={mat.dark} position={[0, H / 2 - 3.6, FRONT + 0.47]} />
+      <mesh name="FrontCamera" position={[-W / 2 + DEVICE.frontCamera.x, H / 2 - DEVICE.frontCamera.y, FRONT + 0.47]}>
+        <circleGeometry args={[DEVICE.frontCamera.r, 24]} />
+        <meshPhysicalMaterial color="#0B0D14" roughness={0.05} clearcoat={1} />
+      </mesh>
 
       {/* ── Keypad ───────────────────────────── */}
       <mesh
         name="KeypadPlate"
         geometry={geo.plate}
         material={mat.plate}
-        position={[0, (layout.top + layout.bottom) / 2, FRONT + 0.05]}
+        position={[0, (layout.top + layout.bottom) / 2, FRONT + 0.02]}
       />
       {layout.keys.map((k) => (
-        <group key={k.def.id} name={`Key_${k.def.id}`} position={[k.x, k.y, FRONT + keyDepth / 2 + 0.1]}>
-          <RoundedBox args={[k.w, k.h, keyDepth]} radius={0.45} smoothness={3} material={mat.keys} castShadow />
+        <group key={k.def.id} name={`Key_${k.def.id}`} position={[k.x, k.y, FRONT + keyDepth / 2 + 0.05]}>
+          <RoundedBox args={[k.w, k.h, keyDepth]} radius={0.18} smoothness={3} material={mat.keys} castShadow />
           {tex && (
             <mesh position={[0, 0, keyDepth / 2 + 0.01]}>
-              <planeGeometry args={[k.w * 0.86, k.h * 0.86]} />
+              <planeGeometry args={[k.w * 0.9, k.h * 0.9]} />
               <meshBasicMaterial map={tex.keyLabels.get(k.def.id)} transparent toneMapped={false} depthWrite={false} />
             </mesh>
           )}
         </group>
       ))}
-      <group name="DPad" position={[0, layout.dpadY, FRONT + 0.1]}>
+      <group name="DPad" position={[0, layout.dpadY, FRONT + 0.05]}>
         <mesh name="DPadRing" geometry={geo.dpadRing} material={mat.keys} castShadow />
         <mesh name="DPadCentre" geometry={geo.dpadBtn} material={mat.keys} castShadow />
         <mesh position={[0, 0, 0.02]}>
           <circleGeometry args={[DEVICE.dpad.outer + 0.3, 64]} />
-          <meshStandardMaterial color="#0E0E10" roughness={0.85} />
+          <meshStandardMaterial color="#040405" roughness={0.9} />
         </mesh>
       </group>
 

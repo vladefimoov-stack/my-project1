@@ -33,7 +33,7 @@ export function Header({ home = true }: { home?: boolean }) {
   const base = home ? "" : `/${locale}`;
   const links = [
     { href: `${base}#why`, label: dict.nav.why },
-    { href: `${base}#product`, label: dict.nav.product },
+    { href: `${base}#top`, label: dict.nav.product },
     { href: `${base}#demo`, label: dict.nav.demo },
     { href: `${base}#faq`, label: dict.nav.faq },
   ];

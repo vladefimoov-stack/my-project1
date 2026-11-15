@@ -3,7 +3,9 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useI18n } from "@/i18n/I18nProvider";
-import { APPS, type AppId } from "@/lib/apps";
+import type { AppId } from "@/lib/apps";
+import { AZ, LAUNCHER_ORDER } from "@/lib/launcher";
+import { launcherDate } from "@/lib/launcher";
 import { DEVICE, KEY_GLYPHS, keypadLayout, type KeyId } from "@/lib/device";
 import { PhoneContext, WALLPAPERS, type KeyHandler, type PhoneSettings } from "./context";
 import { AppIcon } from "./AppIcon";
@@ -48,29 +50,33 @@ function StatusBar({ dark, time }: { dark: boolean; time: string }) {
   );
 }
 
-function Home({ focus, dark, onOpen, showFocus }: { focus: number; dark: boolean; onOpen: (id: AppId) => void; showFocus: boolean }) {
+function Home({ focus, onOpen, showFocus, date }: { focus: number; onOpen: (id: AppId) => void; showFocus: boolean; date: string }) {
   const { dict } = useI18n();
   return (
-    <div className="flex flex-1 flex-col px-[0.6em] pt-[0.7em]">
-      <ul className="grid grid-cols-3 gap-y-[0.9em]">
-        {APPS.map((a, i) => (
-          <li key={a.id} className="flex justify-center">
-            <button
-              type="button"
-              onClick={() => onOpen(a.id)}
-              className={`group flex w-[6.6em] flex-col items-center gap-[0.35em] rounded-[1em] py-[0.25em] outline-none transition-colors ${
-                showFocus && focus === i ? "bg-white/15" : ""
-              }`}
-            >
-              <AppIcon id={a.id} className="h-[4.3em] w-[4.3em] drop-shadow-[0_0.15em_0.3em_rgba(0,0,0,0.35)] transition-transform duration-150 group-active:scale-90" />
-              <span className={`max-w-full truncate text-[0.82em] font-medium ${dark ? "text-white/95" : "text-white"}`}>{dict.demo.apps[a.id]}</span>
-            </button>
-          </li>
+    <div className="relative flex min-h-0 flex-1 text-white">
+      <div className="no-scrollbar min-h-0 flex-1 overflow-y-auto pb-[0.8em] pl-[2.6em] pr-[3.4em] pt-[1.2em]">
+        <p className="mb-[0.6em] text-[1.05em] font-semibold">{date}</p>
+        <ul className="flex flex-col gap-[0.15em]">
+          {LAUNCHER_ORDER.map((id, i) => (
+            <li key={id}>
+              <button
+                type="button"
+                onClick={() => onOpen(id)}
+                className={`flex w-full items-center gap-[0.8em] rounded-[0.7em] px-[0.5em] py-[0.35em] text-left outline-none transition-colors active:bg-white/25 ${
+                  (showFocus ? focus === i : i === 2) ? "bg-white/25" : ""
+                }`}
+              >
+                <AppIcon id={id} className="h-[1.9em] w-[1.9em] shrink-0 drop-shadow-[0_0.1em_0.2em_rgba(0,0,0,0.3)]" />
+                <span className="truncate text-[1em] font-medium">{dict.demo.apps[id]}</span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="pointer-events-none absolute right-[0.9em] top-[2.4em] flex flex-col items-center gap-[0.32em] text-[0.62em] font-semibold text-white/90" aria-hidden="true">
+        {[...AZ].map((ch) => (
+          <span key={ch} className="leading-none">{ch}</span>
         ))}
-      </ul>
-      <div className="mt-auto flex justify-center gap-[0.4em] pb-[0.8em]" aria-hidden="true">
-        <span className="h-[0.35em] w-[0.35em] rounded-full bg-white/90" />
-        <span className="h-[0.35em] w-[0.35em] rounded-full bg-white/35" />
       </div>
     </div>
   );
@@ -104,12 +110,12 @@ function AppView({ id }: { id: AppId }) {
 function KeyLabel({ main, sub, icon }: { main: string; sub?: string; icon?: keyof typeof KEY_GLYPHS }) {
   if (icon)
     return (
-      <svg viewBox="0 0 24 24" className="h-[52%] w-auto" fill="#D9DADE" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="h-[56%] w-auto" fill="#F2F2F4" aria-hidden="true">
         <path d={KEY_GLYPHS[icon]} fillRule="evenodd" />
       </svg>
     );
   return (
-    <span className="flex items-baseline gap-[0.18em] text-[#D9DADE]" aria-hidden="true">
+    <span className="flex items-baseline gap-[0.18em] text-[#F2F2F4]" aria-hidden="true">
       <span className="text-[1.45em] font-light leading-none">{main}</span>
       {sub && <span className="text-[0.55em] font-semibold tracking-wide">{sub}</span>}
     </span>
@@ -117,7 +123,7 @@ function KeyLabel({ main, sub, icon }: { main: string; sub?: string; icon?: keyo
 }
 
 const KEY_NAMES: Partial<Record<KeyId, string>> = {
-  softL: "Clock", softR: "Back", call: "Call", end: "Home / end call",
+  softL: "Menu", softR: "Back", call: "Call", end: "Home / end call",
   up: "Up", down: "Down", left: "Left", right: "Right", ok: "OK",
 };
 
@@ -129,7 +135,7 @@ export function VirtualPhone() {
   const layout = useMemo(() => keypadLayout(), []);
   const [app, setApp] = useState<AppId | null>(null);
   const [payload, setPayload] = useState<string | null>(null);
-  const [focus, setFocus] = useState(0);
+  const [focus, setFocus] = useState(2);
   const [showFocus, setShowFocus] = useState(false);
   const [clock, setClock] = useState(false);
   const [flash, setFlash] = useState<KeyId | null>(null);
@@ -138,7 +144,7 @@ export function VirtualPhone() {
     largeText: false,
     sounds: false,
     brightness: 1,
-    wallpaper: "night",
+    wallpaper: "wave",
   });
   const handlerRef = useRef<KeyHandler | null>(null);
   const audio = useRef<AudioContext | null>(null);
@@ -201,11 +207,10 @@ export function VirtualPhone() {
       // home screen navigation
       if (/^[0-9*#]$/.test(k)) return open("phone", k);
       setShowFocus(true);
-      if (k === "left") setFocus((f) => (f + 8) % 9);
-      if (k === "right") setFocus((f) => (f + 1) % 9);
-      if (k === "up") setFocus((f) => (f + 6) % 9);
-      if (k === "down") setFocus((f) => (f + 3) % 9);
-      if (k === "ok") open(APPS[focus].id);
+      const n = LAUNCHER_ORDER.length;
+      if (k === "up" || k === "left") setFocus((f) => (f + n - 1) % n);
+      if (k === "down" || k === "right") setFocus((f) => (f + 1) % n);
+      if (k === "ok") open(LAUNCHER_ORDER[focus]);
     },
     [app, beep, clock, focus, goHome, open]
   );
@@ -232,7 +237,7 @@ export function VirtualPhone() {
   const glass = DEVICE.glass;
   const dpad = DEVICE.dpad;
   const keyCls = (id: KeyId) =>
-    `vk absolute flex items-center justify-center rounded-[6%/12%] bg-gradient-to-b from-[#45464C] to-[#36373C] shadow-[inset_0_1px_0_rgba(255,255,255,0.12),0_1px_1px_rgba(0,0,0,0.5)] transition-[filter,transform] duration-75 outline-none focus-visible:ring-2 focus-visible:ring-white/70 ${
+    `vk absolute flex items-center justify-center rounded-[3%/6%] bg-gradient-to-b from-[#26272B] to-[#1C1D20] shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition-[filter,transform] duration-75 outline-none focus-visible:ring-2 focus-visible:ring-white/70 ${
       flash === id ? "brightness-125 translate-y-px" : ""
     }`;
 
@@ -249,7 +254,7 @@ export function VirtualPhone() {
       >
         {/* body */}
         <div
-          className="absolute inset-0 bg-gradient-to-br from-[#3A3B40] via-[#2B2C30] to-[#1E1F22] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.55),inset_0_0_0_1.5px_rgba(255,255,255,0.08),inset_0_2px_3px_rgba(255,255,255,0.12)]"
+          className="absolute inset-0 bg-gradient-to-br from-[#26272B] via-[#18191C] to-[#101113] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.6),inset_0_0_0_1.5px_rgba(255,255,255,0.1),inset_0_2px_3px_rgba(255,255,255,0.1)]"
           style={{ borderRadius: `${(DEVICE.cornerRadius / W) * 100}% / ${(DEVICE.cornerRadius / H) * 100}%` }}
         />
         {/* glass */}
@@ -260,10 +265,20 @@ export function VirtualPhone() {
             width: pct(glass.width, W),
             top: pct(glass.top, H),
             height: pct(glass.height, H),
-            borderRadius: `${((DEVICE.cornerRadius - 2.4) / glass.width) * 100}% ${((DEVICE.cornerRadius - 2.4) / glass.width) * 100}% 3% 3% / ${((DEVICE.cornerRadius - 2.4) / glass.height) * 100}% ${((DEVICE.cornerRadius - 2.4) / glass.height) * 100}% 2% 2%`,
+            borderRadius: `${((DEVICE.cornerRadius - 1) / glass.width) * 100}% ${((DEVICE.cornerRadius - 1) / glass.width) * 100}% 1.5% 1.5% / ${((DEVICE.cornerRadius - 1) / glass.height) * 100}% ${((DEVICE.cornerRadius - 1) / glass.height) * 100}% 1% 1%`,
           }}
         >
-          <span className="absolute left-1/2 top-[3.4%] h-[1.3%] w-[18%] -translate-x-1/2 rounded-full bg-[#1a1a1d]" aria-hidden="true" />
+          <span className="absolute left-1/2 h-[1.2%] w-[19%] -translate-x-1/2 rounded-full bg-[#1a1a1d]" style={{ top: pct(3.6 - glass.top - 0.45, glass.height) }} aria-hidden="true" />
+          <span
+            className="absolute rounded-full bg-[#0B0D14] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)]"
+            style={{
+              left: pct(DEVICE.frontCamera.x - (W - glass.width) / 2 - DEVICE.frontCamera.r, glass.width),
+              top: pct(DEVICE.frontCamera.y - glass.top - DEVICE.frontCamera.r, glass.height),
+              width: pct(DEVICE.frontCamera.r * 2, glass.width),
+              aspectRatio: "1",
+            }}
+            aria-hidden="true"
+          />
         </div>
         {/* screen */}
         <div
@@ -281,7 +296,7 @@ export function VirtualPhone() {
             style={{ fontSize: `calc(100cqw / 24 * ${settings.largeText ? 1.12 : 1})`, background: WALLPAPERS[settings.wallpaper] }}
           >
             <StatusBar dark time={time} />
-            <Home focus={focus} dark={settings.dark} onOpen={(id) => open(id)} showFocus={showFocus} />
+            <Home focus={focus} onOpen={(id) => open(id)} showFocus={showFocus} date={now ? launcherDate(locale, now) : launcherDate(locale)} />
             <AnimatePresence>
               {app && (
                 <motion.div
@@ -323,14 +338,14 @@ export function VirtualPhone() {
         </div>
         {/* keypad */}
         <div
-          className="absolute rounded-[3%/6%] bg-[#0E0E10]"
+          className="absolute rounded-[1.5%/3%] bg-[#040405]"
           style={{
-            left: pct(DEVICE.keypad.side - 0.7, W),
-            width: pct(W - DEVICE.keypad.side * 2 + 1.4, W),
-            top: pct(DEVICE.keypad.top - 0.8, H),
-            height: pct(layout.top - layout.bottom + 1.6, H),
-            borderBottomLeftRadius: "14% 9%",
-            borderBottomRightRadius: "14% 9%",
+            left: pct(DEVICE.keypad.side - 0.4, W),
+            width: pct(W - DEVICE.keypad.side * 2 + 0.8, W),
+            top: pct(DEVICE.keypad.top - 0.4, H),
+            height: pct(layout.top - layout.bottom + 0.8, H),
+            borderBottomLeftRadius: "8% 6%",
+            borderBottomRightRadius: "8% 6%",
           }}
           aria-hidden="true"
         />
@@ -354,7 +369,7 @@ export function VirtualPhone() {
           ))}
           {/* D-pad */}
           <div
-            className="absolute rounded-full bg-gradient-to-b from-[#45464C] to-[#323337] shadow-[inset_0_1px_0_rgba(255,255,255,0.14),0_1px_2px_rgba(0,0,0,0.6)]"
+            className="absolute rounded-full bg-gradient-to-b from-[#26272B] to-[#1A1B1E] shadow-[0_0_0_0.12em_#040405,inset_0_1px_0_rgba(255,255,255,0.1)]"
             style={{
               left: pct(W / 2 - dpad.outer, W),
               top: pct(H / 2 - layout.dpadY - dpad.outer, H),
@@ -387,7 +402,7 @@ export function VirtualPhone() {
               type="button"
               aria-label={KEY_NAMES.ok}
               onClick={() => press("ok")}
-              className={`vk absolute left-1/2 top-1/2 h-[50%] w-[50%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-b from-[#4A4B51] to-[#36373C] shadow-[0_0_0_0.18em_#1A1B1E,inset_0_1px_0_rgba(255,255,255,0.15)] outline-none focus-visible:ring-2 focus-visible:ring-white/70 ${
+              className={`absolute left-1/2 top-1/2 h-[50%] w-[50%] -translate-x-1/2 -translate-y-1/2 rounded-full transition-[filter] active:brightness-125 bg-gradient-to-b from-[#2A2B2F] to-[#1E1F22] shadow-[0_0_0_0.16em_#0A0A0C,inset_0_1px_0_rgba(255,255,255,0.12)] outline-none focus-visible:ring-2 focus-visible:ring-white/70 ${
                 flash === "ok" ? "brightness-125" : ""
               }`}
             />

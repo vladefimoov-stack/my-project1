@@ -18,6 +18,7 @@ type Props = {
   autoRotate: boolean;
   active: boolean; // false when scrolled out of view → stop rendering
   labels: Record<AppId, string>;
+  date?: string;
   onInteract: () => void;
   onReady?: () => void;
   /** wheel/pinch zoom — off in the hero so the page keeps scrolling */
@@ -89,7 +90,7 @@ function Rig({ request, autoRotate, onInteract, freeZoom, zoom }: Pick<Props, "r
   );
 }
 
-export default function ViewerCanvas({ request, autoRotate, active, labels, onInteract, onReady, freeZoom, zoom }: Props) {
+export default function ViewerCanvas({ request, autoRotate, active, labels, date, onInteract, onReady, freeZoom, zoom }: Props) {
   const dprMax = typeof window !== "undefined" && window.innerWidth < 768 ? 1.75 : 2;
   return (
     <Canvas
@@ -103,7 +104,7 @@ export default function ViewerCanvas({ request, autoRotate, active, labels, onIn
       aria-hidden="true"
     >
       <StudioLights />
-      <Phone screenLabels={labels} />
+      <Phone screenLabels={labels} screenDate={date} />
       <ContactShadows position={[0, -0.72, 0]} opacity={0.35} scale={3.5} blur={2.8} far={1.4} resolution={512} frames={1} />
       <Rig request={request} autoRotate={autoRotate} onInteract={onInteract} freeZoom={freeZoom} zoom={zoom} />
     </Canvas>

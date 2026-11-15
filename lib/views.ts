@@ -5,7 +5,7 @@ export type ViewId =
 
 export const VIEWS: Record<ViewId, { position: [number, number, number]; target: [number, number, number] }> = {
   front: { position: [0, 0.02, 3.3], target: [0, 0, 0] },
-  keypad: { position: [0.15, -0.75, 1.55], target: [0, -0.36, 0] },
+  keypad: { position: [0.15, -0.85, 1.95], target: [0, -0.38, 0] },
   back: { position: [0, 0.05, -3.3], target: [0, 0, 0] },
   side: { position: [3.2, 0.25, 0.55], target: [0, 0, 0] },
   edges: { position: [1.5, 1.9, 2.0], target: [0, 0.15, 0] },

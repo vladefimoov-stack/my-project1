@@ -78,16 +78,6 @@
     "zoomOut": "Zoom out",
     "provisionalShort": "Provisional 3D model, details to be verified"
   },
-  "presentation": {
-    "display": {
-      "title": "A screen that responds to touch.",
-      "text": "Tap app icons, scroll and swipe like on any smartphone — on a display sized to keep the phone compact."
-    },
-    "keypad": {
-      "title": "Keys you can feel.",
-      "text": "Individual tactile buttons for numbers, calls and navigation, plus a central circular control. Dial without looking."
-    }
-  },
   "specs": {
     "eyebrow": "Specifications",
     "title": "Technical details",

@@ -1,42 +1,42 @@
 {
   "hero": {
-    "width": 1514,
-    "height": 2437
+    "width": 1405,
+    "height": 2423
   },
   "front": {
-    "width": 1432,
-    "height": 2164
+    "width": 1346,
+    "height": 2154
   },
   "back": {
-    "width": 948,
-    "height": 2082
+    "width": 951,
+    "height": 2114
   },
   "threeQuarterFront": {
-    "width": 1414,
-    "height": 2395
+    "width": 1285,
+    "height": 2376
   },
   "threeQuarterBack": {
-    "width": 906,
-    "height": 2250
+    "width": 911,
+    "height": 2292
   },
   "side": {
-    "width": 446,
-    "height": 2231
+    "width": 430,
+    "height": 2275
   },
   "keypadClose": {
-    "width": 1619,
-    "height": 1903
+    "width": 1632,
+    "height": 1933
   },
   "screenClose": {
-    "width": 1833,
+    "width": 1836,
     "height": 2120
   },
   "edges": {
-    "width": 749,
-    "height": 1612
+    "width": 756,
+    "height": 1628
   },
   "scale": {
-    "width": 1831,
-    "height": 1823
+    "width": 1789,
+    "height": 1815
   }
 }

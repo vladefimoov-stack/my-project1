@@ -29,7 +29,7 @@ export function Hero() {
         };
 
   return (
-    <section ref={ref} className="relative overflow-hidden bg-white pt-16" aria-labelledby="hero-title">
+    <section id="top" ref={ref} className="relative overflow-hidden bg-white pt-16" aria-labelledby="hero-title">
       <div className="container-site grid min-h-[calc(100svh-64px)] grid-cols-[minmax(0,1fr)] items-center gap-6 pb-10 pt-8 lg:grid-cols-[1.05fr_1fr] lg:gap-10 lg:pb-16">
         <div className="relative z-10 max-w-xl text-center lg:text-left">
           <motion.p className="eyebrow" {...item(0)}>
