@@ -400,7 +400,7 @@
         },
         {
           "h": "Recipients",
-          "p": "Data may be processed by our service providers — website hosting (Vercel), email delivery (Resend) and courier services — only as far as necessary to provide their service. Some providers may process data outside the EEA (USA); in that case the European Commission's Standard Contractual Clauses apply."
+          "p": "Data may be processed by our service providers — website hosting (Vercel), order records (Google Sheets, Google), email delivery (Resend) and courier services — only as far as necessary to provide their service. Some providers may process data outside the EEA (USA); in that case the European Commission's Standard Contractual Clauses apply."
         },
         {
           "h": "Cookies",

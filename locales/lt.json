@@ -400,7 +400,7 @@
         },
         {
           "h": "Duomenų gavėjai",
-          "p": "Duomenis gali tvarkyti mūsų paslaugų teikėjai: svetainės talpinimo (Vercel) ir el. pašto siuntimo (Resend) paslaugų teikėjai bei kurjerių tarnybos – tik tiek, kiek būtina paslaugai suteikti. Kai kurie teikėjai duomenis gali tvarkyti už EEE ribų (JAV); tokiu atveju taikomos Europos Komisijos patvirtintos standartinės sutarčių sąlygos."
+          "p": "Duomenis gali tvarkyti mūsų paslaugų teikėjai: svetainės talpinimo (Vercel), užsakymų apskaitos („Google Sheets“, „Google“) ir el. pašto siuntimo (Resend) paslaugų teikėjai bei kurjerių tarnybos – tik tiek, kiek būtina paslaugai suteikti. Kai kurie teikėjai duomenis gali tvarkyti už EEE ribų (JAV); tokiu atveju taikomos Europos Komisijos patvirtintos standartinės sutarčių sąlygos."
         },
         {
           "h": "Slapukai",

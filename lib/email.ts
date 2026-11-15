@@ -11,6 +11,13 @@ export type EmailMessage = {
 
 export type SendResult = { ok: true; id: string } | { ok: false; reason: string };
 
+/** true when an email provider is set up (or the dev "log" provider is used) */
+export function emailConfigured() {
+  const provider = (process.env.EMAIL_PROVIDER || "resend").toLowerCase();
+  if (provider === "log") return process.env.NODE_ENV !== "production";
+  return Boolean(process.env.RESEND_API_KEY && process.env.EMAIL_FROM);
+}
+
 export const escapeHtml = (s: string) =>
   s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
 
