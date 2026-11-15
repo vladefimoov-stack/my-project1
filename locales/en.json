@@ -78,6 +78,16 @@
     "zoomOut": "Zoom out",
     "provisionalShort": "Provisional 3D model, details to be verified"
   },
+  "presentation": {
+    "display": {
+      "title": "A screen that responds to touch.",
+      "text": "Tap app icons, scroll and swipe like on any smartphone — on a display sized to keep the phone compact."
+    },
+    "keypad": {
+      "title": "Keys you can feel.",
+      "text": "Individual tactile buttons for numbers, calls and navigation, plus a central circular control. Dial without looking."
+    }
+  },
   "specs": {
     "eyebrow": "Specifications",
     "title": "Technical details",
@@ -259,30 +269,7 @@
     },
     "home": {
       "date": "{weekday}, {day} {month}"
-    },
-    "real": {
-      "badge": "Real device",
-      "caption": "Filmed on a real Keyline One",
-      "videos": [
-        "Beach",
-        "City"
-      ],
-      "play": "Play video",
-      "pause": "Pause video"
     }
-  },
-  "gallery": {
-    "eyebrow": "Real photos",
-    "title": "This is what it really looks like.",
-    "subtitle": "Frames from our videos of Keyline One in everyday use.",
-    "alts": [
-      "Home screen on the beach",
-      "Maps on the beach",
-      "Camera at sunset",
-      "Home screen in the city",
-      "Maps in the city",
-      "Camera in the city"
-    ]
   },
   "purchase": {
     "eyebrow": "Order",

@@ -18,14 +18,14 @@ export function Purchase() {
   return (
     <section id="order" aria-labelledby="order-title" className="bg-mist py-24 sm:py-32">
       <div className="container-site grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-        <Reveal className="relative mx-auto w-full max-w-[520px] overflow-hidden rounded-[32px] bg-white">
-          <div className="relative aspect-[720/980] w-full">
+        <Reveal className="relative overflow-hidden rounded-[32px] bg-white">
+          <div className="relative aspect-[4/5] w-full">
             <Image
-              src="/images/real/beach-launcher.webp"
+              src="/images/renders/threeQuarterFront.webp"
               alt={`${product.name} — ${colourNames[colour] ?? colour}`}
               fill
               sizes="(min-width:1024px) 600px, 100vw"
-              className="object-cover"
+              className="object-contain p-8"
             />
           </div>
         </Reveal>
