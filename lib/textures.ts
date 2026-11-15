@@ -70,7 +70,7 @@ export function drawWallpaper(ctx: CanvasRenderingContext2D, W: number, H: numbe
 /** Home screen texture — list launcher, matching the real device's UI layout. */
 export function makeScreenCanvas(labels: Record<AppId, string> = APP_LABELS_EN, time = "12:48", date = "Mon, Nov 9") {
   date = date || "Mon, Nov 9";
-  const W = 768, H = 952;
+  const W = 768, H = 1024;
   const c = document.createElement("canvas");
   c.width = W; c.height = H;
   const ctx = c.getContext("2d")!;
@@ -92,10 +92,10 @@ export function makeScreenCanvas(labels: Record<AppId, string> = APP_LABELS_EN, 
 
   // date header
   ctx.font = `600 34px ${FONT}`;
-  ctx.fillText(date, 120, 150);
+  ctx.fillText(date, 120, 158);
 
   // app list
-  const rowH = 84, top = 200, icon = 58;
+  const rowH = 92, top = 210, icon = 62;
   LAUNCHER_ORDER.slice(0, 8).forEach((id, i) => {
     const y = top + i * rowH;
     if (i === 2) {
@@ -113,7 +113,7 @@ export function makeScreenCanvas(labels: Record<AppId, string> = APP_LABELS_EN, 
   ctx.fillStyle = "rgba(255,255,255,0.9)";
   ctx.font = `600 22px ${FONT}`;
   ctx.textAlign = "center";
-  const step = (H - 520) / AZ.length;
+  const step = (H - 560) / AZ.length;
   [...AZ].forEach((ch, i) => ctx.fillText(ch, W - 52, 230 + i * step));
   ctx.textAlign = "left";
   return c;

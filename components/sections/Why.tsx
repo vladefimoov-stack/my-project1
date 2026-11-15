@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { useI18n } from "@/i18n/I18nProvider";
-import { fmt } from "@/i18n/dictionaries";
+import { fmt } from "@/i18n/fmt";
 import { Reveal } from "@/components/ui/Reveal";
 
 const ICONS = [

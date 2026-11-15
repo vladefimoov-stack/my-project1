@@ -9,6 +9,10 @@ import { Phone } from "./Phone";
 import { PhoneModel } from "./PhoneModel";
 import { StudioLights } from "./StudioLights";
 import { VIEWS, type ViewId } from "@/lib/views";
+import { isLocale } from "@/i18n/config";
+import { getDictionary } from "@/i18n/dictionaries";
+import { launcherDate } from "@/lib/launcher";
+import type { AppId } from "@/lib/apps";
 
 declare global {
   interface Window {
@@ -52,7 +56,7 @@ function Exporter() {
   const { scene } = useThree();
   useEffect(() => {
     window.__exportGLB = async () => {
-      const target = scene.getObjectByName("KeylineOne");
+      const target = scene.getObjectByName("KalmPhone");
       if (!target) throw new Error("model not found");
       const exporter = new GLTFExporter();
       const result = (await exporter.parseAsync(target, { binary: true, onlyVisible: true })) as ArrayBuffer;
@@ -65,8 +69,12 @@ function Exporter() {
   return null;
 }
 
-export default function RenderStage({ view, bg }: { view: string; bg?: string }) {
+export default function RenderStage({ view, bg, lang }: { view: string; bg?: string; lang?: string }) {
   const v = (view in VIEWS ? view : "hero") as ViewId;
+  const locale = isLocale(lang) ? lang : "en";
+  const labels = getDictionary(locale).demo.apps as Record<AppId, string>;
+  // fixed date so renders are reproducible
+  const date = launcherDate(locale, new Date(2026, 10, 9));
   return (
     <div style={{ position: "fixed", inset: 0, background: bg ? `#${bg}` : "transparent" }}>
       <Canvas
@@ -76,7 +84,7 @@ export default function RenderStage({ view, bg }: { view: string; bg?: string })
       >
         <CameraRig view={v} />
         <StudioLights />
-        {v === "scale" ? <PhoneModel /> : <Phone />}
+        {v === "scale" ? <PhoneModel screenLabels={labels} screenDate={date} /> : <Phone screenLabels={labels} screenDate={date} />}
         {v === "scale" && <BankCard />}
         {(v === "hero" || v === "threeQuarterFront" || v === "front" || v === "scale") && (
           <ContactShadows position={[0, -0.665, 0]} opacity={0.4} scale={4} blur={2.6} far={1.2} resolution={512} />

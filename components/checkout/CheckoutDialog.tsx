@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useI18n } from "@/i18n/I18nProvider";
-import { fmt } from "@/i18n/dictionaries";
+import { fmt } from "@/i18n/fmt";
 import { useCart, clampQty } from "@/components/layout/CartProvider";
 import { QuantityStepper } from "@/components/ui/QuantityStepper";
 import { formatPrice, product } from "@/config/product";
@@ -389,7 +389,7 @@ export function CheckoutDialog() {
                   <h3 className="text-[13px] font-medium uppercase tracking-[0.14em] text-stone">{c.summary}</h3>
                   <div className="mt-5 flex items-center gap-4">
                     <div className="relative h-24 w-16 shrink-0 rounded-xl bg-white">
-                      <Image src="/images/renders/front.webp" alt="" fill sizes="64px" className="object-contain p-1.5" />
+                      <Image src={`/images/renders/front-${locale}.webp`} alt="" fill sizes="64px" className="object-contain p-1.5" />
                     </div>
                     <div>
                       <p className="font-semibold">{product.name}</p>
@@ -410,7 +410,7 @@ export function CheckoutDialog() {
                       <dd>{formatPrice(total, locale)}</dd>
                     </div>
                   </dl>
-                  <p className="mt-6 text-[12px] leading-relaxed text-stone">{dict.purchase.testNotice}</p>
+                  <p className="mt-6 text-[12px] leading-relaxed text-stone">{dict.purchase.orderNotice}</p>
                 </aside>
               </div>
             )}

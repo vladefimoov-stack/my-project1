@@ -1,42 +1,66 @@
 {
-  "hero": {
-    "width": 1405,
-    "height": 2423
-  },
-  "front": {
-    "width": 1346,
-    "height": 2154
-  },
   "back": {
-    "width": 951,
-    "height": 2114
-  },
-  "threeQuarterFront": {
-    "width": 1285,
-    "height": 2376
+    "width": 901,
+    "height": 2061
   },
   "threeQuarterBack": {
-    "width": 911,
-    "height": 2292
+    "width": 854,
+    "height": 2230
   },
   "side": {
-    "width": 430,
-    "height": 2275
+    "width": 400,
+    "height": 2213
   },
   "keypadClose": {
-    "width": 1632,
-    "height": 1933
+    "width": 1532,
+    "height": 1887
   },
   "screenClose": {
-    "width": 1836,
+    "width": 1734,
     "height": 2120
   },
   "edges": {
-    "width": 756,
-    "height": 1628
+    "width": 708,
+    "height": 1579
   },
   "scale": {
-    "width": 1789,
-    "height": 1815
+    "width": 1799,
+    "height": 1810
+  },
+  "hero-en": {
+    "width": 1442,
+    "height": 2416
+  },
+  "hero-lt": {
+    "width": 1442,
+    "height": 2416
+  },
+  "hero-de": {
+    "width": 1442,
+    "height": 2416
+  },
+  "front-en": {
+    "width": 1362,
+    "height": 2151
+  },
+  "front-lt": {
+    "width": 1362,
+    "height": 2151
+  },
+  "front-de": {
+    "width": 1362,
+    "height": 2151
+  },
+  "threeQuarterFront-en": {
+    "width": 1346,
+    "height": 2372
+  },
+  "threeQuarterFront-lt": {
+    "width": 1346,
+    "height": 2372
+  },
+  "threeQuarterFront-de": {
+    "width": 1346,
+    "height": 2372
   }
 }

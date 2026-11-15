@@ -1,14 +1,11 @@
 {
   "meta": {
-    "title": "Keyline One — The phone for what matters. Not for endless scrolling.",
-    "description": "Keyline One is a compact phone with a real keypad and a small touchscreen, made for calls, messages, maps and work — not for endless feeds. Spend less time on your screen."
+    "title": "Kalm — The phone for what matters. Not for endless scrolling.",
+    "description": "Kalm is a compact phone with a real keypad and a small touchscreen, made for calls, messages, maps and work — not for endless feeds. Spend less time on your screen."
   },
   "common": {
     "skip": "Skip to content",
-    "pending": "To be confirmed",
-    "pendingVerification": "Pending supplier verification",
     "simulation": "Simulation",
-    "testPhase": "Test phase — no payments are processed",
     "close": "Close",
     "back": "Back"
   },
@@ -21,21 +18,21 @@
     "language": "Language",
     "menu": "Menu",
     "order": "Order",
-    "why": "Why Keyline"
+    "why": "Why Kalm"
   },
   "hero": {
-    "eyebrow": "Keyline One",
+    "eyebrow": "Kalm",
     "title1": "Do what matters.",
     "title2": "Skip the endless feed.",
     "subtitle": "A compact phone with real keys and a small touchscreen — for calls, messages, maps and work. Everything you need, without the habit of scrolling for hours.",
     "ctaDemo": "Try interactive demo",
-    "priceLabel": "Indicative price",
+    "priceLabel": "Price",
     "ctaOrder": "Order now · {price}"
   },
   "why": {
-    "eyebrow": "Why Keyline",
-    "title": "Your smartphone is built to keep you scrolling. Keyline One is built to let you go.",
-    "intro": "Feeds, notifications and autoplay are designed to hold your attention for as long as possible. Keyline One keeps what you actually need and makes the rest far less tempting — so the minutes you used to lose come back to you.",
+    "eyebrow": "Why Kalm",
+    "title": "Your smartphone is built to keep you scrolling. Kalm is built to let you go.",
+    "intro": "Feeds, notifications and autoplay are designed to hold your attention for as long as possible. Kalm keeps what you actually need and makes the rest far less tempting — so the minutes you used to lose come back to you.",
     "points": [
       {
         "title": "Only the essentials",
@@ -75,33 +72,29 @@
     "autoRotate": "Auto-rotate",
     "hint": "Drag to rotate",
     "zoomIn": "Zoom in",
-    "zoomOut": "Zoom out",
-    "provisionalShort": "Provisional 3D model, details to be verified"
+    "zoomOut": "Zoom out"
   },
   "specs": {
     "eyebrow": "Specifications",
     "title": "Technical details",
-    "note": "We only publish specifications confirmed by the manufacturer. Values marked “To be confirmed” are being verified.",
     "labels": {
-      "display": "Display",
+      "display": "Touchscreen",
       "os": "Operating system",
       "processor": "Processor",
-      "ram": "RAM",
-      "storage": "Internal storage",
+      "memory": "RAM / storage",
       "battery": "Battery",
-      "camera": "Camera",
-      "sim": "SIM",
-      "network": "Network",
+      "connectivity": "Connectivity",
+      "connector": "Connector",
       "dimensions": "Dimensions",
       "weight": "Weight",
-      "colours": "Colours"
+      "inBox": "In the box"
     }
   },
   "demo": {
     "eyebrow": "Interactive demo",
     "title": "Try it right here.",
     "subtitle": "Tap the screen or use the keypad. Open apps, browse, dial a number — just like on the device.",
-    "disclaimer": "This is a website simulation with fictional demo content. It is not an Android emulator and does not connect to Telegram, WhatsApp, YouTube or any other service. App availability on the real device is subject to verification.",
+    "disclaimer": "This is a website simulation with demo content. It is not an Android emulator and does not connect to Telegram, WhatsApp, YouTube or any other service.",
     "keysHint": "Tip: arrows / Enter / Backspace on your keyboard also work.",
     "badge": "Demo",
     "apps": {
@@ -224,7 +217,7 @@
         },
         {
           "title": "Graphite",
-          "artist": "Keyline Sounds"
+          "artist": "Kalm Sounds"
         },
         {
           "title": "Night Train",
@@ -263,33 +256,33 @@
   },
   "purchase": {
     "eyebrow": "Order",
-    "title": "Keyline One",
+    "title": "Kalm",
     "description": "A compact phone with a physical keypad and a colour touchscreen — made for the essentials, not for endless scrolling.",
     "colour": "Colour",
     "colours": {
-      "graphite": "Graphite"
+      "black": "Black"
     },
     "quantity": "Quantity",
     "decrease": "Decrease quantity",
     "increase": "Increase quantity",
     "order": "Order now",
-    "testNotice": "We are currently testing interest in this product. Placing an order sends us a request — no payment is taken.",
     "delivery": {
       "title": "Delivery",
-      "text": "Delivery times and costs will be confirmed before sales open."
+      "text": "Free delivery across Europe. Lithuania: within 3 days. Other European countries: 7–10 days."
     },
     "returns": {
       "title": "Returns",
-      "text": "Return policy details will be published before sales open."
+      "text": "14-day returns, no reason needed."
     },
     "warranty": {
       "title": "Warranty",
-      "text": "Warranty terms will be published before sales open."
-    }
+      "text": "2-year guarantee."
+    },
+    "orderNotice": "Send your order and we'll contact you within 1 business day to confirm the details, delivery and payment."
   },
   "checkout": {
-    "title": "Test order",
-    "subtitle": "Leave your details and we will contact you when the Keyline One is available.",
+    "title": "Order",
+    "subtitle": "Leave your details — we'll contact you to confirm the order, delivery and payment.",
     "name": "Full name",
     "email": "Email",
     "country": "Country",
@@ -300,11 +293,11 @@
     "quantity": "Quantity",
     "summary": "Summary",
     "unitPrice": "Price",
-    "total": "Indicative total",
-    "noPayment": "No payment will be taken. No card details are required.",
+    "total": "Total",
+    "noPayment": "No payment is taken online — we'll arrange it with you when we confirm the order.",
     "consent": "I agree that my details are processed to handle this request, as described in the {privacy}.",
     "privacyLink": "privacy policy",
-    "submit": "Submit test order",
+    "submit": "Send order",
     "submitting": "Sending…",
     "retry": "Try again",
     "errors": {
@@ -320,9 +313,9 @@
       "invalid": "Some fields are invalid. Please check the form."
     },
     "success": {
-      "title": "Request received",
-      "text": "Thank you for your interest! Your request has been successfully received. This is currently a product testing phase, and no payment has been processed.",
-      "reference": "Reference",
+      "title": "Order received",
+      "text": "Thank you! We've received your order and will contact you shortly to confirm the details, delivery and payment.",
+      "reference": "Order number",
       "done": "Done"
     }
   },
@@ -331,40 +324,40 @@
     "title": "Questions & answers",
     "items": [
       {
-        "q": "How does Keyline One help me spend less time on my phone?",
+        "q": "How does Kalm help me spend less time on my phone?",
         "a": "It is designed for purposeful use. The compact screen and physical keypad make calls, messages and quick tasks easy, while long scrolling sessions become much less comfortable. You can use it as your everyday phone and keep a larger device at home for the occasional task that really needs it. How much time you save depends on your habits."
       },
       {
         "q": "Is this a smartphone or a traditional button phone?",
-        "a": "Both. Keyline One has a colour touchscreen in the upper half and a full physical keypad in the lower half. You can navigate with touch, with the keys, or with both."
+        "a": "Both. Kalm has a colour touchscreen in the upper half and a full physical keypad in the lower half. You can navigate with touch, with the keys, or with both."
       },
       {
         "q": "Can I install applications?",
-        "a": "The device is designed for app use, and the reference units run apps. Which app store and operating system version ship with the final product is still being confirmed with the manufacturer. We will publish it here before sales open."
+        "a": "Yes. Kalm runs Android 11, so you can install Android apps — messengers, maps, music and more. The 2.8\" touchscreen and the keypad make quick tasks easy without inviting endless scrolling."
       },
       {
         "q": "Does it support WhatsApp?",
-        "a": "This is being verified on production units. We will only confirm WhatsApp support once we have tested it ourselves."
+        "a": "Yes. WhatsApp is an Android app and can be installed on Kalm (Android 11)."
       },
       {
         "q": "Does it support Telegram?",
-        "a": "This is being verified on production units. We will only confirm Telegram support once we have tested it ourselves."
+        "a": "Yes. Telegram can be installed on Kalm (Android 11)."
       },
       {
-        "q": "Does it have 4G?",
-        "a": "4G support and the exact network bands are being confirmed with the manufacturer. Please check back before ordering."
+        "q": "Which connections does it have?",
+        "a": "Wi-Fi, Bluetooth and a mobile hotspot. If you need to check compatibility with your mobile operator, send us a message and we'll help."
       },
       {
         "q": "What is included in the package?",
-        "a": "The package contents will be confirmed before sales open."
+        "a": "The Kalm phone and a USB-A → USB-C charging cable."
       },
       {
         "q": "How long does delivery take?",
-        "a": "Delivery times will be confirmed before sales open. During the current test phase no orders are shipped."
+        "a": "Delivery is free across Europe: within 3 days in Lithuania and 7–10 days to other European countries, counted from order confirmation."
       },
       {
         "q": "What is the return policy?",
-        "a": "For orders within the EU you will have at least the statutory 14-day right of withdrawal. Full return terms will be published before sales open."
+        "a": "You can return the phone within 14 days of receiving it, no reason needed. A 2-year guarantee applies. Details are in Shipping and Returns."
       }
     ]
   },
@@ -376,8 +369,7 @@
     "privacy": "Privacy Policy",
     "terms": "Terms and Conditions",
     "shipping": "Shipping and Returns",
-    "rights": "All rights reserved.",
-    "testPhase": "This website is in a product testing phase. No payments are processed and no orders are shipped."
+    "rights": "All rights reserved."
   },
   "cookies": {
     "text": "We only use strictly necessary storage (e.g. to remember your language). No tracking or advertising cookies.",
@@ -385,39 +377,38 @@
     "more": "Privacy policy"
   },
   "legal": {
-    "draft": "Template — to be completed and reviewed by a legal professional before launch.",
     "updated": "Last updated",
     "backHome": "Back to home",
     "privacy": {
       "title": "Privacy Policy",
       "sections": [
         {
-          "h": "Who we are",
-          "p": "The controller of your personal data is {entity}, {address}. Contact: {email}."
+          "h": "Data controller",
+          "p": "The controller of your personal data is {entity}. Company details are shown at the top of this page."
         },
         {
           "h": "What data we collect",
-          "p": "When you submit a test order we collect your name, email address, country, optional phone number, selected quantity, selected language and the time of submission. We also process your IP address briefly to protect the form against abuse (rate limiting) and to choose a suitable website language."
+          "p": "When you place an order you provide your name, email address, country, (optionally) phone number and quantity; we also record the selected language and the time of submission. When confirming the order we additionally receive your delivery address and payment information.\nWe briefly process your IP address to protect the website against abuse and to choose a suitable language."
         },
         {
-          "h": "Why we process it",
-          "p": "To respond to your request and to inform you about the product's availability (Art. 6(1)(b) GDPR — steps prior to a contract) and to protect our website (Art. 6(1)(f) GDPR — legitimate interest)."
+          "h": "Purposes and legal bases",
+          "p": "Receiving, confirming and fulfilling your order and communicating with you (Art. 6(1)(b) GDPR — performance of a contract and pre-contractual steps).\nMeeting accounting and tax obligations (Art. 6(1)(c) GDPR).\nKeeping the website secure (Art. 6(1)(f) GDPR — legitimate interest)."
         },
         {
-          "h": "How long we keep it",
-          "p": "Test order requests are stored for {days} days and then deleted, unless you ask us to delete them earlier."
+          "h": "Retention",
+          "p": "Data of completed orders is kept as long as needed to fulfil the order and guarantee obligations; accounting documents are kept for the period required by law (up to 10 years). Requests that did not lead to a purchase are deleted after {days} days."
         },
         {
-          "h": "Who receives it",
-          "p": "Your request is delivered by email through our email service provider, acting as a processor. [List processors, e.g. hosting and email providers, and any transfers outside the EU.]"
+          "h": "Recipients",
+          "p": "Data may be processed by our service providers — website hosting (Vercel), email delivery (Resend) and courier services — only as far as necessary to provide their service. Some providers may process data outside the EEA (USA); in that case the European Commission's Standard Contractual Clauses apply."
         },
         {
-          "h": "Cookies and storage",
-          "p": "We use only strictly necessary storage: a cookie and local storage entry that remember your language. We do not use analytics or advertising cookies."
+          "h": "Cookies",
+          "p": "We only use strictly necessary storage — a cookie and a local storage entry that remember your language and bag. We do not use analytics or advertising cookies."
         },
         {
           "h": "Your rights",
-          "p": "You have the right to access, rectify, erase, restrict and port your data, and to object to processing. You may also lodge a complaint with your supervisory authority (in Lithuania: State Data Protection Inspectorate; in Germany: the data protection authority of your federal state)."
+          "p": "You have the right to access, rectify and erase your data, to restrict its processing, to data portability and to object to processing. To exercise these rights, email us.\nYou may also lodge a complaint with the State Data Protection Inspectorate of Lithuania (www.vdai.lrv.lt) or the data protection authority of your country."
         }
       ]
     },
@@ -425,24 +416,44 @@
       "title": "Terms and Conditions",
       "sections": [
         {
-          "h": "Test phase",
-          "p": "This website is currently used to test interest in the product. Submitting a test order does not create a purchase contract, no payment is taken and no product is shipped."
+          "h": "General",
+          "p": "These terms set out the rights, obligations and liability of the buyer and the seller, {entity} (the \"Seller\"), when products are ordered through this website.\nBy placing an order, the buyer confirms that they have read and accept these terms. The Seller's details are shown at the top of this page."
         },
         {
-          "h": "Seller",
-          "p": "{entity}, {address}, registration no. {reg}, VAT no. {vat}."
+          "h": "Orders and conclusion of the contract",
+          "p": "The buyer fills in the order form on the website. Within 1 business day of receiving the order, the Seller contacts the buyer by email or phone to confirm the quantity, price, delivery address and payment method.\nThe sales contract is concluded when the Seller confirms the order and the buyer pays for the product in the agreed way."
         },
         {
-          "h": "Prices",
-          "p": "Prices shown are indicative and include VAT where applicable. Final prices will be confirmed before sales open."
+          "h": "Prices and payment",
+          "p": "Prices are shown in euros and are final. Delivery is free of charge.\nNo payments are taken on the website and no card details are requested — the payment method is agreed with the buyer when the order is confirmed."
         },
         {
-          "h": "Product information",
-          "p": "Product images include renders of a provisional 3D model. Specifications marked “To be confirmed” are not yet verified."
+          "h": "Delivery",
+          "p": "Products are delivered free of charge: within 3 days in Lithuania and within 7–10 days to other European countries, counted from order confirmation and payment. See \"Shipping and Returns\" for details.\nOwnership and the risk of accidental loss pass to the buyer when the product is handed over to them."
         },
         {
-          "h": "Governing law",
-          "p": "[To be completed.]"
+          "h": "Right of withdrawal",
+          "p": "A consumer may withdraw from the contract within 14 days of receiving the product without giving a reason, by notifying the Seller in writing (by email) and stating the order number.\nThe product must be returned within 14 days of sending the notice. The money, including the original delivery cost, is refunded within 14 days of receiving the notice using the same payment method; the Seller may withhold the refund until the product has been received.\nThe buyer bears the direct cost of returning the product, unless it is defective or not what was ordered. The buyer is liable for any loss of value resulting from handling beyond what is necessary to establish the nature, characteristics and functioning of the product."
+        },
+        {
+          "h": "Quality and legal guarantee",
+          "p": "A 2-year legal guarantee applies to any lack of conformity of the product. If a defect is found, the buyer may require free repair or replacement, a price reduction or termination of the contract as provided by law.\nThe guarantee does not cover damage caused by improper use, mechanical damage, moisture or unauthorised repair."
+        },
+        {
+          "h": "Liability",
+          "p": "The buyer is responsible for the accuracy of the details provided in the order form. The Seller is not liable for delivery delays caused by inaccurate details provided by the buyer or by circumstances beyond the Seller's control."
+        },
+        {
+          "h": "Personal data",
+          "p": "The buyer's personal data is processed in accordance with the Privacy Policy."
+        },
+        {
+          "h": "Disputes",
+          "p": "These terms are governed by the laws of the Republic of Lithuania; this does not deprive a consumer of the protection afforded by the mandatory laws of their country of habitual residence.\nDisputes are resolved by negotiation. Consumers may also contact the State Consumer Rights Protection Authority of Lithuania (Vilniaus g. 25, Vilnius, www.vvtat.lt), their national consumer authority, or the courts."
+        },
+        {
+          "h": "Final provisions",
+          "p": "The Seller may amend these terms. An order is governed by the terms in force when it was placed."
         }
       ]
     },
@@ -450,29 +461,36 @@
       "title": "Shipping and Returns",
       "sections": [
         {
-          "h": "Shipping",
-          "p": "No orders are shipped during the test phase. Shipping destinations, carriers, times and costs will be published before sales open."
+          "h": "Delivery",
+          "p": "Free delivery to all European countries.\nLithuania: within 3 days. Other European countries: 7–10 days.\nDelivery times are counted from order confirmation and payment. We send tracking details once your order has shipped."
         },
         {
-          "h": "Right of withdrawal",
-          "p": "Consumers in the EU have the right to withdraw from a distance contract within 14 days without giving a reason. Full withdrawal instructions and a model withdrawal form will be added here."
+          "h": "14-day returns",
+          "p": "You can return the product within 14 days of receiving it without giving a reason. Email us with your order number and we will send you return instructions.\nThe product must be undamaged and complete. We refund the money within 14 days of receiving your notice (we may wait until we receive the product). Return shipping is paid by the buyer."
         },
         {
-          "h": "Warranty",
-          "p": "The statutory legal guarantee applies. Any additional manufacturer warranty will be described here."
+          "h": "Defective products and guarantee",
+          "p": "The product comes with a 2-year guarantee. If it is faulty or not as described, contact us — we will repair or replace it free of charge or refund you, and we cover the return shipping."
         }
       ]
     },
     "contact": {
       "title": "Contact",
-      "text": "Questions about Keyline One? Write to us and we will get back to you.",
+      "text": "Questions about Kalm or your order? Write to us — we'll get back to you within 1 business day.",
+      "email": "Email"
+    },
+    "company": {
+      "name": "Company",
+      "code": "Company code",
+      "vat": "VAT number",
+      "address": "Address",
       "email": "Email"
     }
   },
   "email": {
-    "customerSubject": "We received your request — Keyline One",
+    "customerSubject": "We received your order — Kalm",
     "customerGreeting": "Hello {name},",
-    "customerBody": "Thank you for your interest in Keyline One. We have received your test order request (reference {ref}). This is currently a product testing phase: no payment has been processed and nothing will be shipped. We will contact you when the product becomes available."
+    "customerBody": "Thank you for your order of Kalm (order number {ref}). We will contact you within 1 business day to confirm the details, delivery and payment. No payment has been taken yet."
   },
   "notFound": {
     "title": "Page not found",

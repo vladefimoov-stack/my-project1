@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useI18n } from "@/i18n/I18nProvider";
 import { usePhone, useKeys, WALLPAPERS, type Wallpaper } from "../context";
 import { AppBar, useTheme } from "./Shell";
+import { product } from "@/config/product";
 
 function Toggle({ on, onChange, label }: { on: boolean; onChange: () => void; label: string }) {
   return (
@@ -106,7 +107,7 @@ export function Settings() {
           </span>
           {about && (
             <span className={`mt-[0.4em] block text-[0.8em] leading-snug ${t.sub}`}>
-              Keyline One · {dict.common.simulation}
+              {product.name} · {dict.common.simulation}
               <br />
               {s.aboutText}
             </span>

@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const d = getDictionary(locale);
   return {
     metadataBase: new URL(site.url),
-    title: { default: d.meta.title, template: `%s — Keyline One` },
+    title: { default: d.meta.title, template: `%s — Kalm` },
     description: d.meta.description,
     alternates: {
       canonical: `/${locale}`,
@@ -37,11 +37,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     },
     openGraph: {
       type: "website",
-      siteName: "Keyline",
+      siteName: "Kalm",
       title: d.meta.title,
       description: d.meta.description,
       locale: locale === "lt" ? "lt_LT" : locale === "de" ? "de_DE" : "en_GB",
-      images: [{ url: "/images/og.jpg", width: 1200, height: 630, alt: "Keyline One" }],
+      images: [{ url: "/images/og.jpg", width: 1200, height: 630, alt: "Kalm" }],
     },
     twitter: { card: "summary_large_image", title: d.meta.title, description: d.meta.description, images: ["/images/og.jpg"] },
     icons: { icon: "/icon.svg" },

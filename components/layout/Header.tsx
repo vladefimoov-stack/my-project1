@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useI18n } from "@/i18n/I18nProvider";
-import { fmt } from "@/i18n/dictionaries";
+import { fmt } from "@/i18n/fmt";
 import { Logo } from "./Logo";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useCart } from "./CartProvider";
@@ -48,7 +48,7 @@ export function Header({ home = true }: { home?: boolean }) {
         {dict.common.skip}
       </a>
       <div className="container-site flex h-16 items-center justify-between gap-4">
-        <Link href={`/${locale}`} className="shrink-0" aria-label="Keyline — home">
+        <Link href={`/${locale}`} className="shrink-0" aria-label="Kalm — home">
           <Logo />
         </Link>
 

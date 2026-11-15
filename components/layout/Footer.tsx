@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useI18n } from "@/i18n/I18nProvider";
 import { Logo } from "./Logo";
+import { site } from "@/config/site";
 
 export function Footer() {
   const { dict, locale } = useI18n();
@@ -38,9 +39,8 @@ export function Footer() {
         </div>
         <div className="mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 text-[12px] text-white/60 sm:flex-row sm:justify-between">
           <p>
-            © {year} Keyline. {f.rights}
+            © {year} {site.legalEntity.name}. {f.rights}
           </p>
-          <p className="max-w-lg sm:text-right">{f.testPhase}</p>
         </div>
       </div>
     </footer>

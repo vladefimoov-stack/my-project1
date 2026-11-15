@@ -1,14 +1,11 @@
 {
   "meta": {
-    "title": "Keyline One — Das Telefon für das Wesentliche. Nicht für endloses Scrollen.",
-    "description": "Keyline One ist ein kompaktes Telefon mit echter Tastatur und kleinem Touchscreen für Anrufe, Nachrichten, Karten und Arbeit — nicht für endlose Feeds. Verbringen Sie weniger Zeit am Bildschirm."
+    "title": "Kalm — Das Telefon für das Wesentliche. Nicht für endloses Scrollen.",
+    "description": "Kalm ist ein kompaktes Telefon mit echter Tastatur und kleinem Touchscreen für Anrufe, Nachrichten, Karten und Arbeit — nicht für endlose Feeds. Verbringen Sie weniger Zeit am Bildschirm."
   },
   "common": {
     "skip": "Zum Inhalt springen",
-    "pending": "Wird bestätigt",
-    "pendingVerification": "Bestätigung durch den Lieferanten ausstehend",
     "simulation": "Simulation",
-    "testPhase": "Testphase — es werden keine Zahlungen abgewickelt",
     "close": "Schließen",
     "back": "Zurück"
   },
@@ -21,21 +18,21 @@
     "language": "Sprache",
     "menu": "Menü",
     "order": "Bestellen",
-    "why": "Warum Keyline"
+    "why": "Warum Kalm"
   },
   "hero": {
-    "eyebrow": "Keyline One",
+    "eyebrow": "Kalm",
     "title1": "Das Wichtige erledigen.",
     "title2": "Ohne endlosen Feed.",
     "subtitle": "Ein kompaktes Telefon mit echten Tasten und kleinem Touchscreen — für Anrufe, Nachrichten, Karten und Arbeit. Alles, was Sie brauchen, ohne die Gewohnheit, stundenlang zu scrollen.",
     "ctaDemo": "Interaktive Demo testen",
-    "priceLabel": "Richtpreis",
+    "priceLabel": "Preis",
     "ctaOrder": "Jetzt bestellen · {price}"
   },
   "why": {
-    "eyebrow": "Warum Keyline",
-    "title": "Ihr Smartphone ist darauf ausgelegt, dass Sie weiterscrollen. Keyline One ist darauf ausgelegt, dass Sie es weglegen.",
-    "intro": "Feeds, Benachrichtigungen und Autoplay sind gemacht, um Ihre Aufmerksamkeit so lange wie möglich festzuhalten. Keyline One behält, was Sie wirklich brauchen, und macht den Rest deutlich weniger verlockend — so bekommen Sie die verlorenen Minuten zurück.",
+    "eyebrow": "Warum Kalm",
+    "title": "Ihr Smartphone ist darauf ausgelegt, dass Sie weiterscrollen. Kalm ist darauf ausgelegt, dass Sie es weglegen.",
+    "intro": "Feeds, Benachrichtigungen und Autoplay sind gemacht, um Ihre Aufmerksamkeit so lange wie möglich festzuhalten. Kalm behält, was Sie wirklich brauchen, und macht den Rest deutlich weniger verlockend — so bekommen Sie die verlorenen Minuten zurück.",
     "points": [
       {
         "title": "Nur das Wesentliche",
@@ -75,33 +72,29 @@
     "autoRotate": "Automatisch drehen",
     "hint": "Ziehen zum Drehen",
     "zoomIn": "Vergrößern",
-    "zoomOut": "Verkleinern",
-    "provisionalShort": "Vorläufiges 3D-Modell, Details werden noch geprüft"
+    "zoomOut": "Verkleinern"
   },
   "specs": {
     "eyebrow": "Spezifikationen",
     "title": "Technische Daten",
-    "note": "Wir veröffentlichen nur vom Hersteller bestätigte Spezifikationen. Mit „Wird bestätigt“ markierte Werte werden derzeit geprüft.",
     "labels": {
-      "display": "Display",
+      "display": "Touchscreen",
       "os": "Betriebssystem",
       "processor": "Prozessor",
-      "ram": "Arbeitsspeicher",
-      "storage": "Interner Speicher",
+      "memory": "Arbeitsspeicher / Speicher",
       "battery": "Akku",
-      "camera": "Kamera",
-      "sim": "SIM",
-      "network": "Netz",
+      "connectivity": "Verbindungen",
+      "connector": "Anschluss",
       "dimensions": "Abmessungen",
       "weight": "Gewicht",
-      "colours": "Farben"
+      "inBox": "Lieferumfang"
     }
   },
   "demo": {
     "eyebrow": "Interaktive Demo",
     "title": "Gleich hier ausprobieren.",
     "subtitle": "Tippen Sie auf den Bildschirm oder nutzen Sie die Tastatur. Apps öffnen, stöbern, eine Nummer wählen — wie auf dem Gerät.",
-    "disclaimer": "Dies ist eine Website-Simulation mit fiktiven Demo-Inhalten. Sie ist kein Android-Emulator und verbindet sich nicht mit Telegram, WhatsApp, YouTube oder anderen Diensten. Die Verfügbarkeit von Apps auf dem echten Gerät wird noch geprüft.",
+    "disclaimer": "Dies ist eine Website-Simulation mit Demo-Inhalten. Sie ist kein Android-Emulator und verbindet sich nicht mit Telegram, WhatsApp, YouTube oder anderen Diensten.",
     "keysHint": "Tipp: Pfeiltasten, Enter und Rücktaste Ihrer Tastatur funktionieren auch.",
     "badge": "Demo",
     "apps": {
@@ -224,7 +217,7 @@
         },
         {
           "title": "Graphit",
-          "artist": "Keyline Sounds"
+          "artist": "Kalm Sounds"
         },
         {
           "title": "Nachtzug",
@@ -263,33 +256,33 @@
   },
   "purchase": {
     "eyebrow": "Bestellen",
-    "title": "Keyline One",
+    "title": "Kalm",
     "description": "Ein kompaktes Telefon mit physischer Tastatur und farbigem Touchscreen — gemacht für das Wesentliche, nicht für endloses Scrollen.",
     "colour": "Farbe",
     "colours": {
-      "graphite": "Graphit"
+      "black": "Schwarz"
     },
     "quantity": "Menge",
     "decrease": "Menge verringern",
     "increase": "Menge erhöhen",
     "order": "Jetzt bestellen",
-    "testNotice": "Wir testen derzeit das Interesse an diesem Produkt. Mit einer Bestellung senden Sie uns eine Anfrage — es wird keine Zahlung eingezogen.",
     "delivery": {
       "title": "Lieferung",
-      "text": "Lieferzeiten und -kosten werden vor Verkaufsstart bestätigt."
+      "text": "Kostenloser Versand in ganz Europa. Litauen: innerhalb von 3 Tagen. Andere europäische Länder: 7–10 Tage."
     },
     "returns": {
       "title": "Rückgabe",
-      "text": "Die Rückgabebedingungen werden vor Verkaufsstart veröffentlicht."
+      "text": "14 Tage Rückgaberecht ohne Angabe von Gründen."
     },
     "warranty": {
-      "title": "Garantie",
-      "text": "Die Garantiebedingungen werden vor Verkaufsstart veröffentlicht."
-    }
+      "title": "Gewährleistung",
+      "text": "2 Jahre Gewährleistung."
+    },
+    "orderNotice": "Senden Sie Ihre Bestellung — wir melden uns innerhalb von 1 Werktag, um Details, Lieferung und Zahlung zu bestätigen."
   },
   "checkout": {
-    "title": "Testbestellung",
-    "subtitle": "Hinterlassen Sie Ihre Daten und wir melden uns, sobald das Keyline One erhältlich ist.",
+    "title": "Bestellung",
+    "subtitle": "Hinterlassen Sie Ihre Daten — wir melden uns, um Bestellung, Lieferung und Zahlung zu bestätigen.",
     "name": "Vollständiger Name",
     "email": "E-Mail",
     "country": "Land",
@@ -300,11 +293,11 @@
     "quantity": "Menge",
     "summary": "Übersicht",
     "unitPrice": "Preis",
-    "total": "Richtwert gesamt",
-    "noPayment": "Es wird keine Zahlung eingezogen. Keine Kartendaten erforderlich.",
+    "total": "Gesamt",
+    "noPayment": "Online wird keine Zahlung abgewickelt — die Zahlung vereinbaren wir bei der Bestätigung der Bestellung.",
     "consent": "Ich bin einverstanden, dass meine Daten zur Bearbeitung dieser Anfrage verarbeitet werden, wie in der {privacy} beschrieben.",
     "privacyLink": "Datenschutzerklärung",
-    "submit": "Testbestellung absenden",
+    "submit": "Bestellung senden",
     "submitting": "Wird gesendet…",
     "retry": "Erneut versuchen",
     "errors": {
@@ -320,9 +313,9 @@
       "invalid": "Einige Felder sind ungültig. Bitte prüfen Sie das Formular."
     },
     "success": {
-      "title": "Anfrage erhalten",
-      "text": "Vielen Dank für Ihr Interesse! Ihre Anfrage ist erfolgreich bei uns eingegangen. Derzeit befindet sich das Produkt in einer Testphase, und es wurde keine Zahlung abgewickelt.",
-      "reference": "Referenz",
+      "title": "Bestellung erhalten",
+      "text": "Vielen Dank! Wir haben Ihre Bestellung erhalten und melden uns in Kürze, um Details, Lieferung und Zahlung zu bestätigen.",
+      "reference": "Bestellnummer",
       "done": "Fertig"
     }
   },
@@ -331,40 +324,40 @@
     "title": "Fragen & Antworten",
     "items": [
       {
-        "q": "Wie hilft mir Keyline One, weniger Zeit am Telefon zu verbringen?",
+        "q": "Wie hilft mir Kalm, weniger Zeit am Telefon zu verbringen?",
         "a": "Es ist für die zielgerichtete Nutzung gemacht. Der kompakte Bildschirm und die physische Tastatur machen Anrufe, Nachrichten und kurze Aufgaben einfach, während langes Scrollen deutlich unbequemer wird. Sie können es als Alltagstelefon nutzen und ein größeres Gerät für die gelegentliche Aufgabe, die es wirklich braucht, zu Hause lassen. Wie viel Zeit Sie sparen, hängt von Ihren Gewohnheiten ab."
       },
       {
         "q": "Ist das ein Smartphone oder ein klassisches Tastenhandy?",
-        "a": "Beides. Keyline One hat einen farbigen Touchscreen in der oberen und eine vollständige physische Tastatur in der unteren Hälfte. Sie können per Touch, mit den Tasten oder mit beidem navigieren."
+        "a": "Beides. Kalm hat einen farbigen Touchscreen in der oberen und eine vollständige physische Tastatur in der unteren Hälfte. Sie können per Touch, mit den Tasten oder mit beidem navigieren."
       },
       {
         "q": "Kann ich Apps installieren?",
-        "a": "Das Gerät ist für die Nutzung von Apps ausgelegt, und auf den Referenzgeräten laufen Apps. Welcher App-Store und welche Betriebssystemversion im Endprodukt enthalten sind, wird noch mit dem Hersteller geklärt. Wir veröffentlichen dies hier vor Verkaufsstart."
+        "a": "Ja. Kalm läuft mit Android 11, daher können Sie Android-Apps installieren — Messenger, Karten, Musik und mehr. Der 2,8\"-Touchscreen und die Tastatur machen kurze Aufgaben einfach, ohne zum endlosen Scrollen einzuladen."
       },
       {
         "q": "Unterstützt es WhatsApp?",
-        "a": "Dies wird an Seriengeräten geprüft. Wir bestätigen die WhatsApp-Unterstützung erst, wenn wir sie selbst getestet haben."
+        "a": "Ja. WhatsApp ist eine Android-App und lässt sich auf Kalm (Android 11) installieren."
       },
       {
         "q": "Unterstützt es Telegram?",
-        "a": "Dies wird an Seriengeräten geprüft. Wir bestätigen die Telegram-Unterstützung erst, wenn wir sie selbst getestet haben."
+        "a": "Ja. Telegram lässt sich auf Kalm (Android 11) installieren."
       },
       {
-        "q": "Hat es 4G?",
-        "a": "Die 4G-Unterstützung und die genauen Frequenzbänder werden mit dem Hersteller geklärt. Bitte prüfen Sie dies vor der Bestellung erneut."
+        "q": "Welche Verbindungen hat es?",
+        "a": "WLAN, Bluetooth und mobiler Hotspot. Wenn Sie die Kompatibilität mit Ihrem Mobilfunkanbieter prüfen möchten, schreiben Sie uns — wir helfen gern."
       },
       {
         "q": "Was ist im Lieferumfang enthalten?",
-        "a": "Der Lieferumfang wird vor Verkaufsstart bestätigt."
+        "a": "Das Kalm-Telefon und ein USB-A → USB-C-Ladekabel."
       },
       {
         "q": "Wie lange dauert die Lieferung?",
-        "a": "Die Lieferzeiten werden vor Verkaufsstart bestätigt. In der aktuellen Testphase werden keine Bestellungen versendet."
+        "a": "Der Versand ist in ganz Europa kostenlos: innerhalb von 3 Tagen in Litauen und 7–10 Tage in andere europäische Länder, ab Bestätigung der Bestellung."
       },
       {
         "q": "Wie sind die Rückgabebedingungen?",
-        "a": "Für Bestellungen innerhalb der EU gilt mindestens das gesetzliche 14-tägige Widerrufsrecht. Die vollständigen Rückgabebedingungen werden vor Verkaufsstart veröffentlicht."
+        "a": "Sie können das Telefon innerhalb von 14 Tagen nach Erhalt ohne Angabe von Gründen zurückgeben. Es gilt eine Gewährleistung von 2 Jahren. Details unter „Versand und Rückgabe“."
       }
     ]
   },
@@ -376,8 +369,7 @@
     "privacy": "Datenschutzerklärung",
     "terms": "AGB",
     "shipping": "Versand und Rückgabe",
-    "rights": "Alle Rechte vorbehalten.",
-    "testPhase": "Diese Website befindet sich in einer Produkt-Testphase. Es werden keine Zahlungen abgewickelt und keine Bestellungen versendet."
+    "rights": "Alle Rechte vorbehalten."
   },
   "cookies": {
     "text": "Wir verwenden nur unbedingt erforderliche Speicherung (z. B. um Ihre Sprache zu merken). Keine Tracking- oder Werbe-Cookies.",
@@ -385,7 +377,6 @@
     "more": "Datenschutzerklärung"
   },
   "legal": {
-    "draft": "Vorlage — vor dem Start von einer juristischen Fachperson zu vervollständigen und zu prüfen.",
     "updated": "Zuletzt aktualisiert",
     "backHome": "Zur Startseite",
     "privacy": {
@@ -393,31 +384,31 @@
       "sections": [
         {
           "h": "Verantwortlicher",
-          "p": "Verantwortlich für Ihre personenbezogenen Daten ist {entity}, {address}. Kontakt: {email}."
+          "p": "Verantwortlich für Ihre personenbezogenen Daten ist {entity}. Die Unternehmensangaben stehen oben auf dieser Seite."
         },
         {
           "h": "Welche Daten wir erheben",
-          "p": "Wenn Sie eine Testbestellung absenden, erheben wir Ihren Namen, Ihre E-Mail-Adresse, Ihr Land, optional Ihre Telefonnummer, die gewählte Menge, die gewählte Sprache und den Zeitpunkt der Übermittlung. Außerdem verarbeiten wir kurzzeitig Ihre IP-Adresse, um das Formular vor Missbrauch zu schützen (Ratenbegrenzung) und eine passende Website-Sprache zu wählen."
+          "p": "Bei einer Bestellung geben Sie Name, E-Mail-Adresse, Land, (optional) Telefonnummer und Menge an; außerdem speichern wir die gewählte Sprache und den Zeitpunkt der Übermittlung. Bei der Bestätigung der Bestellung erhalten wir zusätzlich Ihre Lieferadresse und Zahlungsinformationen.\nIhre IP-Adresse verarbeiten wir kurzzeitig, um die Website vor Missbrauch zu schützen und eine passende Sprache zu wählen."
         },
         {
-          "h": "Zweck der Verarbeitung",
-          "p": "Zur Beantwortung Ihrer Anfrage und zur Information über die Verfügbarkeit des Produkts (Art. 6 Abs. 1 lit. b DSGVO — vorvertragliche Maßnahmen) sowie zum Schutz unserer Website (Art. 6 Abs. 1 lit. f DSGVO — berechtigtes Interesse)."
+          "h": "Zwecke und Rechtsgrundlagen",
+          "p": "Entgegennahme, Bestätigung und Abwicklung Ihrer Bestellung sowie Kommunikation mit Ihnen (Art. 6 Abs. 1 lit. b DSGVO — Vertragserfüllung und vorvertragliche Maßnahmen).\nErfüllung von Buchhaltungs- und Steuerpflichten (Art. 6 Abs. 1 lit. c DSGVO).\nSicherheit der Website (Art. 6 Abs. 1 lit. f DSGVO — berechtigtes Interesse)."
         },
         {
           "h": "Speicherdauer",
-          "p": "Anfragen zu Testbestellungen werden {days} Tage gespeichert und anschließend gelöscht, sofern Sie nicht eine frühere Löschung verlangen."
+          "p": "Daten abgeschlossener Bestellungen werden so lange gespeichert, wie es für die Abwicklung und Gewährleistung erforderlich ist; Buchhaltungsunterlagen für die gesetzlich vorgeschriebene Dauer (bis zu 10 Jahre). Anfragen, die nicht zu einem Kauf geführt haben, werden nach {days} Tagen gelöscht."
         },
         {
           "h": "Empfänger",
-          "p": "Ihre Anfrage wird per E-Mail über unseren E-Mail-Dienstleister als Auftragsverarbeiter zugestellt. [Auftragsverarbeiter, z. B. Hosting- und E-Mail-Anbieter, sowie etwaige Übermittlungen außerhalb der EU auflisten.]"
+          "p": "Daten können von unseren Dienstleistern verarbeitet werden — Website-Hosting (Vercel), E-Mail-Versand (Resend) und Kurierdienste — nur soweit für die Leistung erforderlich. Einige Anbieter können Daten außerhalb des EWR (USA) verarbeiten; in diesem Fall gelten die Standardvertragsklauseln der Europäischen Kommission."
         },
         {
-          "h": "Cookies und Speicherung",
-          "p": "Wir verwenden nur unbedingt erforderliche Speicherung: ein Cookie und einen Eintrag im lokalen Speicher, die Ihre Sprache speichern. Wir verwenden keine Analyse- oder Werbe-Cookies."
+          "h": "Cookies",
+          "p": "Wir verwenden nur unbedingt erforderliche Speicherung — ein Cookie und einen Eintrag im lokalen Speicher, die Ihre Sprache und Ihren Warenkorb speichern. Analyse- oder Werbe-Cookies verwenden wir nicht."
         },
         {
           "h": "Ihre Rechte",
-          "p": "Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Zudem können Sie sich bei einer Datenschutz-Aufsichtsbehörde beschweren, etwa der Behörde Ihres Bundeslandes."
+          "p": "Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Zur Ausübung dieser Rechte schreiben Sie uns eine E-Mail.\nSie können sich außerdem bei der litauischen Datenschutzaufsicht (www.vdai.lrv.lt) oder der Datenschutzbehörde Ihres Landes beschweren."
         }
       ]
     },
@@ -425,24 +416,44 @@
       "title": "Allgemeine Geschäftsbedingungen",
       "sections": [
         {
-          "h": "Testphase",
-          "p": "Diese Website dient derzeit dazu, das Interesse an dem Produkt zu testen. Eine Testbestellung begründet keinen Kaufvertrag, es wird keine Zahlung eingezogen und kein Produkt versendet."
+          "h": "Allgemeines",
+          "p": "Diese Bedingungen regeln die Rechte, Pflichten und Haftung von Käufer und Verkäufer, {entity} (der „Verkäufer“), bei Bestellungen über diese Website.\nMit der Bestellung bestätigt der Käufer, diese Bedingungen gelesen zu haben und zu akzeptieren. Die Angaben zum Verkäufer stehen oben auf dieser Seite."
         },
         {
-          "h": "Verkäufer",
-          "p": "{entity}, {address}, Registernummer {reg}, USt-IdNr. {vat}."
+          "h": "Bestellung und Vertragsschluss",
+          "p": "Der Käufer füllt das Bestellformular auf der Website aus. Innerhalb von 1 Werktag nach Eingang der Bestellung kontaktiert der Verkäufer den Käufer per E-Mail oder Telefon und bestätigt Menge, Preis, Lieferadresse und Zahlungsart.\nDer Kaufvertrag kommt zustande, wenn der Verkäufer die Bestellung bestätigt und der Käufer auf die vereinbarte Weise bezahlt."
         },
         {
-          "h": "Preise",
-          "p": "Die angezeigten Preise sind Richtpreise und enthalten, soweit anwendbar, die Mehrwertsteuer. Endgültige Preise werden vor Verkaufsstart bestätigt."
+          "h": "Preise und Zahlung",
+          "p": "Die Preise sind in Euro angegeben und Endpreise. Der Versand ist kostenlos.\nAuf der Website werden keine Zahlungen abgewickelt und keine Kartendaten abgefragt — die Zahlungsart wird bei der Bestätigung der Bestellung mit dem Käufer vereinbart."
         },
         {
-          "h": "Produktinformationen",
-          "p": "Die Produktbilder umfassen Renderings eines vorläufigen 3D-Modells. Mit „Wird bestätigt“ markierte Spezifikationen sind noch nicht verifiziert."
+          "h": "Lieferung",
+          "p": "Die Lieferung ist kostenlos: in Litauen innerhalb von 3 Tagen, in andere europäische Länder innerhalb von 7–10 Tagen ab Bestätigung und Zahlung der Bestellung. Einzelheiten unter „Versand und Rückgabe“.\nEigentum und Gefahr des zufälligen Untergangs gehen mit der Übergabe der Ware auf den Käufer über."
         },
         {
-          "h": "Anwendbares Recht",
-          "p": "[Wird ergänzt.]"
+          "h": "Widerrufsrecht",
+          "p": "Verbraucher können den Vertrag innerhalb von 14 Tagen ab Erhalt der Ware ohne Angabe von Gründen widerrufen, indem sie dem Verkäufer dies schriftlich (per E-Mail) unter Angabe der Bestellnummer mitteilen.\nDie Ware ist innerhalb von 14 Tagen nach Absendung des Widerrufs zurückzusenden. Der Betrag einschließlich der ursprünglichen Versandkosten wird innerhalb von 14 Tagen nach Eingang des Widerrufs über dieselbe Zahlungsart erstattet; der Verkäufer kann die Erstattung verweigern, bis er die Ware zurückerhalten hat.\nDie unmittelbaren Kosten der Rücksendung trägt der Käufer, es sei denn, die Ware ist mangelhaft oder entspricht nicht der Bestellung. Der Käufer haftet für einen Wertverlust, der auf einen zur Prüfung der Beschaffenheit, Eigenschaften und Funktionsweise nicht notwendigen Umgang zurückzuführen ist."
+        },
+        {
+          "h": "Qualität und gesetzliche Gewährleistung",
+          "p": "Es gilt die gesetzliche Gewährleistung von 2 Jahren für Vertragswidrigkeiten der Ware. Bei einem Mangel kann der Käufer nach den gesetzlichen Bestimmungen kostenlose Reparatur oder Ersatz, eine Preisminderung oder die Vertragsbeendigung verlangen.\nNicht abgedeckt sind Schäden durch unsachgemäßen Gebrauch, mechanische Beschädigung, Feuchtigkeit oder eigenmächtige Reparatur."
+        },
+        {
+          "h": "Haftung",
+          "p": "Der Käufer ist für die Richtigkeit der im Bestellformular gemachten Angaben verantwortlich. Der Verkäufer haftet nicht für Lieferverzögerungen aufgrund ungenauer Angaben des Käufers oder Umständen außerhalb seines Einflussbereichs."
+        },
+        {
+          "h": "Personenbezogene Daten",
+          "p": "Personenbezogene Daten des Käufers werden gemäß der Datenschutzerklärung verarbeitet."
+        },
+        {
+          "h": "Streitbeilegung",
+          "p": "Es gilt das Recht der Republik Litauen; Verbrauchern wird dadurch nicht der Schutz der zwingenden Vorschriften ihres Aufenthaltsstaates entzogen.\nStreitigkeiten werden einvernehmlich gelöst. Verbraucher können sich außerdem an die litauische Verbraucherschutzbehörde (Vilniaus g. 25, Vilnius, www.vvtat.lt), die Verbraucherschutzbehörde ihres Landes oder an die Gerichte wenden."
+        },
+        {
+          "h": "Schlussbestimmungen",
+          "p": "Der Verkäufer kann diese Bedingungen ändern. Für eine Bestellung gelten die zum Zeitpunkt der Bestellung gültigen Bedingungen."
         }
       ]
     },
@@ -450,29 +461,36 @@
       "title": "Versand und Rückgabe",
       "sections": [
         {
-          "h": "Versand",
-          "p": "Während der Testphase werden keine Bestellungen versendet. Lieferländer, Versanddienstleister, Lieferzeiten und Kosten werden vor Verkaufsstart veröffentlicht."
+          "h": "Lieferung",
+          "p": "Kostenloser Versand in alle europäischen Länder.\nLitauen: innerhalb von 3 Tagen. Andere europäische Länder: 7–10 Tage.\nDie Lieferzeit beginnt mit der Bestätigung und Zahlung der Bestellung. Nach dem Versand senden wir Ihnen die Sendungsverfolgung."
         },
         {
-          "h": "Widerrufsrecht",
-          "p": "Verbraucher in der EU haben das Recht, einen Fernabsatzvertrag binnen 14 Tagen ohne Angabe von Gründen zu widerrufen. Die vollständige Widerrufsbelehrung und ein Muster-Widerrufsformular werden hier ergänzt."
+          "h": "14 Tage Rückgaberecht",
+          "p": "Sie können die Ware innerhalb von 14 Tagen nach Erhalt ohne Angabe von Gründen zurückgeben. Schreiben Sie uns eine E-Mail mit Ihrer Bestellnummer, und wir senden Ihnen die Rücksendeanleitung.\nDie Ware muss unbeschädigt und vollständig sein. Wir erstatten den Betrag innerhalb von 14 Tagen nach Eingang Ihrer Mitteilung (ggf. nach Erhalt der Ware). Die Rücksendekosten trägt der Käufer."
         },
         {
-          "h": "Gewährleistung",
-          "p": "Es gilt die gesetzliche Gewährleistung. Eine etwaige zusätzliche Herstellergarantie wird hier beschrieben."
+          "h": "Mängel und Gewährleistung",
+          "p": "Es gilt eine Gewährleistung von 2 Jahren. Ist die Ware defekt oder entspricht nicht der Beschreibung, kontaktieren Sie uns — wir reparieren oder ersetzen sie kostenlos oder erstatten den Kaufpreis und übernehmen die Rücksendekosten."
         }
       ]
     },
     "contact": {
       "title": "Kontakt",
-      "text": "Fragen zum Keyline One? Schreiben Sie uns, wir melden uns bei Ihnen.",
+      "text": "Fragen zu Kalm oder Ihrer Bestellung? Schreiben Sie uns — wir antworten innerhalb von 1 Werktag.",
+      "email": "E-Mail"
+    },
+    "company": {
+      "name": "Unternehmen",
+      "code": "Unternehmenscode",
+      "vat": "USt-IdNr.",
+      "address": "Adresse",
       "email": "E-Mail"
     }
   },
   "email": {
-    "customerSubject": "Wir haben Ihre Anfrage erhalten — Keyline One",
+    "customerSubject": "Wir haben Ihre Bestellung erhalten — Kalm",
     "customerGreeting": "Hallo {name},",
-    "customerBody": "Vielen Dank für Ihr Interesse am Keyline One. Wir haben Ihre Testbestellung erhalten (Referenz {ref}). Derzeit befindet sich das Produkt in einer Testphase: Es wurde keine Zahlung abgewickelt und es wird nichts versendet. Wir melden uns, sobald das Produkt erhältlich ist."
+    "customerBody": "Vielen Dank für Ihre Bestellung von Kalm (Bestellnummer {ref}). Wir melden uns innerhalb von 1 Werktag, um Details, Lieferung und Zahlung zu bestätigen. Es wurde noch keine Zahlung eingezogen."
   },
   "notFound": {
     "title": "Seite nicht gefunden",

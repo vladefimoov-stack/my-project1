@@ -15,7 +15,7 @@ const valid = (over = {}) => ({
   country: "LT",
   phone: "+370 600 00000",
   quantity: 2,
-  colour: "graphite",
+  colour: "black",
   locale: "lt",
   consent: true,
   website: "",
@@ -51,7 +51,7 @@ await t("valid order is accepted and returns a reference", async () => {
   const r = await post(valid());
   eq(r.status, 200, "status");
   eq(r.body.ok, true);
-  if (!/^KL-\d{6}-[A-Z2-9]{5}$/.test(r.body.reference)) throw new Error("bad reference " + r.body.reference);
+  if (!/^KM-\d{6}-[A-Z2-9]{5}$/.test(r.body.reference)) throw new Error("bad reference " + r.body.reference);
 });
 
 await t("optional phone may be empty", async () => {

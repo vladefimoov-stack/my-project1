@@ -1,6 +1,6 @@
-# Keyline One — product validation store
+# Kalm — online store (MB Kalm)
 
-A premium single-product e-commerce website for a compact **hybrid phone**: a real physical numeric keypad plus a colour touchscreen. Built for **demand validation** — it looks and behaves like a real store, but **no payments are taken**: "orders" are delivered to the owner by email.
+A premium single-product website for **Kalm**, a compact phone with a real keypad and a 2.8" touchscreen. Customers send an order through the order form; **no payment is taken online** — the order is emailed to the shop, which contacts the customer to confirm details, delivery and payment.
 
 **Stack:** Next.js 15 (App Router) · React 19 · TypeScript · Tailwind CSS · Framer Motion · Three.js + React Three Fiber + Drei · Zod · Resend (email).
 
@@ -15,12 +15,12 @@ A premium single-product e-commerce website for a compact **hybrid phone**: a re
 | Presentation | Editorial blocks with scroll reveals: front, display close-up, keypad close-up |
 | Specifications | Driven by `config/product.ts`; unverified values show "To be confirmed" |
 | Interactive demo | A website **simulation** of the phone (not an emulator). Launcher identical in layout to the reference photo; 9 working apps (Telegram-style & WhatsApp-style chat with multi-tap keypad typing, Maps, Gallery, Video, Music with generated tones, Settings, Phone dialer, Contacts). Works with touch, the on-device keypad (D-pad, OK, back, call/end, digits) and the computer keyboard |
-| Why Keyline | Main message — less time on the screen — with an interactive calculator where visitors enter their own daily screen time |
+| Why Kalm | Main message — less time on the screen — with an interactive calculator where visitors enter their own daily screen time |
 | Purchase | Colour, quantity, "Order now" → test checkout; delivery/returns/warranty placeholders |
-| Test checkout | Name, email, country, optional phone, quantity, consent → `POST /api/order` → owner email. Success shown **only after** the email provider accepts the message |
+| Order form | Name, email, country, optional phone, quantity, consent → `POST /api/order` → email to the shop. Success shown **only after** the email provider accepts the message; the shop then contacts the customer |
 | FAQ | Accessible accordion + FAQPage JSON-LD |
 | i18n | EN / LT / DE with server-side IP detection, manual switcher, hreflang |
-| Legal | Privacy, Terms, Shipping & Returns, Contact — templates in all 3 languages |
+| Legal | Privacy, Terms, Shipping & Returns, Contact — written for MB Kalm in all 3 languages; company details from `config/site.ts` |
 
 ---
 
@@ -51,7 +51,7 @@ See [`.env.example`](.env.example). Server-only secrets are **never** exposed to
 | `NEXT_PUBLIC_SITE_URL` | yes (prod) | Canonical URL for SEO, hreflang, sitemap |
 | `EMAIL_PROVIDER` | – | `resend` (default) or `log` (dev only) |
 | `RESEND_API_KEY` | yes (prod) | Resend API key |
-| `EMAIL_FROM` | yes (prod) | Verified sender, e.g. `Keyline <orders@yourdomain.com>` |
+| `EMAIL_FROM` | yes (prod) | Verified sender, e.g. `Kalm <orders@yourdomain.com>` |
 | `ORDER_NOTIFICATION_EMAIL` | yes | Recipient of test-order notifications |
 | `SEND_CUSTOMER_CONFIRMATION` | – | `true` to also email the customer (in their language) |
 | `RATE_LIMIT_MAX`, `RATE_LIMIT_WINDOW_SECONDS` | – | Default 5 submissions / 10 min / IP |
@@ -73,7 +73,7 @@ Everything lives in two places:
 
 - **`config/product.ts`** — price, currency, max quantity, colours, specifications, 3D model URL.
   ```ts
-  price: 119,                 // ← change the price here
+  price: 140,                 // ← change the price here
   specs: {
     display: { value: '3.5" IPS touchscreen', verified: true },   // shown
     battery: { value: null, verified: false },                     // "To be confirmed"
@@ -100,18 +100,18 @@ Everything lives in two places:
 
 ---
 
-## Test checkout — how it works
+## Order form — how it works
 
 `components/checkout/CheckoutDialog.tsx` → `app/api/order/route.ts`
 
 1. Client-side validation with the **same Zod schema** used on the server (`lib/order-schema.ts`).
 2. Server: same-origin check → per-IP rate limit → body size limit → honeypot field → minimum fill time (2.5 s) → schema validation & sanitisation.
 3. Duplicate protection: each checkout carries an idempotency key; retries/double-clicks return the original reference instead of sending a second email. Identical submissions from two tabs within 2 minutes are also merged. Concurrent retries share one delivery attempt.
-4. Email to `ORDER_NOTIFICATION_EMAIL`, subject **`NEW PRODUCT PURCHASE INTEREST — TEST ORDER`**, with name, email, country, phone, product, quantity, unit price, indicative total, language, UTC timestamp, order reference and an explicit "test submission — no payment" notice. `reply_to` is the customer.
+4. Email to `ORDER_NOTIFICATION_EMAIL`, subject **`NEW ORDER — KALM · KM-…`**, with name, email, country, phone, product, quantity, unit price, total, language, UTC timestamp and order number. `reply_to` is the customer, so you can answer directly.
 5. The visitor sees the success message **only** when the provider accepted the email; otherwise an error with a retry button (the idempotency key is kept so a retry can't double-send).
 6. Structured JSON logs: `order.accepted`, `order.failed`, `order.rejected` (reason), `email.sent`, `email.failed` — customer emails are masked.
 
-No card data is ever requested; there is no payment integration.
+No card data is ever requested; payment is arranged when the shop confirms the order.
 
 **Note on serverless:** rate-limit and dedupe state is in memory, i.e. per instance. That's adequate for a validation test; for strict guarantees plug in Upstash Redis / Vercel KV in `lib/rate-limit.ts`.
 
@@ -162,7 +162,7 @@ docs/3D-MODEL.md       model status, verification checklist, how to swap in a re
 - [ ] **Studio photography** of a physical sample, and a **photo of the device in a hand**.
 - [ ] **Verified specifications** (display, OS, CPU, RAM, storage, battery, camera, SIM, network bands, dimensions, weight, colours).
 - [ ] Verified app compatibility (WhatsApp, Telegram, etc.) before changing FAQ answers.
-- [ ] Final brand name / logo (current "Keyline" identity is temporary).
+- [ ] Final brand name / logo (current "Kalm" identity is temporary).
 - [ ] Company details, contact email and legally reviewed Privacy Policy, Terms, Shipping & Returns (templates contain `[placeholders]`).
 - [ ] Delivery times/costs, return policy, warranty text.
 - [ ] A verified sending domain in Resend.

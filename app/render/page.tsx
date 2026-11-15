@@ -9,5 +9,5 @@ import RenderStage from "@/components/product-viewer/RenderStage";
 export default async function RenderPage({ searchParams }: { searchParams: Promise<Record<string, string>> }) {
   if (process.env.NODE_ENV === "production" && process.env.ENABLE_RENDER_ROUTE !== "true") notFound();
   const sp = await searchParams;
-  return <RenderStage view={sp.view ?? "hero"} bg={sp.bg} />;
+  return <RenderStage view={sp.view ?? "hero"} bg={sp.bg} lang={sp.lang} />;
 }

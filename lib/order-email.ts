@@ -5,7 +5,7 @@ import { localeNames } from "@/i18n/config";
 import { escapeHtml, type EmailMessage } from "./email";
 import type { Order } from "./order-schema";
 
-export const ORDER_SUBJECT = "NEW PRODUCT PURCHASE INTEREST — TEST ORDER";
+export const ORDER_SUBJECT = "NEW ORDER — KALM";
 
 export function countryName(code: string) {
   if (code === "OTHER") return "Other";
@@ -29,12 +29,12 @@ export function buildOwnerEmail(order: Order, reference: string, submittedAt: Da
     ["Product", `${product.name} (${product.sku})`],
     ["Colour", order.colour],
     ["Quantity", String(order.quantity)],
-    ["Displayed unit price", unit],
-    ["Total indicative value", total],
+    ["Unit price", unit],
+    ["Order total", total],
     ["Selected language", `${localeNames[order.locale]} (${order.locale.toUpperCase()})`],
     ["Submitted at (UTC)", submittedAt.toISOString().replace("T", " ").slice(0, 19)],
   ];
-  const notice = "This is a TEST submission. No payment was requested or made, and no binding order was created.";
+  const notice = "No payment was taken on the website. Contact the customer to confirm the order, delivery address and payment.";
 
   const text = [ORDER_SUBJECT, "", ...rows.map(([k, v]) => `${k}: ${v}`), "", notice].join("\n");
   const html = `<!doctype html><html><body style="margin:0;background:#f5f5f5;font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;color:#111">
@@ -64,9 +64,9 @@ export function buildCustomerEmail(order: Order, reference: string): EmailMessag
   return {
     to: [order.email],
     subject: d.email.customerSubject,
-    text: `${greeting}\n\n${body}\n\n— Keyline`,
+    text: `${greeting}\n\n${body}\n\n— ${product.brand}`,
     html: `<div style="font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#111;max-width:520px"><p>${escapeHtml(
       greeting
-    )}</p><p>${escapeHtml(body)}</p><p style="color:#777">— Keyline</p></div>`,
+    )}</p><p>${escapeHtml(body)}</p><p style="color:#777">— ${product.brand}</p></div>`,
   };
 }

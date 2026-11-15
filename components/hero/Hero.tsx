@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useI18n } from "@/i18n/I18nProvider";
 import { formatPrice, product } from "@/config/product";
-import { fmt } from "@/i18n/dictionaries";
+import { fmt } from "@/i18n/fmt";
 import { useCart } from "@/components/layout/CartProvider";
 import { HeroViewer } from "@/components/product-viewer/HeroViewer";
 

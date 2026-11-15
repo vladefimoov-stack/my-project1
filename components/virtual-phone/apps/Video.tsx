@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useI18n } from "@/i18n/I18nProvider";
-import { fmt } from "@/i18n/dictionaries";
+import { fmt } from "@/i18n/fmt";
 import { useKeys } from "../context";
 import { Photo } from "./Gallery";
 import { AppBar, useTheme } from "./Shell";

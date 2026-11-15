@@ -1,28 +1,26 @@
 /**
- * Provisional physical layout of the device, in millimetres, reconstructed
- * from the reference photographs. Shared by the procedural 3D model and the
- * CSS virtual phone so both depict the same device.
- *
- * ⚠ All values are estimates from photos — verify against a physical sample.
- *    See docs/3D-MODEL.md for the verification checklist.
+ * Physical layout of the device in millimetres. Outer dimensions and screen
+ * size are official; key and part positions are measured from photos/videos.
+ * Shared by the 3D model and the CSS virtual phone so both show the same device.
  */
 export const DEVICE = {
-  width: 55,
-  height: 134,
-  depth: 10.5,
+  // official: 131 × 52 × 9 mm, 91.1 g
+  width: 52,
+  height: 131,
+  depth: 9,
   cornerRadius: 5,
 
   // front glass runs almost edge to edge; screen sits under it
-  glass: { width: 53, height: 73.4, top: 1 }, // top = distance from body top edge
-  screen: { width: 48, height: 59.5, top: 7.5 }, // ≈ 4:5 portrait active area (measured)
-  frontCamera: { x: 6.5, y: 4.2, r: 0.9 }, // from top-left corner of the body
+  glass: { width: 50, height: 69.8, top: 1 }, // top = distance from body top edge
+  screen: { width: 42.7, height: 56.9, top: 7.3 }, // official 2.8" · 480 × 640 (3:4)
+  frontCamera: { x: 6, y: 4, r: 0.85 }, // from top-left corner of the body
 
   // keypad reaches almost to the bottom edge; keys are flush, split by thin lines
-  keypad: { top: 75, side: 1.5, gap: 0.5 },
-  rows: { soft: 8.8, digit: 8.8 },
-  dpad: { outer: 8.6, inner: 4.0 }, // radii
+  keypad: { top: 71.4, side: 1.5, gap: 0.5 },
+  rows: { soft: 9.1, digit: 9.3 },
+  dpad: { outer: 8.9, inner: 4.1 }, // radii
 
-  camera: { x: 9.5, y: 13, w: 9.2, h: 19.5 }, // rear module (from supplier photo; not visible in videos)
+  camera: { x: 9, y: 12.5, w: 8.8, h: 18.5 }, // rear module (from supplier photo; not visible in videos)
 } as const;
 
 export type KeyId =

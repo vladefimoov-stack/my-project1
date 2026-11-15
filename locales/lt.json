@@ -1,14 +1,11 @@
 {
   "meta": {
-    "title": "Keyline One — telefonas tam, kas svarbu. Ne begaliniam naršymui.",
-    "description": "Keyline One — kompaktiškas telefonas su tikra klaviatūra ir mažu jutikliniu ekranu skambučiams, žinutėms, žemėlapiams ir darbui, o ne begaliniams srautams. Praleiskite mažiau laiko prie ekrano."
+    "title": "Kalm — telefonas tam, kas svarbu. Ne begaliniam naršymui.",
+    "description": "Kalm — kompaktiškas telefonas su tikra klaviatūra ir mažu jutikliniu ekranu skambučiams, žinutėms, žemėlapiams ir darbui, o ne begaliniams srautams. Praleiskite mažiau laiko prie ekrano."
   },
   "common": {
     "skip": "Pereiti prie turinio",
-    "pending": "Bus patvirtinta",
-    "pendingVerification": "Laukiama tiekėjo patvirtinimo",
     "simulation": "Simuliacija",
-    "testPhase": "Testavimo etapas — mokėjimai nevykdomi",
     "close": "Uždaryti",
     "back": "Atgal"
   },
@@ -21,21 +18,21 @@
     "language": "Kalba",
     "menu": "Meniu",
     "order": "Užsakyti",
-    "why": "Kodėl Keyline"
+    "why": "Kodėl Kalm"
   },
   "hero": {
-    "eyebrow": "Keyline One",
+    "eyebrow": "Kalm",
     "title1": "Darykite tai, kas svarbu.",
     "title2": "Be begalinio naršymo.",
     "subtitle": "Kompaktiškas telefonas su tikrais mygtukais ir mažu jutikliniu ekranu — skambučiams, žinutėms, žemėlapiams ir darbui. Viskas, ko reikia, be įpročio valandų valandas slinkti ekraną.",
     "ctaDemo": "Išbandykite demonstraciją",
-    "priceLabel": "Orientacinė kaina",
+    "priceLabel": "Kaina",
     "ctaOrder": "Užsakyti · {price}"
   },
   "why": {
-    "eyebrow": "Kodėl Keyline",
-    "title": "Išmanusis telefonas sukurtas, kad slinktumėte be galo. Keyline One sukurtas, kad galėtumėte jį padėti.",
-    "intro": "Naujienų srautai, pranešimai ir automatinis paleidimas sukurti tam, kad jūsų dėmesys būtų išlaikytas kuo ilgiau. Keyline One palieka tai, ko jums iš tikrųjų reikia, o visa kita nebe taip vilioja — ir prarastos minutės grįžta jums.",
+    "eyebrow": "Kodėl Kalm",
+    "title": "Išmanusis telefonas sukurtas, kad slinktumėte be galo. Kalm sukurtas, kad galėtumėte jį padėti.",
+    "intro": "Naujienų srautai, pranešimai ir automatinis paleidimas sukurti tam, kad jūsų dėmesys būtų išlaikytas kuo ilgiau. Kalm palieka tai, ko jums iš tikrųjų reikia, o visa kita nebe taip vilioja — ir prarastos minutės grįžta jums.",
     "points": [
       {
         "title": "Tik tai, kas būtina",
@@ -75,33 +72,29 @@
     "autoRotate": "Automatinis sukimas",
     "hint": "Tempkite, kad pasuktumėte",
     "zoomIn": "Priartinti",
-    "zoomOut": "Nutolinti",
-    "provisionalShort": "Preliminarus 3D modelis, detalės bus patikslintos"
+    "zoomOut": "Nutolinti"
   },
   "specs": {
     "eyebrow": "Specifikacijos",
     "title": "Techniniai duomenys",
-    "note": "Skelbiame tik gamintojo patvirtintas specifikacijas. Reikšmės, pažymėtos „Bus patvirtinta“, šiuo metu tikrinamos.",
     "labels": {
-      "display": "Ekranas",
+      "display": "Jutiklinis ekranas",
       "os": "Operacinė sistema",
       "processor": "Procesorius",
-      "ram": "Operatyvioji atmintis",
-      "storage": "Vidinė atmintis",
+      "memory": "Operatyvioji / vidinė atmintis",
       "battery": "Baterija",
-      "camera": "Kamera",
-      "sim": "SIM",
-      "network": "Tinklas",
+      "connectivity": "Ryšys",
+      "connector": "Jungtis",
       "dimensions": "Matmenys",
       "weight": "Svoris",
-      "colours": "Spalvos"
+      "inBox": "Komplektacija"
     }
   },
   "demo": {
     "eyebrow": "Interaktyvi demonstracija",
     "title": "Išbandykite čia pat.",
     "subtitle": "Palieskite ekraną arba naudokite klaviatūrą. Atidarykite programėles, naršykite, surinkite numerį — kaip tikrame įrenginyje.",
-    "disclaimer": "Tai svetainėje veikianti simuliacija su išgalvotu demonstraciniu turiniu. Tai nėra „Android“ emuliatorius, ji nesijungia prie „Telegram“, „WhatsApp“, „YouTube“ ar kitų paslaugų. Programėlių prieinamumas tikrame įrenginyje dar tikrinamas.",
+    "disclaimer": "Tai svetainėje veikianti simuliacija su demonstraciniu turiniu. Tai nėra „Android“ emuliatorius, ji nesijungia prie „Telegram“, „WhatsApp“, „YouTube“ ar kitų paslaugų.",
     "keysHint": "Patarimas: veikia ir kompiuterio klaviatūros rodyklės, Enter bei Backspace.",
     "badge": "Demo",
     "apps": {
@@ -224,7 +217,7 @@
         },
         {
           "title": "Grafitas",
-          "artist": "Keyline Sounds"
+          "artist": "Kalm Sounds"
         },
         {
           "title": "Naktinis traukinys",
@@ -263,33 +256,33 @@
   },
   "purchase": {
     "eyebrow": "Užsakymas",
-    "title": "Keyline One",
+    "title": "Kalm",
     "description": "Kompaktiškas telefonas su fizine klaviatūra ir spalvotu jutikliniu ekranu — tam, kas būtina, o ne begaliniam naršymui.",
     "colour": "Spalva",
     "colours": {
-      "graphite": "Grafitas"
+      "black": "Juoda"
     },
     "quantity": "Kiekis",
     "decrease": "Sumažinti kiekį",
     "increase": "Padidinti kiekį",
     "order": "Užsakyti dabar",
-    "testNotice": "Šiuo metu tiriame susidomėjimą šiuo produktu. Pateikę užsakymą atsiųsite mums užklausą — jokie pinigai nenuskaičiuojami.",
     "delivery": {
       "title": "Pristatymas",
-      "text": "Pristatymo terminai ir kainos bus patvirtinti prieš prasidedant prekybai."
+      "text": "Nemokamas pristatymas visoje Europoje. Lietuvoje – per 3 dienas, kitose Europos šalyse – per 7–10 dienų."
     },
     "returns": {
       "title": "Grąžinimas",
-      "text": "Grąžinimo sąlygos bus paskelbtos prieš prasidedant prekybai."
+      "text": "Grąžinimas per 14 dienų be priežasties."
     },
     "warranty": {
       "title": "Garantija",
-      "text": "Garantijos sąlygos bus paskelbtos prieš prasidedant prekybai."
-    }
+      "text": "2 metų garantija."
+    },
+    "orderNotice": "Pateikite užsakymą – per 1 darbo dieną susisieksime, kad patvirtintume detales, pristatymą ir apmokėjimą."
   },
   "checkout": {
-    "title": "Bandomasis užsakymas",
-    "subtitle": "Palikite savo duomenis ir mes susisieksime, kai Keyline One bus prieinamas.",
+    "title": "Užsakymas",
+    "subtitle": "Palikite savo duomenis – susisieksime, kad patvirtintume užsakymą, pristatymą ir apmokėjimą.",
     "name": "Vardas ir pavardė",
     "email": "El. paštas",
     "country": "Šalis",
@@ -300,11 +293,11 @@
     "quantity": "Kiekis",
     "summary": "Suvestinė",
     "unitPrice": "Kaina",
-    "total": "Orientacinė suma",
-    "noPayment": "Jokie mokėjimai nebus nuskaičiuoti. Kortelės duomenų nereikia.",
+    "total": "Iš viso",
+    "noPayment": "Svetainėje mokėti nereikia – apmokėjimą suderinsime patvirtindami užsakymą.",
     "consent": "Sutinku, kad mano duomenys būtų tvarkomi šiai užklausai įvykdyti, kaip aprašyta {privacy}.",
     "privacyLink": "privatumo politikoje",
-    "submit": "Pateikti bandomąjį užsakymą",
+    "submit": "Siųsti užsakymą",
     "submitting": "Siunčiama…",
     "retry": "Bandyti dar kartą",
     "errors": {
@@ -320,9 +313,9 @@
       "invalid": "Kai kurie laukai užpildyti neteisingai. Patikrinkite formą."
     },
     "success": {
-      "title": "Užklausa gauta",
-      "text": "Dėkojame už susidomėjimą! Jūsų užklausa sėkmingai gauta. Šiuo metu vyksta produkto testavimo etapas, todėl jokie mokėjimai nebuvo apdoroti.",
-      "reference": "Numeris",
+      "title": "Užsakymas gautas",
+      "text": "Ačiū! Jūsų užsakymą gavome ir netrukus susisieksime, kad patvirtintume detales, pristatymą ir apmokėjimą.",
+      "reference": "Užsakymo numeris",
       "done": "Gerai"
     }
   },
@@ -331,40 +324,40 @@
     "title": "Klausimai ir atsakymai",
     "items": [
       {
-        "q": "Kaip Keyline One padeda mažiau laiko praleisti telefone?",
+        "q": "Kaip Kalm padeda mažiau laiko praleisti telefone?",
         "a": "Jis sukurtas tikslingam naudojimui. Kompaktiškas ekranas ir fizinė klaviatūra palengvina skambučius, žinutes ir greitas užduotis, o ilgas naršymas tampa daug mažiau patogus. Galite jį naudoti kaip kasdienį telefoną, o didesnį įrenginį laikyti namuose retoms užduotims, kurioms jo tikrai reikia. Kiek laiko sutaupysite, priklauso nuo jūsų įpročių."
       },
       {
         "q": "Ar tai išmanusis telefonas, ar tradicinis mygtukinis telefonas?",
-        "a": "Abu. Keyline One viršutinėje dalyje turi spalvotą jutiklinį ekraną, o apatinėje — pilną fizinę klaviatūrą. Galite naršyti lietimu, mygtukais arba abiem būdais."
+        "a": "Abu. Kalm viršutinėje dalyje turi spalvotą jutiklinį ekraną, o apatinėje — pilną fizinę klaviatūrą. Galite naršyti lietimu, mygtukais arba abiem būdais."
       },
       {
         "q": "Ar galiu įdiegti programėles?",
-        "a": "Įrenginys skirtas naudoti programėles, o pavyzdiniuose įrenginiuose jos veikia. Kokia programėlių parduotuvė ir operacinės sistemos versija bus galutiniame produkte, dar tikslinama su gamintoju. Informaciją paskelbsime čia prieš prasidedant prekybai."
+        "a": "Taip. Kalm veikia su „Android 11“, todėl galite įdiegti „Android“ programėles – susirašinėjimo, žemėlapių, muzikos ir kitas. 2,8\" jutiklinis ekranas ir klaviatūra palengvina greitas užduotis, bet neskatina begalinio naršymo."
       },
       {
         "q": "Ar veikia „WhatsApp“?",
-        "a": "Tai tikrinama su gamybiniais įrenginiais. „WhatsApp“ palaikymą patvirtinsime tik patys jį išbandę."
+        "a": "Taip. „WhatsApp“ yra „Android“ programėlė ir ją galima įdiegti į Kalm („Android 11“)."
       },
       {
         "q": "Ar veikia „Telegram“?",
-        "a": "Tai tikrinama su gamybiniais įrenginiais. „Telegram“ palaikymą patvirtinsime tik patys jį išbandę."
+        "a": "Taip. „Telegram“ galima įdiegti į Kalm („Android 11“)."
       },
       {
-        "q": "Ar palaikomas 4G?",
-        "a": "4G palaikymas ir tikslūs tinklo dažnių diapazonai tikslinami su gamintoju. Prieš užsakydami patikrinkite šią informaciją dar kartą."
+        "q": "Kokie ryšio būdai palaikomi?",
+        "a": "Wi-Fi, Bluetooth ir mobilusis prieigos taškas. Jei norite pasitikrinti suderinamumą su savo operatoriumi, parašykite mums – padėsime."
       },
       {
         "q": "Kas yra pakuotėje?",
-        "a": "Pakuotės turinys bus patvirtintas prieš prasidedant prekybai."
+        "a": "Telefonas Kalm ir USB-A → USB-C įkrovimo kabelis."
       },
       {
         "q": "Kiek trunka pristatymas?",
-        "a": "Pristatymo terminai bus patvirtinti prieš prasidedant prekybai. Dabartiniame testavimo etape užsakymai nesiunčiami."
+        "a": "Pristatymas nemokamas visoje Europoje: Lietuvoje – per 3 dienas, kitose Europos šalyse – per 7–10 dienų nuo užsakymo patvirtinimo."
       },
       {
         "q": "Kokia grąžinimo politika?",
-        "a": "Užsakymams ES galios bent įstatymų nustatyta 14 dienų teisė atsisakyti sutarties. Visos grąžinimo sąlygos bus paskelbtos prieš prasidedant prekybai."
+        "a": "Telefoną galite grąžinti per 14 dienų nuo gavimo be jokios priežasties. Taikoma 2 metų garantija. Daugiau – skiltyje „Pristatymas ir grąžinimas“."
       }
     ]
   },
@@ -376,8 +369,7 @@
     "privacy": "Privatumo politika",
     "terms": "Taisyklės ir sąlygos",
     "shipping": "Pristatymas ir grąžinimas",
-    "rights": "Visos teisės saugomos.",
-    "testPhase": "Ši svetainė yra produkto testavimo etape. Mokėjimai nevykdomi, užsakymai nesiunčiami."
+    "rights": "Visos teisės saugomos."
   },
   "cookies": {
     "text": "Naudojame tik būtiną saugyklą (pvz., kad prisimintume jūsų kalbą). Jokių sekimo ar reklaminių slapukų.",
@@ -385,39 +377,38 @@
     "more": "Privatumo politika"
   },
   "legal": {
-    "draft": "Šablonas — prieš paleidimą turi būti užpildytas ir peržiūrėtas teisininko.",
     "updated": "Paskutinį kartą atnaujinta",
     "backHome": "Grįžti į pradžią",
     "privacy": {
       "title": "Privatumo politika",
       "sections": [
         {
-          "h": "Kas mes esame",
-          "p": "Jūsų asmens duomenų valdytojas yra {entity}, {address}. Kontaktai: {email}."
+          "h": "Duomenų valdytojas",
+          "p": "Jūsų asmens duomenų valdytojas yra {entity}. Rekvizitai nurodyti šio puslapio viršuje."
         },
         {
           "h": "Kokius duomenis renkame",
-          "p": "Pateikus bandomąjį užsakymą renkame jūsų vardą, el. pašto adresą, šalį, neprivalomą telefono numerį, pasirinktą kiekį, pasirinktą kalbą ir pateikimo laiką. Taip pat trumpam tvarkome jūsų IP adresą, kad apsaugotume formą nuo piktnaudžiavimo (užklausų ribojimas) ir parinktume tinkamą svetainės kalbą."
+          "p": "Pateikdami užsakymą nurodote vardą ir pavardę, el. pašto adresą, šalį, (neprivalomai) telefono numerį, prekių kiekį; taip pat užfiksuojame pasirinktą kalbą ir pateikimo laiką. Derindami užsakymą papildomai gauname pristatymo adresą ir apmokėjimo informaciją.\nTrumpam tvarkome jūsų IP adresą, kad apsaugotume svetainę nuo piktnaudžiavimo ir parinktume tinkamą kalbą."
         },
         {
-          "h": "Kodėl juos tvarkome",
-          "p": "Kad atsakytume į jūsų užklausą ir informuotume apie produkto prieinamumą (BDAR 6 str. 1 d. b p. — veiksmai prieš sudarant sutartį) bei apsaugotume svetainę (BDAR 6 str. 1 d. f p. — teisėtas interesas)."
+          "h": "Tikslai ir teisiniai pagrindai",
+          "p": "Užsakymo priėmimas, patvirtinimas ir įvykdymas, bendravimas su jumis (BDAR 6 str. 1 d. b p. – sutarties vykdymas ir veiksmai prieš sudarant sutartį).\nApskaitos ir mokesčių prievolių vykdymas (BDAR 6 str. 1 d. c p.).\nSvetainės saugumo užtikrinimas (BDAR 6 str. 1 d. f p. – teisėtas interesas)."
         },
         {
-          "h": "Kiek laiko saugome",
-          "p": "Bandomųjų užsakymų užklausos saugomos {days} d., po to ištrinamos, nebent paprašysite jas ištrinti anksčiau."
+          "h": "Saugojimo terminai",
+          "p": "Įvykdytų užsakymų duomenys saugomi tiek, kiek reikia užsakymui įvykdyti ir garantiniams įsipareigojimams, o apskaitos dokumentai – teisės aktų nustatytą laiką (iki 10 metų). Užklausos, kurios nevirto pirkimu, ištrinamos po {days} dienų."
         },
         {
-          "h": "Kas juos gauna",
-          "p": "Jūsų užklausa pristatoma el. paštu per mūsų el. pašto paslaugų teikėją, veikiantį kaip duomenų tvarkytojas. [Nurodykite tvarkytojus, pvz., talpinimo ir el. pašto paslaugų teikėjus, bei perdavimus už ES ribų.]"
+          "h": "Duomenų gavėjai",
+          "p": "Duomenis gali tvarkyti mūsų paslaugų teikėjai: svetainės talpinimo (Vercel) ir el. pašto siuntimo (Resend) paslaugų teikėjai bei kurjerių tarnybos – tik tiek, kiek būtina paslaugai suteikti. Kai kurie teikėjai duomenis gali tvarkyti už EEE ribų (JAV); tokiu atveju taikomos Europos Komisijos patvirtintos standartinės sutarčių sąlygos."
         },
         {
-          "h": "Slapukai ir saugykla",
-          "p": "Naudojame tik būtiną saugyklą: slapuką ir vietinės saugyklos įrašą, kurie įsimena jūsų kalbą. Nenaudojame analitikos ar reklaminių slapukų."
+          "h": "Slapukai",
+          "p": "Naudojame tik būtiną saugyklą – slapuką ir vietinės saugyklos įrašą, kurie įsimena jūsų pasirinktą kalbą ir krepšelį. Analitikos ar reklaminių slapukų nenaudojame."
         },
         {
           "h": "Jūsų teisės",
-          "p": "Turite teisę susipažinti su savo duomenimis, juos ištaisyti, ištrinti, apriboti jų tvarkymą, perkelti juos ir nesutikti su tvarkymu. Taip pat galite pateikti skundą Valstybinei duomenų apsaugos inspekcijai."
+          "p": "Turite teisę susipažinti su savo duomenimis, juos ištaisyti, ištrinti, apriboti jų tvarkymą, juos perkelti ir nesutikti su tvarkymu. Dėl šių teisių kreipkitės į mus el. paštu.\nTaip pat galite pateikti skundą Valstybinei duomenų apsaugos inspekcijai (www.vdai.lrv.lt)."
         }
       ]
     },
@@ -425,24 +416,44 @@
       "title": "Taisyklės ir sąlygos",
       "sections": [
         {
-          "h": "Testavimo etapas",
-          "p": "Ši svetainė šiuo metu naudojama susidomėjimui produktu įvertinti. Pateikus bandomąjį užsakymą pirkimo sutartis nesudaroma, mokėjimas nenuskaičiuojamas ir prekė nesiunčiama."
+          "h": "Bendrosios nuostatos",
+          "p": "Šios taisyklės nustato pirkėjo ir pardavėjo {entity} (toliau – Pardavėjas) teises, pareigas ir atsakomybę, kai prekės užsakomos per šią svetainę.\nUžsakydamas prekę pirkėjas patvirtina, kad susipažino su šiomis taisyklėmis ir su jomis sutinka. Pardavėjo rekvizitai nurodyti šio puslapio viršuje."
         },
         {
-          "h": "Pardavėjas",
-          "p": "{entity}, {address}, įmonės kodas {reg}, PVM mokėtojo kodas {vat}."
+          "h": "Užsakymas ir sutarties sudarymas",
+          "p": "Pirkėjas užpildo užsakymo formą svetainėje. Gavęs užsakymą, Pardavėjas ne vėliau kaip per 1 darbo dieną susisiekia su pirkėju el. paštu arba telefonu ir patvirtina prekių kiekį, kainą, pristatymo adresą ir apmokėjimo būdą.\nPirkimo–pardavimo sutartis laikoma sudaryta, kai Pardavėjas patvirtina užsakymą, o pirkėjas sumoka už prekę suderintu būdu."
         },
         {
-          "h": "Kainos",
-          "p": "Nurodytos kainos yra orientacinės ir, kai taikoma, apima PVM. Galutinės kainos bus patvirtintos prieš prasidedant prekybai."
+          "h": "Kainos ir apmokėjimas",
+          "p": "Prekių kainos nurodytos eurais ir yra galutinės. Pristatymas nemokamas.\nSvetainėje mokėjimai nepriimami ir mokėjimo kortelės duomenys neprašomi – apmokėjimo būdas suderinamas su pirkėju patvirtinant užsakymą."
         },
         {
-          "h": "Informacija apie produktą",
-          "p": "Produkto vaizdai apima preliminaraus 3D modelio vizualizacijas. Specifikacijos, pažymėtos „Bus patvirtinta“, dar nepatikrintos."
+          "h": "Pristatymas",
+          "p": "Prekės pristatomos nemokamai: Lietuvoje – per 3 dienas, kitose Europos šalyse – per 7–10 dienų nuo užsakymo patvirtinimo ir apmokėjimo. Išsamiau – skiltyje „Pristatymas ir grąžinimas“.\nPrekės nuosavybės teisė ir atsitiktinio žuvimo rizika pirkėjui pereina, kai prekė jam perduodama."
         },
         {
-          "h": "Taikytina teisė",
-          "p": "[Bus užpildyta.]"
+          "h": "Teisė atsisakyti sutarties",
+          "p": "Pirkėjas vartotojas turi teisę per 14 dienų nuo prekės gavimo dienos atsisakyti sutarties nenurodydamas priežasties. Apie tai reikia pranešti Pardavėjui raštu (el. paštu), nurodant užsakymo numerį.\nPrekė turi būti grąžinta per 14 dienų nuo pranešimo išsiuntimo. Pinigai, įskaitant pradinio pristatymo išlaidas, grąžinami per 14 dienų nuo pranešimo gavimo tuo pačiu mokėjimo būdu; Pardavėjas gali sulaikyti grąžinamą sumą, kol gaus prekę.\nTiesiogines prekės grąžinimo išlaidas apmoka pirkėjas, išskyrus atvejus, kai prekė yra nekokybiška ar ne ta, kuri buvo užsakyta. Pirkėjas atsako už prekės vertės sumažėjimą, atsiradusį dėl naudojimo labiau nei būtina prekės savybėms ir veikimui nustatyti."
+        },
+        {
+          "h": "Prekių kokybė ir garantija",
+          "p": "Prekėms taikoma įstatymų nustatyta 2 metų garantija dėl prekės neatitikties sutarties sąlygoms. Nustačius trūkumą, pirkėjas turi teisę reikalauti prekę nemokamai pataisyti ar pakeisti, sumažinti kainą arba nutraukti sutartį teisės aktų nustatyta tvarka.\nGarantija netaikoma gedimams, atsiradusiems dėl netinkamo naudojimo, mechaninių pažeidimų, drėgmės ar savavališko remonto."
+        },
+        {
+          "h": "Šalių atsakomybė",
+          "p": "Pirkėjas atsako už užsakymo formoje pateiktų duomenų teisingumą. Pardavėjas neatsako už pristatymo vėlavimą, jei jis atsirado dėl pirkėjo pateiktų netikslių duomenų ar nuo Pardavėjo nepriklausančių aplinkybių."
+        },
+        {
+          "h": "Asmens duomenys",
+          "p": "Pirkėjo asmens duomenys tvarkomi pagal Privatumo politiką."
+        },
+        {
+          "h": "Ginčų sprendimas",
+          "p": "Šioms taisyklėms taikoma Lietuvos Respublikos teisė; ši nuostata neatima iš vartotojo apsaugos, kurią jam suteikia jo nuolatinės gyvenamosios vietos šalies imperatyviosios teisės normos.\nGinčai sprendžiami derybomis. Vartotojas taip pat turi teisę kreiptis į Valstybinę vartotojų teisių apsaugos tarnybą (Vilniaus g. 25, Vilnius, www.vvtat.lt) arba į teismą."
+        },
+        {
+          "h": "Baigiamosios nuostatos",
+          "p": "Pardavėjas gali keisti šias taisykles. Užsakymui taikomos taisyklės, galiojusios užsakymo pateikimo metu."
         }
       ]
     },
@@ -451,28 +462,35 @@
       "sections": [
         {
           "h": "Pristatymas",
-          "p": "Testavimo etape užsakymai nesiunčiami. Pristatymo šalys, vežėjai, terminai ir kainos bus paskelbti prieš prasidedant prekybai."
+          "p": "Pristatymas nemokamas į visas Europos šalis.\nLietuvoje – per 3 dienas, kitose Europos šalyse – per 7–10 dienų.\nTerminai skaičiuojami nuo užsakymo patvirtinimo ir apmokėjimo. Išsiuntę užsakymą atsiųsime siuntos sekimo informaciją."
         },
         {
-          "h": "Teisė atsisakyti sutarties",
-          "p": "ES vartotojai turi teisę per 14 dienų be priežasties atsisakyti nuotolinės sutarties. Išsamios instrukcijos ir pavyzdinė atsisakymo forma bus pateiktos čia."
+          "h": "Grąžinimas per 14 dienų",
+          "p": "Prekę galite grąžinti per 14 dienų nuo jos gavimo nenurodydami priežasties. Parašykite mums el. paštu ir nurodykite užsakymo numerį – atsiųsime grąžinimo instrukcijas.\nPrekė turi būti nesugadinta, su visa komplektacija. Pinigus grąžinsime per 14 dienų nuo pranešimo gavimo (galime palaukti, kol gausime prekę). Grąžinimo siuntimo išlaidas apmoka pirkėjas."
         },
         {
-          "h": "Garantija",
-          "p": "Taikoma įstatymų nustatyta garantija. Papildoma gamintojo garantija, jei tokia bus, bus aprašyta čia."
+          "h": "Nekokybiška prekė ir garantija",
+          "p": "Prekei taikoma 2 metų garantija. Jei prekė sugedo ar neatitinka aprašymo, susisiekite su mumis – prekę nemokamai pataisysime, pakeisime arba grąžinsime pinigus, o grąžinimo išlaidas padengsime mes."
         }
       ]
     },
     "contact": {
       "title": "Kontaktai",
-      "text": "Turite klausimų apie Keyline One? Parašykite mums ir mes atsakysime.",
+      "text": "Turite klausimų apie Kalm ar savo užsakymą? Parašykite mums – atsakysime per 1 darbo dieną.",
+      "email": "El. paštas"
+    },
+    "company": {
+      "name": "Įmonė",
+      "code": "Įmonės kodas",
+      "vat": "PVM mokėtojo kodas",
+      "address": "Adresas",
       "email": "El. paštas"
     }
   },
   "email": {
-    "customerSubject": "Gavome jūsų užklausą — Keyline One",
+    "customerSubject": "Gavome jūsų užsakymą – Kalm",
     "customerGreeting": "Sveiki, {name},",
-    "customerBody": "Dėkojame už susidomėjimą Keyline One. Gavome jūsų bandomojo užsakymo užklausą (numeris {ref}). Šiuo metu vyksta produkto testavimo etapas: jokie mokėjimai nebuvo apdoroti ir niekas nebus išsiųsta. Susisieksime, kai produktas bus prieinamas."
+    "customerBody": "Dėkojame už Kalm užsakymą (užsakymo numeris {ref}). Per 1 darbo dieną susisieksime, kad patvirtintume detales, pristatymą ir apmokėjimą. Mokėjimas dar nebuvo nuskaičiuotas."
   },
   "notFound": {
     "title": "Puslapis nerastas",

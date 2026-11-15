@@ -11,7 +11,4 @@ export function getDictionary(locale: Locale): Dictionary {
   return dictionaries[locale] ?? en;
 }
 
-/** Replace {placeholders} in a translated string. */
-export function fmt(template: string, vars: Record<string, string | number> = {}) {
-  return template.replace(/\{(\w+)\}/g, (m, k) => (k in vars ? String(vars[k]) : m));
-}
+export { fmt } from "./fmt";

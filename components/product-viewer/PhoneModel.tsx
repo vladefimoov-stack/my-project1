@@ -105,7 +105,7 @@ export const PhoneModel = forwardRef<THREE.Group, PhoneModelProps>(function Phon
       body: new THREE.MeshPhysicalMaterial({ color: bodyColor, roughness: 0.62, metalness: 0.08, clearcoat: 0.12, clearcoatRoughness: 0.6 }),
       keys: new THREE.MeshPhysicalMaterial({ color: keyColor, roughness: 0.5, metalness: 0.05, clearcoat: 0.3, clearcoatRoughness: 0.45 }),
       plate: new THREE.MeshStandardMaterial({ color: "#040405", roughness: 0.9 }),
-      glass: new THREE.MeshPhysicalMaterial({ color: "#020203", roughness: 0.08, metalness: 0, clearcoat: 1, clearcoatRoughness: 0.04, envMapIntensity: 0.35 }),
+      glass: new THREE.MeshPhysicalMaterial({ color: "#000000", roughness: 0.12, metalness: 0, clearcoat: 0.5, clearcoatRoughness: 0.08, specularIntensity: 0.25, envMapIntensity: 0.3 }),
       dark: new THREE.MeshStandardMaterial({ color: "#060607", roughness: 0.6 }),
       lens: new THREE.MeshPhysicalMaterial({ color: "#07080B", roughness: 0.02, metalness: 0.3, clearcoat: 1, clearcoatRoughness: 0 }),
       lensRing: new THREE.MeshStandardMaterial({ color: "#9A9CA3", roughness: 0.28, metalness: 1 }),
@@ -134,7 +134,7 @@ export const PhoneModel = forwardRef<THREE.Group, PhoneModelProps>(function Phon
   const cam = { x: W / 2 - DEVICE.camera.x, y: H / 2 - DEVICE.camera.y };
 
   return (
-    <group ref={ref} scale={S} name="KeylineOne">
+    <group ref={ref} scale={S} name="KalmPhone">
       {/* ── Body ─────────────────────────────── */}
       <mesh name="Body" geometry={geo.body} material={mat.body} castShadow receiveShadow />
 

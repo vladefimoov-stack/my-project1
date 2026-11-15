@@ -26,7 +26,7 @@ function makeReference(now: Date) {
   const bytes = randomBytes(5);
   const rand = Array.from(bytes, (b) => alphabet[b % alphabet.length]).join("");
   const ymd = now.toISOString().slice(2, 10).replace(/-/g, "");
-  return `KL-${ymd}-${rand}`;
+  return `KM-${ymd}-${rand}`;
 }
 
 export async function POST(req: NextRequest) {

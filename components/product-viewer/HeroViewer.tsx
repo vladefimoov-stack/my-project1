@@ -129,10 +129,10 @@ export function HeroViewer() {
           aria-hidden={ready}
         >
           <Image
-            src="/images/renders/hero.webp"
+            src={`/images/renders/hero-${locale}.webp`}
             alt={`${product.name} — ${dict.purchase.description}`}
-            width={renders.hero.width}
-            height={renders.hero.height}
+            width={renders[`hero-${locale}`].width}
+            height={renders[`hero-${locale}`].height}
             priority
             fetchPriority="high"
             quality={70}
@@ -220,7 +220,7 @@ export function HeroViewer() {
         <div className="mt-2">
           <PresetChips active={active} onPick={go} />
           <p className="mt-3 text-center text-[11px] leading-snug text-stone">
-            {dict.viewer.hint} · {dict.viewer.provisionalShort}
+            {dict.viewer.hint}
           </p>
         </div>
       )}

@@ -21,7 +21,7 @@ export function Purchase() {
         <Reveal className="relative overflow-hidden rounded-[32px] bg-white">
           <div className="relative aspect-[4/5] w-full">
             <Image
-              src="/images/renders/threeQuarterFront.webp"
+              src={`/images/renders/threeQuarterFront-${locale}.webp`}
               alt={`${product.name} — ${colourNames[colour] ?? colour}`}
               fill
               sizes="(min-width:1024px) 600px, 100vw"
@@ -75,7 +75,7 @@ export function Purchase() {
               <circle cx="12" cy="12" r="9" />
               <path d="M12 8v5M12 16h.01" />
             </svg>
-            {p.testNotice}
+            {p.orderNotice}
           </p>
 
           <dl className="mt-8 divide-y divide-line border-y border-line">

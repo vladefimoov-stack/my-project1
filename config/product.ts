@@ -15,27 +15,27 @@ export type SpecKey =
   | "display"
   | "os"
   | "processor"
-  | "ram"
-  | "storage"
+  | "memory"
   | "battery"
-  | "camera"
-  | "sim"
-  | "network"
+  | "connectivity"
+  | "connector"
   | "dimensions"
   | "weight"
-  | "colours";
+  | "inBox";
 
-export type Spec = { value: string | null; verified: boolean };
+/** a value can be one string for all languages, or one per language */
+export type SpecValue = string | { en: string; lt: string; de: string };
+export type Spec = { value: SpecValue | null; verified: boolean };
 
 export const product = {
   /** Internal SKU used in order notifications */
-  sku: "KL-ONE-GRAPHITE",
+  sku: "KALM-BLACK",
   /** Display name (brand names are not translated) */
-  name: "Keyline One",
-  brand: "Keyline",
+  name: "Kalm",
+  brand: "Kalm",
 
   /** ── PRICE ─────────────────────────────────────────────────────── */
-  price: 119, // indicative price shown on the site (test phase, no payment)
+  price: 140, // price in EUR shown on the site (payment is arranged when we confirm the order)
   currency: "EUR" as const,
   /** Maximum units per test order */
   maxQuantity: 5,
@@ -43,7 +43,7 @@ export const product = {
   /** ── COLOURS ───────────────────────────────────────────────────── */
   colours: [
     {
-      id: "graphite",
+      id: "black",
       // swatch + material colours used by the 3D model
       swatch: "#16171A",
       body: "#18191C",
@@ -59,18 +59,22 @@ export const product = {
    * Example once confirmed:  display: { value: '3.5" touchscreen', verified: true }
    */
   specs: {
-    display: { value: null, verified: false },
-    os: { value: null, verified: false },
-    processor: { value: null, verified: false },
-    ram: { value: null, verified: false },
-    storage: { value: null, verified: false },
-    battery: { value: null, verified: false },
-    camera: { value: null, verified: false },
-    sim: { value: null, verified: false },
-    network: { value: null, verified: false },
-    dimensions: { value: null, verified: false },
-    weight: { value: null, verified: false },
-    colours: { value: null, verified: false },
+    display: { value: { en: '2.8" · 480 × 640', lt: '2,8" · 480 × 640', de: '2,8" · 480 × 640' }, verified: true },
+    os: { value: "Android 11", verified: true },
+    processor: { value: "MediaTek MT6739", verified: true },
+    memory: { value: "3 GB / 32 GB", verified: true },
+    battery: { value: { en: "2000 mAh", lt: "2000 mAh", de: "2000 mAh" }, verified: true },
+    connectivity: {
+      value: { en: "Wi-Fi · Bluetooth · hotspot", lt: "Wi-Fi · Bluetooth · prieigos taškas", de: "WLAN · Bluetooth · Hotspot" },
+      verified: true,
+    },
+    connector: { value: "USB Type-C", verified: true },
+    dimensions: { value: "131 × 52 × 9 mm", verified: true },
+    weight: { value: { en: "91.1 g", lt: "91,1 g", de: "91,1 g" }, verified: true },
+    inBox: {
+      value: { en: "Phone, USB-A → USB-C cable", lt: "Telefonas, USB-A → USB-C kabelis", de: "Telefon, USB-A → USB-C-Kabel" },
+      verified: true,
+    },
   } satisfies Record<SpecKey, Spec>,
 
   /** ── 3D MODEL ──────────────────────────────────────────────────────

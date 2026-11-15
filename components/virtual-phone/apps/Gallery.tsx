@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useI18n } from "@/i18n/I18nProvider";
-import { fmt } from "@/i18n/dictionaries";
+import { fmt } from "@/i18n/fmt";
 import { useKeys } from "../context";
 import { MOUNTAINS, SCENES } from "../data";
 import { AppBar, useTheme } from "./Shell";
