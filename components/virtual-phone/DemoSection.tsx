@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 import { useI18n } from "@/i18n/I18nProvider";
 import { Reveal } from "@/components/ui/Reveal";
+import { RealVideo } from "./RealVideo";
 
 const VirtualPhone = dynamic(() => import("./VirtualPhone").then((m) => m.VirtualPhone), {
   ssr: false,
@@ -29,16 +30,16 @@ export function DemoSection() {
 
         <Reveal delay={0.1} y={40}>
           <VirtualPhone />
+          <p className="mx-auto mt-5 flex max-w-[320px] gap-2 text-[11px] leading-relaxed text-white/60">
+            <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-300" aria-hidden="true" />
+            <span>
+              <strong className="font-semibold text-white/80">{dict.common.simulation}.</strong> {dict.demo.disclaimer}
+            </span>
+          </p>
         </Reveal>
 
-        <Reveal delay={0.2} className="mx-auto max-w-md lg:mx-0">
-          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-            <p className="flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.14em] text-white/70">
-              <span className="h-1.5 w-1.5 rounded-full bg-amber-300" aria-hidden="true" />
-              {dict.common.simulation}
-            </p>
-            <p className="mt-3 text-[13px] leading-relaxed text-white/55">{dict.demo.disclaimer}</p>
-          </div>
+        <Reveal delay={0.2}>
+          <RealVideo />
         </Reveal>
       </div>
     </section>

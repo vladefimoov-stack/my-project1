@@ -9,7 +9,7 @@ export function Footer() {
   const f = dict.footer;
   const year = new Date().getFullYear();
   const links = [
-    { href: `/${locale}#product`, label: f.product },
+    { href: `/${locale}#real`, label: f.product },
     { href: `/${locale}/contact`, label: f.contact },
     { href: `/${locale}#faq`, label: f.faq },
     { href: `/${locale}/privacy`, label: f.privacy },

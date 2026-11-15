@@ -78,16 +78,6 @@
     "zoomOut": "Nutolinti",
     "provisionalShort": "Preliminarus 3D modelis, detalės bus patikslintos"
   },
-  "presentation": {
-    "display": {
-      "title": "Ekranas, reaguojantis į prisilietimą.",
-      "text": "Spauskite programėlių piktogramas, slinkite ir braukite kaip bet kuriame išmaniajame telefone — ekrane, kurio dydis leidžia telefonui išlikti kompaktiškam."
-    },
-    "keypad": {
-      "title": "Mygtukai, kuriuos jaučiate.",
-      "text": "Atskiri lytimi mygtukai skaičiams, skambučiams ir naršymui bei centrinis apvalus valdiklis. Rinkite numerį nežiūrėdami."
-    }
-  },
   "specs": {
     "eyebrow": "Specifikacijos",
     "title": "Techniniai duomenys",
@@ -269,7 +259,30 @@
     },
     "home": {
       "date": "{weekday}, {month} {day} d."
+    },
+    "real": {
+      "badge": "Tikras įrenginys",
+      "caption": "Nufilmuota su tikru Keyline One",
+      "videos": [
+        "Paplūdimys",
+        "Miestas"
+      ],
+      "play": "Paleisti vaizdo įrašą",
+      "pause": "Sustabdyti vaizdo įrašą"
     }
+  },
+  "gallery": {
+    "eyebrow": "Tikros nuotraukos",
+    "title": "Štai kaip jis atrodo iš tikrųjų.",
+    "subtitle": "Kadrai iš mūsų vaizdo įrašų — Keyline One kasdieniame gyvenime.",
+    "alts": [
+      "Pradinis ekranas paplūdimyje",
+      "Žemėlapiai paplūdimyje",
+      "Kamera saulėlydžio metu",
+      "Pradinis ekranas mieste",
+      "Žemėlapiai mieste",
+      "Kamera mieste"
+    ]
   },
   "purchase": {
     "eyebrow": "Užsakymas",

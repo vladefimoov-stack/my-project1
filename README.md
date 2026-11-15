@@ -11,8 +11,8 @@ A premium single-product e-commerce website for a compact **hybrid phone**: a re
 | Section | What it does |
 |---|---|
 | Hero | Staggered entrance, scroll parallax, price from config, CTAs to the 3D viewer and demo |
-| 360° viewer | Real WebGL 3D model: drag/touch rotate (horizontal + vertical), wheel/pinch zoom, idle auto-rotate that pauses on interaction, preset views (display, keypad, back & camera, side, top & bottom), reset, fullscreen (with iOS fallback). Lazy-loaded when near the viewport, render loop paused off-screen, static renders if WebGL is unavailable |
-| Presentation | Editorial blocks with scroll reveals: front, display close-up, keypad close-up |
+| Hero 3D viewer | Real WebGL 3D model in the first screen (render as poster/fallback): drag/touch rotate (horizontal + vertical), wheel/pinch zoom, idle auto-rotate that pauses on interaction, preset views (display, keypad, back & camera, side, top & bottom), reset, fullscreen (with iOS fallback). Lazy-loaded when near the viewport, render loop paused off-screen, static renders if WebGL is unavailable |
+| Real device | Footage of the real phone next to the simulation (`public/videos/real-*.mp4`) and a gallery of 6 real photos (`public/images/real/`) |
 | Specifications | Driven by `config/product.ts`; unverified values show "To be confirmed" |
 | Interactive demo | A website **simulation** of the phone (not an emulator). Launcher identical in layout to the reference photo; 9 working apps (Telegram-style & WhatsApp-style chat with multi-tap keypad typing, Maps, Gallery, Video, Music with generated tones, Settings, Phone dialer, Contacts). Works with touch, the on-device keypad (D-pad, OK, back, call/end, digits) and the computer keyboard |
 | Why Keyline | Main message — less time on the screen — with an interactive calculator where visitors enter their own daily screen time |
@@ -159,7 +159,8 @@ docs/3D-MODEL.md       model status, verification checklist, how to swap in a re
 ## Assets still required before launch
 
 - [ ] **Real 3D model** of the production device (see `docs/3D-MODEL.md`) — the current one is a provisional reconstruction.
-- [ ] **Studio photography** of a physical sample, and a **photo of the device in a hand**.
+- [x] Real photos/videos of the device in a hand (from the owner's videos, captions cropped off).
+- [ ] Higher-resolution studio photography of a physical sample (current stills come from 720p video).
 - [ ] **Verified specifications** (display, OS, CPU, RAM, storage, battery, camera, SIM, network bands, dimensions, weight, colours).
 - [ ] Verified app compatibility (WhatsApp, Telegram, etc.) before changing FAQ answers.
 - [ ] Final brand name / logo (current "Keyline" identity is temporary).

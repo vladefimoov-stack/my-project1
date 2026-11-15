@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/hero/Hero";
-import { Presentation } from "@/components/sections/Presentation";
+import { RealPhotos } from "@/components/sections/RealPhotos";
 import { Specs } from "@/components/sections/Specs";
 import { DemoSection } from "@/components/virtual-phone/DemoSection";
 import { Why } from "@/components/sections/Why";
@@ -27,8 +27,8 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <main id="main">
         <Hero />
         <Why />
-        <Presentation />
         <DemoSection />
+        <RealPhotos />
         <Purchase />
         <Specs />
         <FAQ />

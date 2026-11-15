@@ -78,16 +78,6 @@
     "zoomOut": "Verkleinern",
     "provisionalShort": "Vorläufiges 3D-Modell, Details werden noch geprüft"
   },
-  "presentation": {
-    "display": {
-      "title": "Ein Bildschirm, der auf Berührung reagiert.",
-      "text": "Tippen Sie auf App-Symbole, scrollen und wischen Sie wie auf jedem Smartphone — auf einem Display, das das Telefon kompakt hält."
-    },
-    "keypad": {
-      "title": "Tasten, die man fühlt.",
-      "text": "Einzelne fühlbare Tasten für Ziffern, Anrufe und Navigation sowie ein zentrales rundes Steuerelement. Wählen, ohne hinzusehen."
-    }
-  },
   "specs": {
     "eyebrow": "Spezifikationen",
     "title": "Technische Daten",
@@ -269,7 +259,30 @@
     },
     "home": {
       "date": "{weekday}, {day}. {month}"
+    },
+    "real": {
+      "badge": "Echtes Gerät",
+      "caption": "Mit einem echten Keyline One gefilmt",
+      "videos": [
+        "Strand",
+        "Stadt"
+      ],
+      "play": "Video abspielen",
+      "pause": "Video pausieren"
     }
+  },
+  "gallery": {
+    "eyebrow": "Echte Fotos",
+    "title": "So sieht es wirklich aus.",
+    "subtitle": "Bilder aus unseren Videos — Keyline One im Alltag.",
+    "alts": [
+      "Startbildschirm am Strand",
+      "Karten am Strand",
+      "Kamera bei Sonnenuntergang",
+      "Startbildschirm in der Stadt",
+      "Karten in der Stadt",
+      "Kamera in der Stadt"
+    ]
   },
   "purchase": {
     "eyebrow": "Bestellen",
