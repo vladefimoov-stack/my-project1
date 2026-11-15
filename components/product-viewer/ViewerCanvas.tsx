@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { CameraControls, ContactShadows } from "@react-three/drei";
+import { CameraControls, CameraControlsImpl, ContactShadows } from "@react-three/drei";
 import * as THREE from "three";
 import { Phone } from "./Phone";
 import { StudioLights } from "./StudioLights";
@@ -10,6 +10,8 @@ import { VIEWS, type ViewId } from "@/lib/views";
 import type { AppId } from "@/lib/apps";
 
 export type ViewRequest = { id: ViewId; nonce: number };
+export type ZoomRequest = { dir: 1 | -1; nonce: number };
+const { ACTION } = CameraControlsImpl;
 
 type Props = {
   request: ViewRequest;
@@ -18,11 +20,14 @@ type Props = {
   labels: Record<AppId, string>;
   onInteract: () => void;
   onReady?: () => void;
+  /** wheel/pinch zoom — off in the hero so the page keeps scrolling */
+  freeZoom: boolean;
+  zoom: ZoomRequest;
 };
 
 const IDLE_MS = 6000;
 
-function Rig({ request, autoRotate, onInteract }: Pick<Props, "request" | "autoRotate" | "onInteract">) {
+function Rig({ request, autoRotate, onInteract, freeZoom, zoom }: Pick<Props, "request" | "autoRotate" | "onInteract" | "freeZoom" | "zoom">) {
   const ref = useRef<CameraControls>(null);
   const lastInput = useRef(0);
   const first = useRef(true);
@@ -35,6 +40,20 @@ function Rig({ request, autoRotate, onInteract }: Pick<Props, "request" | "autoR
     if (!first.current) lastInput.current = performance.now();
     first.current = false;
   }, [request]);
+
+  useEffect(() => {
+    const c = ref.current;
+    if (!c) return;
+    c.mouseButtons.wheel = freeZoom ? ACTION.DOLLY : ACTION.NONE;
+    c.touches.two = freeZoom ? ACTION.TOUCH_DOLLY : ACTION.NONE;
+  }, [freeZoom]);
+
+  useEffect(() => {
+    const c = ref.current;
+    if (!c || zoom.nonce === 0) return;
+    c.dolly(zoom.dir * 0.45, true);
+    lastInput.current = performance.now();
+  }, [zoom]);
 
   useEffect(() => {
     const c = ref.current;
@@ -70,7 +89,7 @@ function Rig({ request, autoRotate, onInteract }: Pick<Props, "request" | "autoR
   );
 }
 
-export default function ViewerCanvas({ request, autoRotate, active, labels, onInteract, onReady }: Props) {
+export default function ViewerCanvas({ request, autoRotate, active, labels, onInteract, onReady, freeZoom, zoom }: Props) {
   const dprMax = typeof window !== "undefined" && window.innerWidth < 768 ? 1.75 : 2;
   return (
     <Canvas
@@ -79,13 +98,14 @@ export default function ViewerCanvas({ request, autoRotate, active, labels, onIn
       camera={{ fov: 30, near: 0.05, far: 50, position: VIEWS.hero.position }}
       gl={{ antialias: true, alpha: true, toneMapping: THREE.ACESFilmicToneMapping, powerPreference: "high-performance" }}
       onCreated={() => onReady?.()}
-      style={{ touchAction: "none" }}
+      // in the page, vertical swipes keep scrolling; horizontal drags rotate
+      style={{ touchAction: freeZoom ? "none" : "pan-y" }}
       aria-hidden="true"
     >
       <StudioLights />
       <Phone screenLabels={labels} />
       <ContactShadows position={[0, -0.72, 0]} opacity={0.35} scale={3.5} blur={2.8} far={1.4} resolution={512} frames={1} />
-      <Rig request={request} autoRotate={autoRotate} onInteract={onInteract} />
+      <Rig request={request} autoRotate={autoRotate} onInteract={onInteract} freeZoom={freeZoom} zoom={zoom} />
     </Canvas>
   );
 }

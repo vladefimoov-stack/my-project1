@@ -1,13 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import { useRef } from "react";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useI18n } from "@/i18n/I18nProvider";
 import { formatPrice, product } from "@/config/product";
 import { fmt } from "@/i18n/dictionaries";
 import { useCart } from "@/components/layout/CartProvider";
-import renders from "@/lib/render-manifest.json";
+import { HeroViewer } from "@/components/product-viewer/HeroViewer";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -17,7 +16,6 @@ export function Hero() {
   const { openCheckout } = useCart();
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const phoneY = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : 90]);
   const discY = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : -60]);
   const discScale = useTransform(scrollYProgress, [0, 1], [1, reduce ? 1 : 1.15]);
 
@@ -32,7 +30,7 @@ export function Hero() {
 
   return (
     <section ref={ref} className="relative overflow-hidden bg-white pt-16" aria-labelledby="hero-title">
-      <div className="container-site grid min-h-[calc(100svh-64px)] items-center gap-6 pb-10 pt-8 lg:grid-cols-[1.05fr_1fr] lg:gap-10 lg:pb-16">
+      <div className="container-site grid min-h-[calc(100svh-64px)] grid-cols-[minmax(0,1fr)] items-center gap-6 pb-10 pt-8 lg:grid-cols-[1.05fr_1fr] lg:gap-10 lg:pb-16">
         <div className="relative z-10 max-w-xl text-center lg:text-left">
           <motion.p className="eyebrow" {...item(0)}>
             {dict.hero.eyebrow}
@@ -59,33 +57,20 @@ export function Hero() {
           </motion.div>
         </div>
 
-        <div className="relative mx-auto flex w-full max-w-[560px] items-center justify-center">
+        <div className="relative mx-auto flex w-full min-w-0 max-w-[620px] items-center justify-center">
           <motion.div
             aria-hidden="true"
             style={{ y: discY, scale: discScale }}
-            className="absolute left-1/2 top-1/2 aspect-square w-[92%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(closest-side,#EDEDED,#F5F5F5_60%,rgba(255,255,255,0)_100%)]"
+            className="pointer-events-none absolute left-1/2 top-[45%] aspect-square w-[92%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(closest-side,#EDEDED,#F5F5F5_60%,rgba(255,255,255,0)_100%)]"
           />
           <motion.div
-            initial={reduce ? false : { y: 60, rotate: -2 }}
-            animate={{ y: 0, rotate: 0 }}
-            transition={{ duration: 1.3, delay: 0.1, ease }}
-            className="relative mx-auto w-full [--hero-h:52svh] lg:[--hero-h:78svh]"
-            style={{ y: phoneY, maxWidth: `calc(var(--hero-h) * ${(renders.hero.width / renders.hero.height).toFixed(4)})` }}
+            initial={reduce ? false : { y: 40 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 1.1, delay: 0.1, ease }}
+            className="relative w-full"
           >
-            <Image
-              src="/images/renders/hero.webp"
-              alt={`${product.name} — ${dict.purchase.description}`}
-              width={renders.hero.width}
-              height={renders.hero.height}
-              priority
-              sizes="(min-width: 1024px) 440px, 60vw"
-              quality={70}
-              fetchPriority="high"
-              className="h-auto w-full select-none"
-              draggable={false}
-            />
+            <HeroViewer />
           </motion.div>
-          <p className="absolute bottom-0 right-0 text-[11px] text-stone/80">{dict.hero.renderNote}</p>
         </div>
       </div>
     </section>

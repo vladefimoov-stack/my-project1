@@ -30,7 +30,6 @@
     "subtitle": "A compact phone with real keys and a small touchscreen — for calls, messages, maps and work. Everything you need, without the habit of scrolling for hours.",
     "ctaDemo": "Try interactive demo",
     "priceLabel": "Indicative price",
-    "renderNote": "Render of provisional 3D model",
     "ctaOrder": "Order now · {price}"
   },
   "why": {
@@ -63,8 +62,6 @@
   },
   "viewer": {
     "eyebrow": "360° viewer",
-    "title": "Every angle. In your hands.",
-    "subtitle": "Drag to rotate, scroll or pinch to zoom. Jump to a detail below.",
     "views": {
       "front": "Display",
       "keypad": "Keypad",
@@ -76,17 +73,12 @@
     "fullscreen": "Fullscreen",
     "exitFullscreen": "Exit fullscreen",
     "autoRotate": "Auto-rotate",
-    "loading": "Loading 3D model…",
-    "load": "Load 3D viewer",
-    "provisional": "Provisional 3D model reconstructed from reference photos. Proportions and details are approximate until verified against the production device.",
-    "noWebgl": "Your browser cannot display 3D graphics. Here are studio renders of the device instead.",
-    "hint": "Drag to rotate"
+    "hint": "Drag to rotate",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out",
+    "provisionalShort": "Provisional 3D model, details to be verified"
   },
   "presentation": {
-    "front": {
-      "title": "Two ways to control. One device.",
-      "text": "A colour touchscreen in the upper half, a full physical keypad in the lower half. Use whichever feels natural at the moment."
-    },
     "display": {
       "title": "A screen that responds to touch.",
       "text": "Tap app icons, scroll and swipe like on any smartphone — on a display sized to keep the phone compact."

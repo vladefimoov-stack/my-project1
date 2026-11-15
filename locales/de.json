@@ -30,7 +30,6 @@
     "subtitle": "Ein kompaktes Telefon mit echten Tasten und kleinem Touchscreen — für Anrufe, Nachrichten, Karten und Arbeit. Alles, was Sie brauchen, ohne die Gewohnheit, stundenlang zu scrollen.",
     "ctaDemo": "Interaktive Demo testen",
     "priceLabel": "Richtpreis",
-    "renderNote": "Rendering des vorläufigen 3D-Modells",
     "ctaOrder": "Jetzt bestellen · {price}"
   },
   "why": {
@@ -63,8 +62,6 @@
   },
   "viewer": {
     "eyebrow": "360°-Ansicht",
-    "title": "Jeder Winkel. In Ihren Händen.",
-    "subtitle": "Ziehen zum Drehen, scrollen oder mit zwei Fingern zoomen. Wählen Sie unten ein Detail.",
     "views": {
       "front": "Display",
       "keypad": "Tastatur",
@@ -76,17 +73,12 @@
     "fullscreen": "Vollbild",
     "exitFullscreen": "Vollbild beenden",
     "autoRotate": "Automatisch drehen",
-    "loading": "3D-Modell wird geladen…",
-    "load": "3D-Ansicht laden",
-    "provisional": "Vorläufiges 3D-Modell, rekonstruiert anhand von Referenzfotos. Proportionen und Details sind Näherungswerte, bis sie am Seriengerät überprüft wurden.",
-    "noWebgl": "Ihr Browser kann keine 3D-Grafik darstellen. Hier sehen Sie stattdessen Studio-Renderings des Geräts.",
-    "hint": "Ziehen zum Drehen"
+    "hint": "Ziehen zum Drehen",
+    "zoomIn": "Vergrößern",
+    "zoomOut": "Verkleinern",
+    "provisionalShort": "Vorläufiges 3D-Modell, Details werden noch geprüft"
   },
   "presentation": {
-    "front": {
-      "title": "Zwei Arten der Bedienung. Ein Gerät.",
-      "text": "Ein farbiger Touchscreen in der oberen Hälfte, eine vollständige physische Tastatur in der unteren. Nutzen Sie, was sich gerade natürlich anfühlt."
-    },
     "display": {
       "title": "Ein Bildschirm, der auf Berührung reagiert.",
       "text": "Tippen Sie auf App-Symbole, scrollen und wischen Sie wie auf jedem Smartphone — auf einem Display, das das Telefon kompakt hält."

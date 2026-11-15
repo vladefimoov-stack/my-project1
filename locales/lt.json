@@ -30,7 +30,6 @@
     "subtitle": "Kompaktiškas telefonas su tikrais mygtukais ir mažu jutikliniu ekranu — skambučiams, žinutėms, žemėlapiams ir darbui. Viskas, ko reikia, be įpročio valandų valandas slinkti ekraną.",
     "ctaDemo": "Išbandykite demonstraciją",
     "priceLabel": "Orientacinė kaina",
-    "renderNote": "Preliminaraus 3D modelio vizualizacija",
     "ctaOrder": "Užsakyti · {price}"
   },
   "why": {
@@ -63,8 +62,6 @@
   },
   "viewer": {
     "eyebrow": "360° peržiūra",
-    "title": "Kiekvienas kampas. Jūsų rankose.",
-    "subtitle": "Tempkite, kad pasuktumėte, slinkite ar suspauskite pirštais, kad priartintumėte. Pasirinkite detalę žemiau.",
     "views": {
       "front": "Ekranas",
       "keypad": "Klaviatūra",
@@ -76,17 +73,12 @@
     "fullscreen": "Visas ekranas",
     "exitFullscreen": "Išeiti iš viso ekrano",
     "autoRotate": "Automatinis sukimas",
-    "loading": "Įkeliamas 3D modelis…",
-    "load": "Įkelti 3D peržiūrą",
-    "provisional": "Preliminarus 3D modelis, atkurtas pagal pavyzdines nuotraukas. Proporcijos ir detalės yra apytikslės, kol nebus patikrintos su gamybiniu įrenginiu.",
-    "noWebgl": "Jūsų naršyklė negali rodyti 3D grafikos. Vietoj to pateikiame studijines įrenginio vizualizacijas.",
-    "hint": "Tempkite, kad pasuktumėte"
+    "hint": "Tempkite, kad pasuktumėte",
+    "zoomIn": "Priartinti",
+    "zoomOut": "Nutolinti",
+    "provisionalShort": "Preliminarus 3D modelis, detalės bus patikslintos"
   },
   "presentation": {
-    "front": {
-      "title": "Du valdymo būdai. Vienas įrenginys.",
-      "text": "Spalvotas jutiklinis ekranas viršutinėje dalyje, pilna fizinė klaviatūra apatinėje. Naudokite tai, kas tuo metu patogiau."
-    },
     "display": {
       "title": "Ekranas, reaguojantis į prisilietimą.",
       "text": "Spauskite programėlių piktogramas, slinkite ir braukite kaip bet kuriame išmaniajame telefone — ekrane, kurio dydis leidžia telefonui išlikti kompaktiškam."
