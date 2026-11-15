@@ -10,6 +10,8 @@ export const site = {
     address: "",
     vatNo: "", // PVM mokėtojo kodas (leave empty if not a VAT payer)
   },
+  /** where order notifications are sent (ORDER_NOTIFICATION_EMAIL overrides it) */
+  orderEmail: "vladefimoov@gmail.com",
   /** how long order requests that did not lead to a sale are kept (privacy policy) */
   dataRetentionDays: 365,
 };

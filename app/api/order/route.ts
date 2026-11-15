@@ -5,6 +5,7 @@ import { rateLimit, recall, remember } from "@/lib/rate-limit";
 import { sendEmail } from "@/lib/email";
 import { buildCustomerEmail, buildOwnerEmail } from "@/lib/order-email";
 import { log, maskEmail } from "@/lib/logger";
+import { site } from "@/config/site";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -117,11 +118,7 @@ type Delivery = { ok: true; reference: string } | { ok: false; status: number };
 const inflight = new Map<string, Promise<Delivery>>();
 
 async function deliver(order: Order, dupKeys: string[]): Promise<Delivery> {
-  const to = process.env.ORDER_NOTIFICATION_EMAIL;
-  if (!to) {
-    log("error", "order.config", { reason: "ORDER_NOTIFICATION_EMAIL missing" });
-    return { ok: false, status: 503 };
-  }
+  const to = process.env.ORDER_NOTIFICATION_EMAIL || site.orderEmail;
 
   const now = new Date();
   const reference = makeReference(now);
