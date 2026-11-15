@@ -476,8 +476,10 @@
     },
     "contact": {
       "title": "Kontaktai",
-      "text": "Turite klausimų apie Kalm ar savo užsakymą? Parašykite mums – atsakysime per 1 darbo dieną.",
-      "email": "El. paštas"
+      "text": "Turite klausimų apie Kalm ar savo užsakymą? Paskambinkite arba parašykite – atsakysime per 1 darbo dieną.",
+      "email": "El. paštas",
+      "phone": "Telefonas",
+      "phoneNote": "Paspauskite, kad paskambintumėte"
     },
     "company": {
       "name": "Įmonė",

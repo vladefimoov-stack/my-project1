@@ -476,8 +476,10 @@
     },
     "contact": {
       "title": "Contact",
-      "text": "Questions about Kalm or your order? Write to us — we'll get back to you within 1 business day.",
-      "email": "Email"
+      "text": "Questions about Kalm or your order? Call us or write — we'll get back to you within 1 business day.",
+      "email": "Email",
+      "phone": "Phone",
+      "phoneNote": "Tap to call"
     },
     "company": {
       "name": "Company",

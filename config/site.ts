@@ -3,6 +3,8 @@ export const site = {
   url: (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000").replace(/\/$/, ""),
   /** public contact email — shown on the contact & legal pages when filled in */
   contactEmail: "",
+  /** public contact phone — shown on the contact page as a tap-to-call link */
+  contactPhone: "+370 626 26210",
   /** company details for legal pages — empty fields are simply not shown */
   legalEntity: {
     name: "MB Kalm",

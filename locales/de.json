@@ -476,8 +476,10 @@
     },
     "contact": {
       "title": "Kontakt",
-      "text": "Fragen zu Kalm oder Ihrer Bestellung? Schreiben Sie uns — wir antworten innerhalb von 1 Werktag.",
-      "email": "E-Mail"
+      "text": "Fragen zu Kalm oder Ihrer Bestellung? Rufen Sie uns an oder schreiben Sie uns — wir antworten innerhalb von 1 Werktag.",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "phoneNote": "Zum Anrufen tippen"
     },
     "company": {
       "name": "Unternehmen",
