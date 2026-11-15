@@ -1,0 +1,328 @@
+{
+  "meta": {
+    "title": "Keyline One — klasikinė klaviatūra. Jutiklinio ekrano išmanusis telefonas.",
+    "description": "Keyline One — kompaktiškas hibridinis telefonas: tikra fizinė klaviatūra ir spalvotas jutiklinis ekranas. Apžiūrėkite jį 3D formatu ir išbandykite interaktyvią demonstraciją."
+  },
+  "common": {
+    "skip": "Pereiti prie turinio",
+    "pending": "Bus patvirtinta",
+    "pendingVerification": "Laukiama tiekėjo patvirtinimo",
+    "simulation": "Simuliacija",
+    "testPhase": "Testavimo etapas — mokėjimai nevykdomi",
+    "close": "Uždaryti",
+    "back": "Atgal"
+  },
+  "nav": {
+    "product": "Produktas",
+    "features": "Funkcijos",
+    "demo": "Interaktyvi demonstracija",
+    "faq": "DUK",
+    "bag": "Krepšelis",
+    "bagItems": "Krepšelyje prekių: {count}",
+    "language": "Kalba",
+    "menu": "Meniu",
+    "order": "Užsakyti"
+  },
+  "hero": {
+    "eyebrow": "Pristatome Keyline One",
+    "title1": "Tikri mygtukai.",
+    "title2": "Tikras jutiklinis ekranas.",
+    "subtitle": "Kompaktiškas telefonas, kuriame lytima skaičių klaviatūra dera su spalvotu jutikliniu ekranu — paprastumas, kurį prisimenate, ir programėlės, kuriomis naudojatės.",
+    "ctaDiscover": "Susipažinkite su įrenginiu",
+    "ctaDemo": "Išbandykite demonstraciją",
+    "priceLabel": "Orientacinė kaina",
+    "renderNote": "Preliminaraus 3D modelio vizualizacija"
+  },
+  "viewer": {
+    "eyebrow": "360° peržiūra",
+    "title": "Kiekvienas kampas. Jūsų rankose.",
+    "subtitle": "Tempkite, kad pasuktumėte, slinkite ar suspauskite pirštais, kad priartintumėte. Pasirinkite detalę žemiau.",
+    "views": {
+      "front": "Ekranas",
+      "keypad": "Klaviatūra",
+      "back": "Nugarėlė ir kamera",
+      "side": "Šonas",
+      "edges": "Viršus ir apačia"
+    },
+    "reset": "Atstatyti vaizdą",
+    "fullscreen": "Visas ekranas",
+    "exitFullscreen": "Išeiti iš viso ekrano",
+    "autoRotate": "Automatinis sukimas",
+    "loading": "Įkeliamas 3D modelis…",
+    "load": "Įkelti 3D peržiūrą",
+    "provisional": "Preliminarus 3D modelis, atkurtas pagal pavyzdines nuotraukas. Proporcijos ir detalės yra apytikslės, kol nebus patikrintos su gamybiniu įrenginiu.",
+    "noWebgl": "Jūsų naršyklė negali rodyti 3D grafikos. Vietoj to pateikiame studijines įrenginio vizualizacijas.",
+    "hint": "Tempkite, kad pasuktumėte"
+  },
+  "presentation": {
+    "eyebrow": "Koncepcija",
+    "title": "Klasikinis valdymas. Kitokia išmaniojo telefono patirtis.",
+    "intro": "Dažniausiai tenka rinktis: jutiklinis išmanusis telefonas arba paprastas mygtukinis telefonas. Keyline One sujungia abu viename kompaktiškame korpuse. Rašykite, skambinkite ir naršykite tikrais mygtukais — o kai greičiau paliesti, tiesiog palieskite ekraną.",
+    "front": {
+      "title": "Du valdymo būdai. Vienas įrenginys.",
+      "text": "Spalvotas jutiklinis ekranas viršutinėje dalyje, pilna fizinė klaviatūra apatinėje. Naudokite tai, kas tuo metu patogiau."
+    },
+    "display": {
+      "title": "Ekranas, reaguojantis į prisilietimą.",
+      "text": "Spauskite programėlių piktogramas, slinkite ir braukite kaip bet kuriame išmaniajame telefone — ekrane, kurio dydis leidžia telefonui išlikti kompaktiškam."
+    },
+    "keypad": {
+      "title": "Mygtukai, kuriuos jaučiate.",
+      "text": "Atskiri lytimi mygtukai skaičiams, skambučiams ir naršymui bei centrinis apvalus valdiklis. Rinkite numerį nežiūrėdami."
+    },
+    "back": {
+      "title": "Švari nugarėlė. Galinė kamera.",
+      "text": "Minimalistinė grafito spalvos nugarėlė su galinės kameros moduliu kampe."
+    },
+    "scale": {
+      "title": "Sukurtas lengvai tilpti į kišenę.",
+      "text": "Siauras ir kompaktiškas — palyginimui pavaizduotas šalia standartinės banko kortelės (85,6 × 54 mm).",
+      "card": "Banko kortelė",
+      "note": "Apytikslis mastelis pagal pavyzdines nuotraukas. Tikslūs matmenys bus paskelbti juos patvirtinus."
+    }
+  },
+  "specs": {
+    "eyebrow": "Specifikacijos",
+    "title": "Techniniai duomenys",
+    "note": "Skelbiame tik gamintojo patvirtintas specifikacijas. Reikšmės, pažymėtos „Bus patvirtinta“, šiuo metu tikrinamos.",
+    "labels": {
+      "display": "Ekranas",
+      "os": "Operacinė sistema",
+      "processor": "Procesorius",
+      "ram": "Operatyvioji atmintis",
+      "storage": "Vidinė atmintis",
+      "battery": "Baterija",
+      "camera": "Kamera",
+      "sim": "SIM",
+      "network": "Tinklas",
+      "dimensions": "Matmenys",
+      "weight": "Svoris",
+      "colours": "Spalvos"
+    }
+  },
+  "demo": {
+    "eyebrow": "Interaktyvi demonstracija",
+    "title": "Išbandykite čia pat.",
+    "subtitle": "Palieskite ekraną arba naudokite klaviatūrą. Atidarykite programėles, naršykite, surinkite numerį — kaip tikrame įrenginyje.",
+    "disclaimer": "Tai svetainėje veikianti simuliacija su išgalvotu demonstraciniu turiniu. Tai nėra „Android“ emuliatorius, ji nesijungia prie „Telegram“, „WhatsApp“, „YouTube“ ar kitų paslaugų. Programėlių prieinamumas tikrame įrenginyje dar tikrinamas.",
+    "keysHint": "Patarimas: veikia ir kompiuterio klaviatūros rodyklės, Enter bei Backspace.",
+    "badge": "Demo",
+    "apps": {
+      "telegram": "Telegram",
+      "maps": "Žemėlapiai",
+      "gallery": "Galerija",
+      "youtube": "YouTube",
+      "music": "Muzika",
+      "whatsapp": "WhatsApp",
+      "settings": "Nustatymai",
+      "phone": "Telefonas",
+      "contacts": "Kontaktai"
+    },
+    "messaging": {
+      "search": "Paieška",
+      "typeMessage": "Žinutė",
+      "online": "prisijungęs",
+      "lastSeen": "matytas neseniai",
+      "chats": [
+        { "name": "Ana", "preview": "Iki 7?", "time": "12:41", "messages": [["in", "Labas! Ar šiandien vakare susitinkam?"], ["out", "Taip! Toje pačioje vietoje kaip praėjusį kartą?"], ["in", "Iki 7?"]] },
+        { "name": "Šeima", "preview": "Mama: Sekmadienio nuotraukos 📷", "time": "11:02", "messages": [["in", "Sekmadienio nuotraukos 📷"], ["out", "Puikios, ačiū!"]] },
+        { "name": "Tomas", "preview": "Klaviatūra labai patogi", "time": "Vakar", "messages": [["in", "Jau turi naują telefoną?"], ["out", "Taip — vėl rašau tikrais mygtukais"], ["in", "Klaviatūra labai patogi"]] },
+        { "name": "Darbas", "preview": "Susitikimas perkeltas į 10:30", "time": "Pr", "messages": [["in", "Susitikimas perkeltas į 10:30"]] }
+      ],
+      "autoReply": "👍"
+    },
+    "maps": {
+      "search": "Ieškoti vietų",
+      "you": "Jūs esate čia",
+      "places": ["Kavinė", "Parkas", "Stotis"],
+      "route": "Maršrutas",
+      "walk": "12 min pėsčiomis"
+    },
+    "gallery": { "title": "Galerija", "count": "Nuotraukų: {count}" },
+    "video": {
+      "title": "Vaizdo įrašai",
+      "items": ["Rytas kalnuose", "Kaip pasigaminti šviežių makaronų", "Miesto šviesos — pagreitintas vaizdas", "Jūros bangos — 10 minučių"],
+      "views": "{count} peržiūrų",
+      "playing": "Demonstracinis atkūrimas",
+      "channel": "Demo kanalas"
+    },
+    "music": {
+      "title": "Dabar groja",
+      "tracks": [
+        { "title": "Tylus rytas", "artist": "Demo Ensemble" },
+        { "title": "Grafitas", "artist": "Keyline Sounds" },
+        { "title": "Naktinis traukinys", "artist": "Demo Ensemble" }
+      ],
+      "note": "Sugeneruoti demonstraciniai garsai — jokios autorių teisėmis saugomos muzikos"
+    },
+    "settings": {
+      "title": "Nustatymai",
+      "darkMode": "Tamsus režimas",
+      "largeText": "Didelis tekstas",
+      "sounds": "Mygtukų garsai",
+      "brightness": "Ryškumas",
+      "wallpaper": "Ekrano fonas",
+      "about": "Apie įrenginį",
+      "aboutText": "Demonstracinė simuliuota sąsaja."
+    },
+    "phone": {
+      "title": "Telefonas",
+      "call": "Skambinti",
+      "calling": "Skambinama…",
+      "demoCall": "Demonstracinis skambutis — tikras skambutis nevykdomas",
+      "end": "Baigti",
+      "recent": "Naujausi",
+      "keypad": "Klaviatūra"
+    },
+    "contacts": {
+      "title": "Kontaktai",
+      "search": "Ieškoti kontaktų",
+      "mobile": "Mobilusis"
+    },
+    "home": { "date": "{weekday}, {month} {day} d." }
+  },
+  "features": {
+    "eyebrow": "Funkcijos",
+    "title": "Paprastas iš išorės. Išmanus viduje.",
+    "pending": "Laukiama patvirtinimo",
+    "items": {
+      "compact": { "title": "Kompaktiškas dizainas", "text": "Siauras korpusas, patogiai telpantis vienoje rankoje ir bet kurioje kišenėje." },
+      "keypad": { "title": "Fizinė klaviatūra", "text": "Lytimi skaičių mygtukai, skambučių mygtukai ir apvalus naršymo valdiklis." },
+      "touch": { "title": "Jutiklinis ekranas", "text": "Spalvotas ekranas, kurį galima liesti, slinkti ir braukti." },
+      "hybrid": { "title": "Hibridinė patirtis", "text": "Bet kurioje programėlėje bet kada perjunkite tarp mygtukų ir lietimo." },
+      "apps": { "title": "Programėlių suderinamumas", "text": "Sukurtas populiarioms susirašinėjimo ir medijos programėlėms. Tikslus suderinamumas tikrinamas." },
+      "dualSim": { "title": "Dvi SIM kortelės", "text": "Dvi SIM kortelės viename įrenginyje. Tikslinama su gamintoju." },
+      "lte": { "title": "4G ryšys", "text": "Mobilieji duomenys 4G tinkluose. Palaikomi dažnių diapazonai tikslinami." }
+    }
+  },
+  "purchase": {
+    "eyebrow": "Užsakymas",
+    "title": "Keyline One",
+    "description": "Kompaktiškas hibridinis telefonas su fizine skaičių klaviatūra ir spalvotu jutikliniu ekranu.",
+    "colour": "Spalva",
+    "colours": { "graphite": "Grafitas" },
+    "quantity": "Kiekis",
+    "decrease": "Sumažinti kiekį",
+    "increase": "Padidinti kiekį",
+    "order": "Užsakyti dabar",
+    "testNotice": "Šiuo metu tiriame susidomėjimą šiuo produktu. Pateikę užsakymą atsiųsite mums užklausą — jokie pinigai nenuskaičiuojami.",
+    "delivery": { "title": "Pristatymas", "text": "Pristatymo terminai ir kainos bus patvirtinti prieš prasidedant prekybai." },
+    "returns": { "title": "Grąžinimas", "text": "Grąžinimo sąlygos bus paskelbtos prieš prasidedant prekybai." },
+    "warranty": { "title": "Garantija", "text": "Garantijos sąlygos bus paskelbtos prieš prasidedant prekybai." }
+  },
+  "checkout": {
+    "title": "Bandomasis užsakymas",
+    "subtitle": "Palikite savo duomenis ir mes susisieksime, kai Keyline One bus prieinamas.",
+    "name": "Vardas ir pavardė",
+    "email": "El. paštas",
+    "country": "Šalis",
+    "selectCountry": "Pasirinkite šalį",
+    "otherCountry": "Kita",
+    "phone": "Telefonas",
+    "optional": "neprivaloma",
+    "quantity": "Kiekis",
+    "summary": "Suvestinė",
+    "unitPrice": "Kaina",
+    "total": "Orientacinė suma",
+    "noPayment": "Jokie mokėjimai nebus nuskaičiuoti. Kortelės duomenų nereikia.",
+    "consent": "Sutinku, kad mano duomenys būtų tvarkomi šiai užklausai įvykdyti, kaip aprašyta {privacy}.",
+    "privacyLink": "privatumo politikoje",
+    "submit": "Pateikti bandomąjį užsakymą",
+    "submitting": "Siunčiama…",
+    "retry": "Bandyti dar kartą",
+    "errors": {
+      "name": "Įveskite savo vardą.",
+      "email": "Įveskite teisingą el. pašto adresą.",
+      "country": "Pasirinkite savo šalį.",
+      "phone": "Įveskite teisingą telefono numerį.",
+      "quantity": "Pasirinkite kiekį nuo 1 iki {max}.",
+      "consent": "Norėdami tęsti, sutikite su privatumo politika.",
+      "rate": "Per daug užklausų. Palaukite kelias minutes ir bandykite dar kartą.",
+      "server": "Šiuo metu nepavyko išsiųsti jūsų užklausos. Bandykite dar kartą.",
+      "network": "Tinklo klaida. Patikrinkite ryšį ir bandykite dar kartą.",
+      "invalid": "Kai kurie laukai užpildyti neteisingai. Patikrinkite formą."
+    },
+    "success": {
+      "title": "Užklausa gauta",
+      "text": "Dėkojame už susidomėjimą! Jūsų užklausa sėkmingai gauta. Šiuo metu vyksta produkto testavimo etapas, todėl jokie mokėjimai nebuvo apdoroti.",
+      "reference": "Numeris",
+      "done": "Gerai"
+    }
+  },
+  "faq": {
+    "eyebrow": "DUK",
+    "title": "Klausimai ir atsakymai",
+    "items": [
+      { "q": "Ar tai išmanusis telefonas, ar tradicinis mygtukinis telefonas?", "a": "Abu. Keyline One viršutinėje dalyje turi spalvotą jutiklinį ekraną, o apatinėje — pilną fizinę klaviatūrą. Galite naršyti lietimu, mygtukais arba abiem būdais." },
+      { "q": "Ar galiu įdiegti programėles?", "a": "Įrenginys skirtas naudoti programėles, o pavyzdiniuose įrenginiuose jos veikia. Kokia programėlių parduotuvė ir operacinės sistemos versija bus galutiniame produkte, dar tikslinama su gamintoju. Informaciją paskelbsime čia prieš prasidedant prekybai." },
+      { "q": "Ar veikia „WhatsApp“?", "a": "Tai tikrinama su gamybiniais įrenginiais. „WhatsApp“ palaikymą patvirtinsime tik patys jį išbandę." },
+      { "q": "Ar veikia „Telegram“?", "a": "Tai tikrinama su gamybiniais įrenginiais. „Telegram“ palaikymą patvirtinsime tik patys jį išbandę." },
+      { "q": "Ar palaikomas 4G?", "a": "4G palaikymas ir tikslūs tinklo dažnių diapazonai tikslinami su gamintoju. Prieš užsakydami patikrinkite šią informaciją dar kartą." },
+      { "q": "Kas yra pakuotėje?", "a": "Pakuotės turinys bus patvirtintas prieš prasidedant prekybai." },
+      { "q": "Kiek trunka pristatymas?", "a": "Pristatymo terminai bus patvirtinti prieš prasidedant prekybai. Dabartiniame testavimo etape užsakymai nesiunčiami." },
+      { "q": "Kokia grąžinimo politika?", "a": "Užsakymams ES galios bent įstatymų nustatyta 14 dienų teisė atsisakyti sutarties. Visos grąžinimo sąlygos bus paskelbtos prieš prasidedant prekybai." }
+    ]
+  },
+  "footer": {
+    "tagline": "Tikri mygtukai. Tikras jutiklinis ekranas.",
+    "product": "Produktas",
+    "contact": "Kontaktai",
+    "faq": "DUK",
+    "privacy": "Privatumo politika",
+    "terms": "Taisyklės ir sąlygos",
+    "shipping": "Pristatymas ir grąžinimas",
+    "rights": "Visos teisės saugomos.",
+    "testPhase": "Ši svetainė yra produkto testavimo etape. Mokėjimai nevykdomi, užsakymai nesiunčiami."
+  },
+  "cookies": {
+    "text": "Naudojame tik būtiną saugyklą (pvz., kad prisimintume jūsų kalbą). Jokių sekimo ar reklaminių slapukų.",
+    "ok": "Gerai",
+    "more": "Privatumo politika"
+  },
+  "legal": {
+    "draft": "Šablonas — prieš paleidimą turi būti užpildytas ir peržiūrėtas teisininko.",
+    "updated": "Paskutinį kartą atnaujinta",
+    "backHome": "Grįžti į pradžią",
+    "privacy": {
+      "title": "Privatumo politika",
+      "sections": [
+        { "h": "Kas mes esame", "p": "Jūsų asmens duomenų valdytojas yra {entity}, {address}. Kontaktai: {email}." },
+        { "h": "Kokius duomenis renkame", "p": "Pateikus bandomąjį užsakymą renkame jūsų vardą, el. pašto adresą, šalį, neprivalomą telefono numerį, pasirinktą kiekį, pasirinktą kalbą ir pateikimo laiką. Taip pat trumpam tvarkome jūsų IP adresą, kad apsaugotume formą nuo piktnaudžiavimo (užklausų ribojimas) ir parinktume tinkamą svetainės kalbą." },
+        { "h": "Kodėl juos tvarkome", "p": "Kad atsakytume į jūsų užklausą ir informuotume apie produkto prieinamumą (BDAR 6 str. 1 d. b p. — veiksmai prieš sudarant sutartį) bei apsaugotume svetainę (BDAR 6 str. 1 d. f p. — teisėtas interesas)." },
+        { "h": "Kiek laiko saugome", "p": "Bandomųjų užsakymų užklausos saugomos {days} d., po to ištrinamos, nebent paprašysite jas ištrinti anksčiau." },
+        { "h": "Kas juos gauna", "p": "Jūsų užklausa pristatoma el. paštu per mūsų el. pašto paslaugų teikėją, veikiantį kaip duomenų tvarkytojas. [Nurodykite tvarkytojus, pvz., talpinimo ir el. pašto paslaugų teikėjus, bei perdavimus už ES ribų.]" },
+        { "h": "Slapukai ir saugykla", "p": "Naudojame tik būtiną saugyklą: slapuką ir vietinės saugyklos įrašą, kurie įsimena jūsų kalbą. Nenaudojame analitikos ar reklaminių slapukų." },
+        { "h": "Jūsų teisės", "p": "Turite teisę susipažinti su savo duomenimis, juos ištaisyti, ištrinti, apriboti jų tvarkymą, perkelti juos ir nesutikti su tvarkymu. Taip pat galite pateikti skundą Valstybinei duomenų apsaugos inspekcijai." }
+      ]
+    },
+    "terms": {
+      "title": "Taisyklės ir sąlygos",
+      "sections": [
+        { "h": "Testavimo etapas", "p": "Ši svetainė šiuo metu naudojama susidomėjimui produktu įvertinti. Pateikus bandomąjį užsakymą pirkimo sutartis nesudaroma, mokėjimas nenuskaičiuojamas ir prekė nesiunčiama." },
+        { "h": "Pardavėjas", "p": "{entity}, {address}, įmonės kodas {reg}, PVM mokėtojo kodas {vat}." },
+        { "h": "Kainos", "p": "Nurodytos kainos yra orientacinės ir, kai taikoma, apima PVM. Galutinės kainos bus patvirtintos prieš prasidedant prekybai." },
+        { "h": "Informacija apie produktą", "p": "Produkto vaizdai apima preliminaraus 3D modelio vizualizacijas. Specifikacijos, pažymėtos „Bus patvirtinta“, dar nepatikrintos." },
+        { "h": "Taikytina teisė", "p": "[Bus užpildyta.]" }
+      ]
+    },
+    "shipping": {
+      "title": "Pristatymas ir grąžinimas",
+      "sections": [
+        { "h": "Pristatymas", "p": "Testavimo etape užsakymai nesiunčiami. Pristatymo šalys, vežėjai, terminai ir kainos bus paskelbti prieš prasidedant prekybai." },
+        { "h": "Teisė atsisakyti sutarties", "p": "ES vartotojai turi teisę per 14 dienų be priežasties atsisakyti nuotolinės sutarties. Išsamios instrukcijos ir pavyzdinė atsisakymo forma bus pateiktos čia." },
+        { "h": "Garantija", "p": "Taikoma įstatymų nustatyta garantija. Papildoma gamintojo garantija, jei tokia bus, bus aprašyta čia." }
+      ]
+    },
+    "contact": {
+      "title": "Kontaktai",
+      "text": "Turite klausimų apie Keyline One? Parašykite mums ir mes atsakysime.",
+      "email": "El. paštas"
+    }
+  },
+  "email": {
+    "customerSubject": "Gavome jūsų užklausą — Keyline One",
+    "customerGreeting": "Sveiki, {name},",
+    "customerBody": "Dėkojame už susidomėjimą Keyline One. Gavome jūsų bandomojo užsakymo užklausą (numeris {ref}). Šiuo metu vyksta produkto testavimo etapas: jokie mokėjimai nebuvo apdoroti ir niekas nebus išsiųsta. Susisieksime, kai produktas bus prieinamas."
+  },
+  "notFound": { "title": "Puslapis nerastas", "back": "Grįžti į pradžią" }
+}

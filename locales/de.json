@@ -1,0 +1,328 @@
+{
+  "meta": {
+    "title": "Keyline One — Klassische Tastatur. Touchscreen-Smartphone.",
+    "description": "Keyline One ist ein kompaktes Hybrid-Telefon: eine echte physische Tastatur kombiniert mit einem farbigen Touchscreen. Entdecken Sie es in 3D und testen Sie die interaktive Demo."
+  },
+  "common": {
+    "skip": "Zum Inhalt springen",
+    "pending": "Wird bestätigt",
+    "pendingVerification": "Bestätigung durch den Lieferanten ausstehend",
+    "simulation": "Simulation",
+    "testPhase": "Testphase — es werden keine Zahlungen abgewickelt",
+    "close": "Schließen",
+    "back": "Zurück"
+  },
+  "nav": {
+    "product": "Produkt",
+    "features": "Funktionen",
+    "demo": "Interaktive Demo",
+    "faq": "FAQ",
+    "bag": "Warenkorb",
+    "bagItems": "{count} Artikel im Warenkorb",
+    "language": "Sprache",
+    "menu": "Menü",
+    "order": "Bestellen"
+  },
+  "hero": {
+    "eyebrow": "Das neue Keyline One",
+    "title1": "Echte Tasten.",
+    "title2": "Echter Touchscreen.",
+    "subtitle": "Ein kompaktes Telefon, das eine fühlbare Zifferntastatur mit einem farbigen Touchscreen verbindet — die Einfachheit, die Sie kennen, und die Apps, die Sie brauchen.",
+    "ctaDiscover": "Gerät entdecken",
+    "ctaDemo": "Interaktive Demo testen",
+    "priceLabel": "Richtpreis",
+    "renderNote": "Rendering des vorläufigen 3D-Modells"
+  },
+  "viewer": {
+    "eyebrow": "360°-Ansicht",
+    "title": "Jeder Winkel. In Ihren Händen.",
+    "subtitle": "Ziehen zum Drehen, scrollen oder mit zwei Fingern zoomen. Wählen Sie unten ein Detail.",
+    "views": {
+      "front": "Display",
+      "keypad": "Tastatur",
+      "back": "Rückseite & Kamera",
+      "side": "Seitenprofil",
+      "edges": "Ober- & Unterseite"
+    },
+    "reset": "Ansicht zurücksetzen",
+    "fullscreen": "Vollbild",
+    "exitFullscreen": "Vollbild beenden",
+    "autoRotate": "Automatisch drehen",
+    "loading": "3D-Modell wird geladen…",
+    "load": "3D-Ansicht laden",
+    "provisional": "Vorläufiges 3D-Modell, rekonstruiert anhand von Referenzfotos. Proportionen und Details sind Näherungswerte, bis sie am Seriengerät überprüft wurden.",
+    "noWebgl": "Ihr Browser kann keine 3D-Grafik darstellen. Hier sehen Sie stattdessen Studio-Renderings des Geräts.",
+    "hint": "Ziehen zum Drehen"
+  },
+  "presentation": {
+    "eyebrow": "Das Konzept",
+    "title": "Klassische Bedienung. Ein anderes Smartphone-Erlebnis.",
+    "intro": "Meist muss man sich entscheiden: Touchscreen-Smartphone oder einfaches Tastenhandy. Keyline One vereint beides in einem kompakten Gehäuse. Tippen, wählen und navigieren Sie mit echten Tasten — und berühren Sie den Bildschirm, wann immer es schneller geht.",
+    "front": {
+      "title": "Zwei Arten der Bedienung. Ein Gerät.",
+      "text": "Ein farbiger Touchscreen in der oberen Hälfte, eine vollständige physische Tastatur in der unteren. Nutzen Sie, was sich gerade natürlich anfühlt."
+    },
+    "display": {
+      "title": "Ein Bildschirm, der auf Berührung reagiert.",
+      "text": "Tippen Sie auf App-Symbole, scrollen und wischen Sie wie auf jedem Smartphone — auf einem Display, das das Telefon kompakt hält."
+    },
+    "keypad": {
+      "title": "Tasten, die man fühlt.",
+      "text": "Einzelne fühlbare Tasten für Ziffern, Anrufe und Navigation sowie ein zentrales rundes Steuerelement. Wählen, ohne hinzusehen."
+    },
+    "back": {
+      "title": "Klare Rückseite. Rückkamera.",
+      "text": "Eine minimalistische Rückseite in Graphit mit einem Kameramodul in der Ecke."
+    },
+    "scale": {
+      "title": "Gemacht, um in der Tasche zu verschwinden.",
+      "text": "Schmal und kompakt — zum Größenvergleich neben einer Standard-Bankkarte (85,6 × 54 mm).",
+      "card": "Bankkarte",
+      "note": "Ungefährer Maßstab auf Basis von Referenzfotos. Genaue Abmessungen werden nach Bestätigung veröffentlicht."
+    }
+  },
+  "specs": {
+    "eyebrow": "Spezifikationen",
+    "title": "Technische Daten",
+    "note": "Wir veröffentlichen nur vom Hersteller bestätigte Spezifikationen. Mit „Wird bestätigt“ markierte Werte werden derzeit geprüft.",
+    "labels": {
+      "display": "Display",
+      "os": "Betriebssystem",
+      "processor": "Prozessor",
+      "ram": "Arbeitsspeicher",
+      "storage": "Interner Speicher",
+      "battery": "Akku",
+      "camera": "Kamera",
+      "sim": "SIM",
+      "network": "Netz",
+      "dimensions": "Abmessungen",
+      "weight": "Gewicht",
+      "colours": "Farben"
+    }
+  },
+  "demo": {
+    "eyebrow": "Interaktive Demo",
+    "title": "Gleich hier ausprobieren.",
+    "subtitle": "Tippen Sie auf den Bildschirm oder nutzen Sie die Tastatur. Apps öffnen, stöbern, eine Nummer wählen — wie auf dem Gerät.",
+    "disclaimer": "Dies ist eine Website-Simulation mit fiktiven Demo-Inhalten. Sie ist kein Android-Emulator und verbindet sich nicht mit Telegram, WhatsApp, YouTube oder anderen Diensten. Die Verfügbarkeit von Apps auf dem echten Gerät wird noch geprüft.",
+    "keysHint": "Tipp: Pfeiltasten, Enter und Rücktaste Ihrer Tastatur funktionieren auch.",
+    "badge": "Demo",
+    "apps": {
+      "telegram": "Telegram",
+      "maps": "Karten",
+      "gallery": "Galerie",
+      "youtube": "YouTube",
+      "music": "Musik",
+      "whatsapp": "WhatsApp",
+      "settings": "Einstellungen",
+      "phone": "Telefon",
+      "contacts": "Kontakte"
+    },
+    "messaging": {
+      "search": "Suchen",
+      "typeMessage": "Nachricht",
+      "online": "online",
+      "lastSeen": "kürzlich online",
+      "chats": [
+        { "name": "Anna", "preview": "Um 7?", "time": "12:41", "messages": [["in", "Hi! Bleibt es bei heute Abend?"], ["out", "Ja! Gleicher Ort wie letztes Mal?"], ["in", "Um 7?"]] },
+        { "name": "Familie", "preview": "Mama: Fotos vom Sonntag 📷", "time": "11:02", "messages": [["in", "Fotos vom Sonntag 📷"], ["out", "Wunderschön, danke!"]] },
+        { "name": "Tomas", "preview": "Die Tastatur ist so praktisch", "time": "Gestern", "messages": [["in", "Hast du das neue Telefon?"], ["out", "Ja — endlich wieder mit echten Tasten tippen"], ["in", "Die Tastatur ist so praktisch"]] },
+        { "name": "Arbeit", "preview": "Meeting auf 10:30 verschoben", "time": "Mo", "messages": [["in", "Meeting auf 10:30 verschoben"]] }
+      ],
+      "autoReply": "👍"
+    },
+    "maps": {
+      "search": "Orte suchen",
+      "you": "Sie sind hier",
+      "places": ["Café", "Park", "Bahnhof"],
+      "route": "Route",
+      "walk": "12 Min. zu Fuß"
+    },
+    "gallery": { "title": "Galerie", "count": "{count} Fotos" },
+    "video": {
+      "title": "Videos",
+      "items": ["Morgen in den Bergen", "Frische Pasta selbst machen", "Stadtlichter im Zeitraffer", "Meereswellen — 10 Minuten"],
+      "views": "{count} Aufrufe",
+      "playing": "Demo-Wiedergabe",
+      "channel": "Demo-Kanal"
+    },
+    "music": {
+      "title": "Aktuelle Wiedergabe",
+      "tracks": [
+        { "title": "Stiller Morgen", "artist": "Demo Ensemble" },
+        { "title": "Graphit", "artist": "Keyline Sounds" },
+        { "title": "Nachtzug", "artist": "Demo Ensemble" }
+      ],
+      "note": "Generierte Demo-Töne — keine urheberrechtlich geschützte Musik"
+    },
+    "settings": {
+      "title": "Einstellungen",
+      "darkMode": "Dunkelmodus",
+      "largeText": "Große Schrift",
+      "sounds": "Tastentöne",
+      "brightness": "Helligkeit",
+      "wallpaper": "Hintergrund",
+      "about": "Über das Gerät",
+      "aboutText": "Simulierte Oberfläche zu Demonstrationszwecken."
+    },
+    "phone": {
+      "title": "Telefon",
+      "call": "Anrufen",
+      "calling": "Wird angerufen…",
+      "demoCall": "Demo-Anruf — es wird kein echter Anruf getätigt",
+      "end": "Beenden",
+      "recent": "Zuletzt",
+      "keypad": "Tastatur"
+    },
+    "contacts": {
+      "title": "Kontakte",
+      "search": "Kontakte suchen",
+      "mobile": "Mobil"
+    },
+    "home": { "date": "{weekday}, {day}. {month}" }
+  },
+  "features": {
+    "eyebrow": "Funktionen",
+    "title": "Außen einfach. Innen smart.",
+    "pending": "Prüfung ausstehend",
+    "items": {
+      "compact": { "title": "Kompaktes Design", "text": "Ein schmales Gehäuse, das bequem in einer Hand und jeder Tasche Platz findet." },
+      "keypad": { "title": "Physische Tastatur", "text": "Fühlbare Zifferntasten, Anruftasten und ein rundes Navigationselement." },
+      "touch": { "title": "Touchscreen", "text": "Ein Farbdisplay zum Tippen, Scrollen und Wischen." },
+      "hybrid": { "title": "Hybrides Erlebnis", "text": "Wechseln Sie jederzeit und in jeder App zwischen Tasten und Touch." },
+      "apps": { "title": "App-Kompatibilität", "text": "Ausgelegt für gängige Messenger- und Medien-Apps. Die genaue Kompatibilität wird geprüft." },
+      "dualSim": { "title": "Dual-SIM", "text": "Zwei SIM-Karten in einem Gerät. Wird mit dem Hersteller bestätigt." },
+      "lte": { "title": "4G-Konnektivität", "text": "Mobile Daten über 4G-Netze. Die unterstützten Frequenzbänder werden bestätigt." }
+    }
+  },
+  "purchase": {
+    "eyebrow": "Bestellen",
+    "title": "Keyline One",
+    "description": "Kompaktes Hybrid-Telefon mit physischer Zifferntastatur und farbigem Touchscreen.",
+    "colour": "Farbe",
+    "colours": { "graphite": "Graphit" },
+    "quantity": "Menge",
+    "decrease": "Menge verringern",
+    "increase": "Menge erhöhen",
+    "order": "Jetzt bestellen",
+    "testNotice": "Wir testen derzeit das Interesse an diesem Produkt. Mit einer Bestellung senden Sie uns eine Anfrage — es wird keine Zahlung eingezogen.",
+    "delivery": { "title": "Lieferung", "text": "Lieferzeiten und -kosten werden vor Verkaufsstart bestätigt." },
+    "returns": { "title": "Rückgabe", "text": "Die Rückgabebedingungen werden vor Verkaufsstart veröffentlicht." },
+    "warranty": { "title": "Garantie", "text": "Die Garantiebedingungen werden vor Verkaufsstart veröffentlicht." }
+  },
+  "checkout": {
+    "title": "Testbestellung",
+    "subtitle": "Hinterlassen Sie Ihre Daten und wir melden uns, sobald das Keyline One erhältlich ist.",
+    "name": "Vollständiger Name",
+    "email": "E-Mail",
+    "country": "Land",
+    "selectCountry": "Land auswählen",
+    "otherCountry": "Anderes",
+    "phone": "Telefon",
+    "optional": "optional",
+    "quantity": "Menge",
+    "summary": "Übersicht",
+    "unitPrice": "Preis",
+    "total": "Richtwert gesamt",
+    "noPayment": "Es wird keine Zahlung eingezogen. Keine Kartendaten erforderlich.",
+    "consent": "Ich bin einverstanden, dass meine Daten zur Bearbeitung dieser Anfrage verarbeitet werden, wie in der {privacy} beschrieben.",
+    "privacyLink": "Datenschutzerklärung",
+    "submit": "Testbestellung absenden",
+    "submitting": "Wird gesendet…",
+    "retry": "Erneut versuchen",
+    "errors": {
+      "name": "Bitte geben Sie Ihren Namen ein.",
+      "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "country": "Bitte wählen Sie Ihr Land aus.",
+      "phone": "Bitte geben Sie eine gültige Telefonnummer ein.",
+      "quantity": "Bitte wählen Sie eine Menge zwischen 1 und {max}.",
+      "consent": "Bitte akzeptieren Sie die Datenschutzerklärung, um fortzufahren.",
+      "rate": "Zu viele Anfragen. Bitte warten Sie einige Minuten und versuchen Sie es erneut.",
+      "server": "Ihre Anfrage konnte gerade nicht gesendet werden. Bitte versuchen Sie es erneut.",
+      "network": "Netzwerkfehler. Prüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
+      "invalid": "Einige Felder sind ungültig. Bitte prüfen Sie das Formular."
+    },
+    "success": {
+      "title": "Anfrage erhalten",
+      "text": "Vielen Dank für Ihr Interesse! Ihre Anfrage ist erfolgreich bei uns eingegangen. Derzeit befindet sich das Produkt in einer Testphase, und es wurde keine Zahlung abgewickelt.",
+      "reference": "Referenz",
+      "done": "Fertig"
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Fragen & Antworten",
+    "items": [
+      { "q": "Ist das ein Smartphone oder ein klassisches Tastenhandy?", "a": "Beides. Keyline One hat einen farbigen Touchscreen in der oberen und eine vollständige physische Tastatur in der unteren Hälfte. Sie können per Touch, mit den Tasten oder mit beidem navigieren." },
+      { "q": "Kann ich Apps installieren?", "a": "Das Gerät ist für die Nutzung von Apps ausgelegt, und auf den Referenzgeräten laufen Apps. Welcher App-Store und welche Betriebssystemversion im Endprodukt enthalten sind, wird noch mit dem Hersteller geklärt. Wir veröffentlichen dies hier vor Verkaufsstart." },
+      { "q": "Unterstützt es WhatsApp?", "a": "Dies wird an Seriengeräten geprüft. Wir bestätigen die WhatsApp-Unterstützung erst, wenn wir sie selbst getestet haben." },
+      { "q": "Unterstützt es Telegram?", "a": "Dies wird an Seriengeräten geprüft. Wir bestätigen die Telegram-Unterstützung erst, wenn wir sie selbst getestet haben." },
+      { "q": "Hat es 4G?", "a": "Die 4G-Unterstützung und die genauen Frequenzbänder werden mit dem Hersteller geklärt. Bitte prüfen Sie dies vor der Bestellung erneut." },
+      { "q": "Was ist im Lieferumfang enthalten?", "a": "Der Lieferumfang wird vor Verkaufsstart bestätigt." },
+      { "q": "Wie lange dauert die Lieferung?", "a": "Die Lieferzeiten werden vor Verkaufsstart bestätigt. In der aktuellen Testphase werden keine Bestellungen versendet." },
+      { "q": "Wie sind die Rückgabebedingungen?", "a": "Für Bestellungen innerhalb der EU gilt mindestens das gesetzliche 14-tägige Widerrufsrecht. Die vollständigen Rückgabebedingungen werden vor Verkaufsstart veröffentlicht." }
+    ]
+  },
+  "footer": {
+    "tagline": "Echte Tasten. Echter Touchscreen.",
+    "product": "Produkt",
+    "contact": "Kontakt",
+    "faq": "FAQ",
+    "privacy": "Datenschutzerklärung",
+    "terms": "AGB",
+    "shipping": "Versand und Rückgabe",
+    "rights": "Alle Rechte vorbehalten.",
+    "testPhase": "Diese Website befindet sich in einer Produkt-Testphase. Es werden keine Zahlungen abgewickelt und keine Bestellungen versendet."
+  },
+  "cookies": {
+    "text": "Wir verwenden nur unbedingt erforderliche Speicherung (z. B. um Ihre Sprache zu merken). Keine Tracking- oder Werbe-Cookies.",
+    "ok": "OK",
+    "more": "Datenschutzerklärung"
+  },
+  "legal": {
+    "draft": "Vorlage — vor dem Start von einer juristischen Fachperson zu vervollständigen und zu prüfen.",
+    "updated": "Zuletzt aktualisiert",
+    "backHome": "Zur Startseite",
+    "privacy": {
+      "title": "Datenschutzerklärung",
+      "sections": [
+        { "h": "Verantwortlicher", "p": "Verantwortlich für Ihre personenbezogenen Daten ist {entity}, {address}. Kontakt: {email}." },
+        { "h": "Welche Daten wir erheben", "p": "Wenn Sie eine Testbestellung absenden, erheben wir Ihren Namen, Ihre E-Mail-Adresse, Ihr Land, optional Ihre Telefonnummer, die gewählte Menge, die gewählte Sprache und den Zeitpunkt der Übermittlung. Außerdem verarbeiten wir kurzzeitig Ihre IP-Adresse, um das Formular vor Missbrauch zu schützen (Ratenbegrenzung) und eine passende Website-Sprache zu wählen." },
+        { "h": "Zweck der Verarbeitung", "p": "Zur Beantwortung Ihrer Anfrage und zur Information über die Verfügbarkeit des Produkts (Art. 6 Abs. 1 lit. b DSGVO — vorvertragliche Maßnahmen) sowie zum Schutz unserer Website (Art. 6 Abs. 1 lit. f DSGVO — berechtigtes Interesse)." },
+        { "h": "Speicherdauer", "p": "Anfragen zu Testbestellungen werden {days} Tage gespeichert und anschließend gelöscht, sofern Sie nicht eine frühere Löschung verlangen." },
+        { "h": "Empfänger", "p": "Ihre Anfrage wird per E-Mail über unseren E-Mail-Dienstleister als Auftragsverarbeiter zugestellt. [Auftragsverarbeiter, z. B. Hosting- und E-Mail-Anbieter, sowie etwaige Übermittlungen außerhalb der EU auflisten.]" },
+        { "h": "Cookies und Speicherung", "p": "Wir verwenden nur unbedingt erforderliche Speicherung: ein Cookie und einen Eintrag im lokalen Speicher, die Ihre Sprache speichern. Wir verwenden keine Analyse- oder Werbe-Cookies." },
+        { "h": "Ihre Rechte", "p": "Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Zudem können Sie sich bei einer Datenschutz-Aufsichtsbehörde beschweren, etwa der Behörde Ihres Bundeslandes." }
+      ]
+    },
+    "terms": {
+      "title": "Allgemeine Geschäftsbedingungen",
+      "sections": [
+        { "h": "Testphase", "p": "Diese Website dient derzeit dazu, das Interesse an dem Produkt zu testen. Eine Testbestellung begründet keinen Kaufvertrag, es wird keine Zahlung eingezogen und kein Produkt versendet." },
+        { "h": "Verkäufer", "p": "{entity}, {address}, Registernummer {reg}, USt-IdNr. {vat}." },
+        { "h": "Preise", "p": "Die angezeigten Preise sind Richtpreise und enthalten, soweit anwendbar, die Mehrwertsteuer. Endgültige Preise werden vor Verkaufsstart bestätigt." },
+        { "h": "Produktinformationen", "p": "Die Produktbilder umfassen Renderings eines vorläufigen 3D-Modells. Mit „Wird bestätigt“ markierte Spezifikationen sind noch nicht verifiziert." },
+        { "h": "Anwendbares Recht", "p": "[Wird ergänzt.]" }
+      ]
+    },
+    "shipping": {
+      "title": "Versand und Rückgabe",
+      "sections": [
+        { "h": "Versand", "p": "Während der Testphase werden keine Bestellungen versendet. Lieferländer, Versanddienstleister, Lieferzeiten und Kosten werden vor Verkaufsstart veröffentlicht." },
+        { "h": "Widerrufsrecht", "p": "Verbraucher in der EU haben das Recht, einen Fernabsatzvertrag binnen 14 Tagen ohne Angabe von Gründen zu widerrufen. Die vollständige Widerrufsbelehrung und ein Muster-Widerrufsformular werden hier ergänzt." },
+        { "h": "Gewährleistung", "p": "Es gilt die gesetzliche Gewährleistung. Eine etwaige zusätzliche Herstellergarantie wird hier beschrieben." }
+      ]
+    },
+    "contact": {
+      "title": "Kontakt",
+      "text": "Fragen zum Keyline One? Schreiben Sie uns, wir melden uns bei Ihnen.",
+      "email": "E-Mail"
+    }
+  },
+  "email": {
+    "customerSubject": "Wir haben Ihre Anfrage erhalten — Keyline One",
+    "customerGreeting": "Hallo {name},",
+    "customerBody": "Vielen Dank für Ihr Interesse am Keyline One. Wir haben Ihre Testbestellung erhalten (Referenz {ref}). Derzeit befindet sich das Produkt in einer Testphase: Es wurde keine Zahlung abgewickelt und es wird nichts versendet. Wir melden uns, sobald das Produkt erhältlich ist."
+  },
+  "notFound": { "title": "Seite nicht gefunden", "back": "Zur Startseite" }
+}
